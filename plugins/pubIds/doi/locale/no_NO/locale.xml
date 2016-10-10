@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * plugins/pubIds/doi/locale/en_US/locale.xml
+  *
+  * Copyright (c) 2013 Simon Fraser University Library
+  * Copyright (c) 2003-2013 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * DOI plugin localization strings
+  -->
+ 
+<locale name="en_US" full_name="U.S. English">
+	<message key="plugins.pubIds.doi.displayName">DOI</message>
+	<message key="plugins.pubIds.doi.description">Ved å aktiver DOI programutvidelse kan Digital Object Identifiers (DOI) tilordnes utgaver, artikler, trykkeversjoner og supplerende filer i OJS.</message>
+
+	<!-- settings form -->
+	<message key="plugins.pubIds.doi.manager.settings.doiSettings">Innstillinger for DOI programutvidelse</message>
+	<message key="plugins.pubIds.doi.manager.settings.description">Konfigurer DOI programutvidelse til å administrere og bruke DOIer i OJS:</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiObjects">Tidsskriftsinnhold</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiObjectsRequired">Velg hvilke objekter som skal tilordnes DOI.</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainDois">Velg hvilke publiseringsobjekter som skal tilordnes Digital Object Identifiers (DOI):</message>
+	<message key="plugins.pubIds.doi.manager.settings.explainCrossRefDois"><![CDATA[<strong>NB:</strong> Velg artikler dersom det er <a href="http://www.crossref.org" target="_new">CrossRef</a> DOIer som skal genereres. En artikkel sees på som et arbeid, dvs. en enhet med intellektuelt og kunstnerisk innhold. Artikkelen er med andre ord publiseringsobjektet som skal eksporteres i CossRef DOI eksport og som registreringen baseres på.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.enableIssueDoi">Utgaver</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableArticleDoi">Artikler</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableGalleyDoi">Trykkeversjoner</message>
+	<message key="plugins.pubIds.doi.manager.settings.enableSuppFileDoi">Supplerende filer</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefix">DOI Prefiks</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixDescription"><![CDATA[DOI Prefikset tilordnes av registreringsbyåer (f.eks. <a href="http://www.crossref.org" target="_new">CrossRef</a>) og er på formatet 10.xxxx (f.eks. 10.1234):]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiPrefixPattern">DOI prefiks er obligatorisk og må være på formen 10.xxxx.</message>
+
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffix">DOI Suffiks</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDescription">Et DOI suffiks kan ha mange former, men må være unikt blant alle publiseringsobjektene som har samme DOI prefiks.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern">Bruk mønsteret lagt inn under til å generere DOI suffiks. Bruk %j for tidsskriftinitialer, %v for volumnummer, %i for utgavenummer, %y for år, %a for OJS artikkelID, %g for OJS trykkeversjon ID, %s for OJS supplerende fil ID, %p for sidetall og %x for "Skreddersydd Identifikator" (kan aktiveres i Oppsett 4.3).</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.issues">for utgaver</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.articles">for artikler</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.galleys">for galleys</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.suppFiles">for supplerende filer.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPattern.example">For eksempel, vol%viss%ipp%p kan produsere en DOI slik som denne 10.1234/vol3iss2pp230</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault">Bruk standardmønstre.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixDefault.description"><![CDATA[%j.v%vi%i for utgaver<br />%j.v%vi%i.%a for artikler<br />%j.v%vi%i.%a.g%g for trykkeversjoner <br />%j.v%vi%i.%a.s%s for supplerende filer.]]></message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixPublisherId">Bruk "Skreddersydd identifikator" for publiserte objekter som DOI suffiks (må være aktivert i Oppsett 4.3). Dette er den samme identifikatoren som brukes for offentlige URLer.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuffixCustomIdentifier">Legg til et individuelt DOI suffiks for hvert publisert objekt uavhengig av og forskjellig fra den "Skreddersydde identifikatoren" nevnt ovenfor. Du vil finne et ytterligere registreringsfelt for DOI på metadatasiden for hvert objekt.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiIssueSuffixPatternRequired">Legg til DOI suffiksmønster for utgaver</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiArticleSuffixPatternRequired">Legg til DOI suffiksmønster for artikler.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiGalleySuffixPatternRequired">Legg til DOI suffiksmønster for trykkeversjoner.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiSuppFileSuffixPatternRequired">Legg til DOI suffiksmønster for supplerende filer.</message>
+	
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign">Tilordne DOI på nytt</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.description">Endringer i DOI konfigurasjonen vil ikke påvirke allerede tilordnede DOIer. Når DOI konfigurasjonen er lagret kan du bruke denne knappen for å nullstille alle eksisterende DOIer slik at de nye innstillingene trer i kraft også for eksisterende artikler.</message>
+	<message key="plugins.pubIds.doi.manager.settings.doiReassign.confirm">Er du sikker på at du ønsker å slette alle eksisterende DOIer?</message>	
+
+
+	<!-- metadata form -->
+	<message key="plugins.pubIds.doi.editor.doi">DOI</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeIssue">utgave</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeArticle">artikkel</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeGalley">trykkeversjon</message>
+	<message key="plugins.pubIds.doi.editor.doiObjectTypeSuppFile">Supplerende fil</message>
+	<message key="plugins.pubIds.doi.editor.doiNotYetGenerated">Dette er en forhåndsvisning av DOIen og den kan være ukomplett. DOI er mao. ennå ikke generert. Ved å publisere utgaven og se på den offentlige {$pubObjectType} siden vil det automatisk bli generert en unik DOI for denne {$pubObjectType}.</message>
+	<message key="plugins.pubIds.doi.editor.doiSuffixCustomIdentifierNotUnique">Det tilordnede DOI suffikset er allerede i bruk for et annet publisert objekt. Vennligst velg et unikt DOI suffiks for hvert objekt.</message>
+</locale>
+

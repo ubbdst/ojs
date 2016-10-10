@@ -4,6 +4,7 @@
 <!--
   * locale/no_NO/author.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -124,4 +125,7 @@
 	<message key="author.submit.submissionLocale">Innleveringsspråk</message>
 	<message key="author.submit.submissionLocaleDescription">Dette tidsskriftet tillater innleveringer på flere språk. Velg hovedspråket for innleveringen fra rullegardinmenyen under.</message>
 	<message key="author.submit.form.localeRequired">Vennligst velg innleveringsspråk.</message>
+	<message key="author.submit.submissionSupportingAgencies">Bidragsytere</message>
+	<message key="author.submit.submissionSupportingAgenciesDescription">Identifiser enheter (personer, organisasjoner eller tjenester) som har bidratt til innhold,  med økonomiske midler eller annen støtte til arbeidet som presenteres i artikkelen du nå skal levere inn. Separer dem med semikolon (f.eks. John Doe, Metro University; Master University, Department of Computer Science).</message>
 </locale>
+

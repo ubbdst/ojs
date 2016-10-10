@@ -1,11 +1,12 @@
 /**
- * styles/leftSidebar.css
+ * leftSidebar.css
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2003-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Site-wide shared elements for pages including a left-hand sidebar.
  *
+ * $Id$
  */
 
 /**
@@ -23,11 +24,11 @@
 
 #leftSidebar {
 	float: left;
-	width: 14%;
+	width: 18%;
 	padding: 1em 0em 1em 0em;
 	font-size: 0.65em;
 	height: 100%;
-	margin-left: 10%;
+	margin-left: 2%;
 	margin-right: 2%;
 	display: inline;
 	overflow: hidden;
@@ -35,12 +36,12 @@
 
 #main {
 	float: right;
-	width: 63%;
-	margin-right: 10%;
+	width: 73%;
+	margin-right: 2%;
 	overflow: hidden;
 }
 
-/* Set main on non-IE browsers to have a 10% margin */
+// Set main on non-IE browsers to have a 10% margin
 *html #main {
 	margin-right: 5%;
 } 

@@ -4,6 +4,7 @@
 <!--
   * locale/no_NO/editor.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -205,4 +206,19 @@
 	<message key="editor.notifyUsers.allAuthors">Alle publiserte forfattere ({$count} users)</message>
 	<message key="editor.notifyUsers.allIndividualSubscribers">Alle personlige abonnenter ({$count} users)</message>
 	<message key="editor.notifyUsers.allInstitutionalSubscribers">Alle institusjonelle abonnenter  ({$count} users)</message>
+	<message key="editor.reassign">Tildel på ny</message>
+	<message key="editor.publicIdentificationExists">Denne offentlige identifkatoren '{$publicIdentifier}' finnes allerede for et annet objekt (utgave, artikkel, trykkeversjon eller supplerende filer.</message>
+	<message key="editor.submissionReview.sendToCopyediting">Send til redigering</message>
+	<message key="editor.notifyUsers.allMailingList">Inkluder alle epost adresser på epost listen ({$count} eposter)</message>
+	<message key="editor.issues.galleys">Trykkeutgaver</message>
+	<message key="editor.issues.galley">Trykkeutgave</message>
+	<message key="editor.issues.viewingGalley">Visningsutgave</message>
+	<message key="editor.issues.issueGalleysDescription">Publiser trykkeversjon med fullstendig utgaveinnhold.</message>
+	<message key="editor.issues.noneIssueGalleys">Ingen trykkeutgaver er publisert.</message>
+	<message key="editor.issues.galleyLabelRequired">En trykkeutgaveetikkett er  påkrevd.</message>
+	<message key="editor.issues.galleyLocaleRequired">En lokale for trykkeutgave kreves.</message>
+	<message key="editor.issues.galleyPublicIdentificationExists">Identifikasjon for offentlig trykkeutgave finnes allerede.</message>
+	<message key="editor.issues.backToIssueGalleys">Tilbake til trykkeutgaver</message>
+	<message key="editor.issues.confirmDeleteGalley">Er du sikker på at du ønsker å slette denne trykkeutgaven?</message>
 </locale>
+

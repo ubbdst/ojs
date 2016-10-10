@@ -1,0 +1,182 @@
+/**
+ * voices.css
+ *
+ *
+ * Voices theme.
+ *
+ * voices.css 08.10.08
+ */
+
+/* Site reset */
+body {
+	background-image: none;
+}
+
+a {
+	text-decoration: underline;
+}
+
+a:link {
+	color: #375;
+}
+
+a:active {
+	color: #253;
+}
+
+a:visited {
+	color: #375;
+}
+
+a:hover {
+	color: #253;
+	background: #CDC;
+}
+
+a.plain {
+	text-decoration: none;
+}
+
+#container {
+	background: none;
+	border: none;
+	overflow: auto;
+}
+
+#header img {
+	float: left;
+}
+
+#navbar ul.menu li {
+	font-size: 1em;
+}
+
+#sidebarLanguageToggle {
+	position: static;
+}
+
+#sidebarFontSize {
+	position: static;
+}
+
+#sidebarHelp {
+	position: static;
+}
+
+#sidebarHelp a {
+	display: block;
+	padding: 0.5em 0 0.5em 0;
+	font-size: 1em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+#sidebarDevelopedBy {
+	display: block;
+}
+
+/* END Site reset */
+
+
+body {
+	background-color: #CFCDC6;
+	color: #000000;
+	font-family: arial, helvetica, sans-serif;
+}
+
+a:link {
+	color: #000000;
+}
+
+a:active {
+	color: #000000;
+}
+
+a:visited {
+	color: #808080;
+}
+
+a:hover {
+	color: red;
+	background: #ffffff;
+}
+
+input.textField, select.selectMenu, textarea.textArea, input.uploadField {
+	background-color: #eeeeee;
+}
+
+input.defaultButton {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+#container {
+	text-align: left;
+	background-image: none;
+	margin: 0;
+}
+
+#header {
+	background-color: #CFCDC6;
+	margin: 0 0 2em 1em;
+	width: auto;
+}
+
+#headerTitle {
+	margin: 0;
+}
+
+#header img {
+	float: left;
+}
+
+#header h1 {
+	margin: 0;
+	padding-left: 0.3em;
+}
+
+#rightSidebar span.blockTitle, #leftSidebar span.blockTitle {
+	background-color: black;
+	color: white;
+	margin: 0.7em 0 0.5em 0;
+	padding: 0.2em 0.5em !important;
+}
+
+#main {
+}
+
+#navbar {
+	font-size: 1em;
+	font-weight: bolder;
+	color: #DD0000;
+	border-bottom: 1px solid black;
+}
+
+#navbar ul.menu li {
+	padding-right: 0.5em !important;
+	display: inline;
+}
+
+#navbar a {
+	color: #DD0000;
+}
+
+#main h2 {
+	padding-left: 10px;
+}
+
+td.tocGalleys {
+	padding-right: 10px;
+}
+
+#breadcrumb {
+	padding-left: 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid black;	
+}
+
+#content {
+	padding-left: 10px;
+	border-top: 0px dotted #000;
+}
+

@@ -1,0 +1,239 @@
+/**
+ * boap-standard.css
+ *
+ *
+ * BOAP standard theme.
+ *
+ * spt.css 20.01.09
+ */
+
+/* Site reset */
+
+body {
+	background-color: white !important;
+}
+
+a {
+	text-decoration: underline;
+}
+
+a:link {
+	color: #375 !important;
+}
+
+a:active {
+	color: #253 !important;
+}
+
+a:visited {
+	color: #375 !important;
+}
+
+a:hover {
+	color: #253 !important;
+	background: #CDC !important;
+}
+
+a.plain {
+	text-decoration: none;
+}
+
+ul.plain li { margin-bottom: 5px; }
+
+ul.steplist { margin-bottom: 25px; }
+
+ul.steplist li { font-weight: bolder; font-size: 1em; display: inline-block; border-left: 1px solid black; padding: 8px;}
+ul.steplist li:first-child { border: none !important; padding: 8px 8px 8px 0 !important; }
+
+#container {
+	background-color: white;
+	overflow: auto;
+	background-image: none !important;
+}
+
+#header img {
+	float: left;
+}
+
+#navbar ul.menu li {
+	font-size: 1em;
+}
+
+#sidebarLanguageToggle {
+	position: static;
+}
+
+#sidebarFontSize {
+	position: static;
+}
+
+#sidebarHelp {
+	position: static;
+}
+
+#sidebarHelp a {
+	display: block;
+	padding: 0.5em 0 0.5em 0;
+	font-size: 1em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+#sidebarDevelopedBy {
+	display: block;
+}
+
+#sidebarDevelopedBy {
+	display: none;
+}
+
+#sidebarFontSize span.blockTitle, #sidebarLanguageToggle span.blockTitle {
+	display: block !important;
+}
+
+#sidebarNavigation input.textField {
+	background-color: white;
+	width: 142px;
+}
+
+#sidebarNavigation input.button, input.button[type=Submit] {
+	color: white;
+	background-color: black;
+}
+
+#sidebarNavigation select.selectMenu, select.selectMenu {
+	color: black;
+	background-color: #ddd;
+	border-color: black !important;
+}
+
+select.selectMenu, input.textField {
+	color: black;
+}
+
+/* END Site reset */ 
+
+body {
+	font-family: arial, helvetica, sans-serif;
+}
+
+a:link {
+	color: #000000;
+}
+
+a:active {
+	color: #000000;
+}
+
+a:visited {
+	color: #808080;
+}
+
+a:hover {
+	color: red;
+	background: #ffffff;
+}
+
+input.textField, select.selectMenu, textarea.textArea, input.uploadField {
+	background-color: #eeeeee;
+	color: black;
+}
+
+input.defaultButton {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+input[value=Cancel] {
+	background-color: red;
+}
+
+#header {
+	background-color: white;
+	margin: 0;
+	width: auto;
+}
+
+#headerTitle {
+	width: auto;
+}
+
+#header img {
+	float: left;
+}
+
+#header h1 {
+	margin: 0;
+}
+
+span.blockTitle {
+	color: black !important;
+	border-bottom: black 1px solid !important;
+	margin-bottom: 0.5em;
+	padding: 0.2em 0.5em !important;
+}
+#navbar {
+	font-size: 1.3em;
+	font-weight: bolder;
+	color: #DD0000;
+	border-bottom: 1px solid black;
+	padding-bottom: 0;
+}
+
+#navbar ul.menu li {
+	padding-right: 0.5em !important;
+	display: inline;
+}
+
+#navbar a {
+	color: #DD0000;
+}
+
+#main h2 {
+}
+
+td.tocGalleys {
+	padding-right: 10px;
+}
+
+#breadcrumb {
+	padding-left: 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid black;	
+}
+
+#content {
+	border-top: 0px dotted #000;
+}
+
+#main {
+	padding-top: 0;
+}
+
+#announcementsHome {
+	border: #777 solid 1px;
+	width: auto;
+	padding: 0 15px;
+	background-color: #ddd;
+}
+
+.announcementsMore {
+	text-align: right !important;
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+
+.endseparator {
+ line-height: 60%;
+}
+
+#main_footer {
+	width: 100%;
+	border-top: dotted 1px black;
+	float: left;
+	padding: 10px 0 0 0;
+	margin-top: 1.5em;
+	clear: both;
+	color: #777;
+}
+

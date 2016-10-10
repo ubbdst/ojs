@@ -1,0 +1,447 @@
+/**
+ * boap-standard.css
+ *
+ *
+ * BOAP standard theme.
+ *
+ * spt.css 20.01.09
+ */
+
+/* Site reset */
+
+body {
+	background-image: none !important;
+}
+
+a {
+	text-decoration: underline;
+}
+
+a:link {
+	color: #375 !important;
+}
+
+a:active {
+	color: #253 !important;
+}
+
+a:visited {
+	color: #375 !important;
+}
+
+a:hover {
+	color: #253 !important;
+	background: #CDC !important;
+}
+
+a.plain {
+	text-decoration: none;
+}
+
+#container {
+	background-color: white;
+	overflow: auto;
+}
+
+#header img {
+	float: left;
+}
+
+#navbar ul.menu li {
+	font-size: 1em;
+}
+
+#sidebarLanguageToggle {
+	position: static;
+}
+
+#sidebarFontSize {
+	position: static;
+}
+
+#sidebarHelp {
+	position: static;
+}
+
+#sidebarHelp a {
+	display: block;
+	padding: 0.5em 0 0.5em 0;
+	font-size: 1em;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+#sidebarDevelopedBy {
+	display: block;
+}
+
+#sidebarDevelopedBy {
+	display: none;
+}
+
+#sidebarFontSize span.blockTitle, #sidebarLanguageToggle span.blockTitle {
+	display: block !important;
+}
+
+#sidebarNavigation input.textField {
+	background-color: white;
+	width: 142px;
+}
+
+#sidebarNavigation input.button, input.button[type=Submit] {
+	color: white;
+	background-color: black;
+}
+
+#sidebarNavigation select.selectMenu, select.selectMenu {
+	color: black;
+	background-color: #ddd;
+	border-color: black !important;
+}
+
+select.selectMenu, input.textField {
+	color: black;
+}
+
+/* END Site reset */ 
+
+body {
+	font-family: helvetica, verdana, sans-serif;
+	background-color: gray;
+}
+
+input.textField, select.selectMenu, textarea.textArea, input.uploadField {
+	background-color: #eeeeee;
+	color: black;
+}
+
+input.defaultButton {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+input[value=Cancel] {
+	background-color: red;
+}
+
+#container {
+	margin: 1.5% auto;
+	text-align: left;
+	background-image: none;	
+	width:1000px !important;
+	min-width: 730px !important;
+	border: 1px #777 solid;
+}
+
+#header {
+	margin: 0 0 10px 0;
+	width: auto;
+	background-color: #ebeae5;
+	border-bottom: gray dashed 1px;
+	padding: 0;
+	height: 152px;
+}
+
+#headerTitle {
+	margin: 0;
+}
+
+#header img {
+	float: left;
+}
+
+#header h1 {
+	margin: 0;
+	padding: 3px 0 0 0.3em;
+}
+
+/*
+span.blockTitle {
+	color: black !important;
+	border-bottom: black 1px solid !important;
+	margin-bottom: 0.5em;
+	padding: 0.2em 0.5em !important;
+}
+
+#sidebarLanguageToggle {
+	position: absolute;
+	padding: 0 1% 0 0;
+	top: 1em;
+	right: 1em;
+	left: auto;
+	background-color: transparent !important;
+}
+
+#sidebarFontSize {
+	position: absolute;
+	top: 4em;
+	right: 1em;
+	left: auto;
+	padding: 0 1% 0 1%;
+	background-color: transparent !important;
+}
+
+#sidebarHelp {
+	position: absolute;
+	top: 6em;
+	right: 1.5em;	
+	left: auto;
+	padding-left: 1%;
+	background-color: transparent !important;
+}
+ 
+#sidebarFontSize span.blockTitle, #sidebarLanguageToggle span.blockTitle {
+	display: none !important;
+} 
+*/
+
+#pageFooter {
+	width: 860px;
+	background-color: white;
+	border-top: gray dashed 1px;
+	padding: 8px 10px 15px 15px;
+	margin: 15px 0 15px -15px; 
+	font-size: 95%;
+	clear: both;
+}
+
+#pageFooter * {border: none; text-decoration: none; }
+
+#footerContent {
+	/* width: 870px; */
+}
+
+#pageFooter img {
+	float: left;
+	margin-right: 15px;
+}
+
+#pageFooter p {
+	text-align: left;
+	font-family: helvetica, verdana, sans-serif;
+
+}
+
+#footerinfo {
+	float: left;
+}
+
+p {
+	font-family: georgia, times, serif;
+	margin-bottom: 10px;
+}
+
+.noril_presentasjon {
+	font-size: 1.3em;
+	line-height: 1.3;
+	font-family: helvetica, verdana, sans-serif;
+}
+
+#content h3 {
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0.75em;
+	font-family: helvetica, verdana, sans-serif;
+	font-weight: normal;
+	font-size: 1.8em;
+	line-height: 1.35em;
+}
+
+#content h4 {
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0.75em;
+	font-family: helvetica, verdana, sans-serif;
+	font-weight: normal;
+	font-size: 1.5em;
+}
+
+#content h5 {
+	margin: 0em 1em 0.25em 0em;
+	padding-top: 0.75em;
+	font-weight: bold;
+	font-size: 1em;
+}
+/**
+ * Navigation bar
+ */
+
+#navbar a {
+	font-size: 0.8em;
+	font-weight: bolder !important;
+	letter-spacing: 0.02em;
+	color: black !important;
+}
+
+#navbar a:link {
+}
+
+#navbar a:active {
+}
+
+#navbar a:visited {
+}
+
+#navbar a:hover {
+}
+
+
+/**
+ * Breadcrumbs
+ */
+
+#breadcrumb a {
+	text-decoration: none;
+}
+
+#breadcrumb a.current {
+	font-weight: bold;
+}
+
+
+.blockTitle {
+	border-bottom: 1px dashed gray !important;
+	display: block;
+	font-size: 1.1em;
+	font-weight: normal !important;
+	background-color: #ebeae5;
+	padding: 8px 3px 3px 5px !important;
+	margin-bottom: 5px;
+	color: black !important;
+}
+
+#navbar {
+	font-size: 1.2em;
+	font-weight: bolder;
+	color: #DD0000;
+	border-bottom: 1px dotted #000;
+	padding-bottom: 0.2em;
+}
+
+#navbar ul.menu li {
+	padding-right: 0.5em !important;
+	display: inline;
+}
+
+#navbar a {
+	color: #DD0000;
+}
+
+td.tocGalleys {
+	padding-right: 10px;
+}
+
+#breadcrumb {
+	padding-left: 10px;
+	padding-bottom: 7px;
+	border-bottom: 1px dotted black;	
+	font-size: 0.7em;
+}
+
+#content {
+	border-top: 0px dotted #000;
+}
+
+#announcementsHome {
+	border: #777 solid 1px;
+	width: auto;
+	padding: 0 15px;
+	background-color: #ddd;
+}
+
+.announcementsMore {
+	text-align: right !important;
+	font-size: 1.2em;
+	font-weight: bolder;
+}
+
+#main_footer {
+	width: 100%;
+	border-top: dotted 1px black;
+	float: left;
+	padding: 10px 0 0 0;
+	margin-top: 1.5em;
+	clear: both;
+	color: #777;
+}
+
+/*----- CALL FOR PAPER -----*/
+.knapp {
+	display: block;
+	width: 90%;
+	padding: 5px 2px 5px 5px;
+	background-color: #ebeae5;
+	font-family: verdana, sans-serif;
+	color: black;
+	float: left;
+	clear: both;
+}
+
+.knapp a, .knapp a:visited { color: white; text-decoration: none; text-transform: uppercase;}
+
+.call_for_paper {
+	width: 670px;
+	background-color: #ebeae5;
+	margin-top: 40px;
+	padding: 0 30px 0 15px !important;
+	background-image: url(http://noril.uib.no/ugla.gif);
+	background-position: 495px 50px;
+	background-repeat: no-repeat;
+	border: none !important;
+}
+.call_for_paper .ingress {margin-bottom: 20px;}
+.call_for_paper p {font-size: 1.2em; line-height: 1.4;}
+.call_for_paper p.ingress {
+	margin-top: 0px;
+	font-weight: bolder;
+	font-weight: bold;
+	font-size: 120%;
+}
+/* .call_for_paper h4 {width: 90%;} */
+.col.reg {float: left; width: 60% !important;}
+.col.les_mer {float: right; width: 35% !important; }
+
+.bidrag {
+	color: white;
+	text-align: center;
+	padding: 5px;
+	font-size: 1.4em;
+	background-color: #d95911 !important;
+	margin-bottom: 8px;
+}
+
+.row {
+	margin: 0 15px 10px 10px;
+	padding: 10px;
+	float: left;
+	color: #393939;
+	position: relative;
+}
+.border_top {
+	border-top: 2px black solid;
+	margin-top: 30px;
+}
+.col {
+}
+
+.first {
+	margin-top: 0;
+}
+
+.call h2, .call_for_paper h2 {
+	color: #AA0000;
+	font-size: 2.5em;
+	margin-top: 0;
+}
+
+.les_mer h4 {
+	border-bottom: 1px gray solid;
+	margin: -15px 0 -3px 0;
+	padding-top: 0;
+	font-size: 1.3em;
+}
+
+h4.margin_top {margin-top: 30px;}
+
+.bolder { font-weight: bolder; font-weight: bold;}
+.italic { font-style: italic;}
+
+input { margin: 6px 0 6px 0;}

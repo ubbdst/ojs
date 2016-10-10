@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../../locale/locale.dtd">
+
+<!--
+  * locale.xml
+  *
+  * Copyright (c) 2003-2008 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings for the no_NO (Norwegian) locale.
+  *
+  * $Id: locale.xml,v 1.2 2008/06/11 18:55:09 asmecher Exp $
+  -->
+
+<locale name="no_NO" full_name="Norwegian">
+        <message key="plugins.block.sidebarSubmission.displayName">Manuskriptinnsendelse blokk</message>
+        <message key="plugins.block.sidebarSubmission.description">Lenker for innsendelse av manuskript</message>
+</locale>

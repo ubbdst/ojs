@@ -4,6 +4,7 @@
 <!--
   * locale/no_NO/admin.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -77,4 +78,21 @@
 	<message key="admin.categories.confirmDelete">Er du sikker på at du ønsker å slette denne kategorien?</message>
 	<message key="admin.categories.name">Kategorinavn</message>
 	<message key="admin.categories.nameRequired">Kategorinavn må oppgis.</message>
+	<message key="admin.settings.journalsList.showThumbnail">Tidsskrift miniatyrbilde</message>
+	<message key="admin.settings.defaultMetricDescription">OJS installasjonen din er konfigurert til å registrere mer enn et statistisk mål på bruk. Denne informasjonen vises flere steder i systemet. 
+                I flere situasjoner kan imidlertid kun et mål brukes, f.eks. når en ordnet liste av mest brukte artikler skal genereres, eller når man skal rangere søkeresultater. Velg derfor et av de konfigurerte målene som standard.</message>
+	<message key="admin.copyAccessLogFileTool.error.creatingFolder">Feil: Kan ikke opprette midlertidig folder {$tmpDir}</message>
+	<message key="admin.copyAccessLogFileTool.error.acessingFile">Feil: Fil {$filePath} eksisterer ikke eller er utilgjengelige</message>
+	<message key="admin.copyAccessLogFileTool.error.copyingFile">Feil: Kan ikke kopiere fil fra {$filePath} til {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.error.deletingFile">Feil: Kan ikke slette fil {$tmpFilePath}</message>
+	<message key="admin.copyAccessLogFileTool.warning.fileAlreadyExists">Advarsel: filen {$filePath} finnes allerede i usage stats folderen.</message>
+	<message key="admin.copyAccessLogFileTool.success">Suksess: {$filePath} til {$destinationPath}</message>
+	<message key="admin.copyAccessLogFileTool.usage">Kopier de overførte apache tilgangsloggfil(ene), filtrer innførsler relatert til denne installasjonen til den nåværende filkatalogen inni UsageStatsPlugin stegfolder. 
+Må kjøres av bruker med lesetilgang til apache tilgangsloggfiler
+
+Dette verktøyet vil kun kopiere filer som ikke allerede finnes i UsageStats fillasterfoldere (steg, prosessering, arkiv, avvis).
+
+Bruk: {$scriptName} path/to/apache/log/file.lo
+Bruk (prosesserer alle filer i en folder): {$scriptName} path/to/apache/directory</message>
 </locale>
+

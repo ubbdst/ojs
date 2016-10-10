@@ -4,6 +4,7 @@
 <!--
   * plugins/importexport/native/locale/no_NO/locale.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -124,4 +125,11 @@ Følgende formater blir akseptert:
 	<message key="plugins.importexport.native.import.success.description">Importen var vellykket. Vellykket importerte elementer er listet opp nedenfor.</message>
 
 	<message key="plugins.importexport.native.import.error.articleAuthorAffiliationLocaleUnsupported">En forfattertilhørighet ble angitt for forfatteren  "{$authorFullName}" av artikkelen "{$articleTitle}" i nummeret "{$issueTitle}" på et språk ("{$locale}") som dette tidsskriftet ikke støtter.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicGalleyId">Offentlig ID oppgitt for importert trykkeversjon "{$publicId}" er allerede i bruk av en annen trykkeversjon for samme artikkel, "{$articleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicSuppFileId">Offentlig ID oppgitt for importert supplerende fil "{$suppFileTitle}" er allerede i bruk av en annen supplerende fil for samme artikkel, "{$otherSuppFileTitle}".</message>
+	<message key="plugins.importexport.native.import.error.duplicatePublicArticleId">Offentlig ID oppgitt for importert artikkel "{$articleTitle}" er allerede i bruk av en annen artikkel, "{$otherArticleTitle}".</message>
+	<message key="plugins.importexport.native.import.error.invalidPubId">Importfilen din inneholder et datasett med en ugyldig {$pubIdType}: '{$pubId}'.</message>
+	<message key="plugins.importexport.native.import.error.duplicatePubId">Importfilen din inneholder et datasett med {$pubIdType} '{$pubId}' som allerede eksisterer for et annet objekt i databasen. Vennligst påse at du aldri importerer objekter med ID'er som allerede finnes i databasen.</message>
+	<message key="plugins.importexport.native.import.error.unknownPubId">Importfilen din inneholder et datasett med en ID-type '{$pubIdType}' som ingen av ID-programutvidelsene kan håndtere. Vennligst installer og/eller aktiver den tilhørende ID-programutvidelsen før du forsøker å importere dette datasettet.</message>
 </locale>
+

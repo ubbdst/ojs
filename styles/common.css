@@ -1,19 +1,19 @@
 /**
- * styles/common.css
+ * common.css
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2003-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Site-wide shared stylesheet.
  *
+ * $Id$
  */
 
-/**
+/*
  * Notifications
  * FIXME: (Re)move once OJS styles are consolidated with new styles and themes
  */
 @import url("../lib/pkp/styles/themes/default/pnotify.css");
-@import url("../lib/pkp/styles/themes/default/notificationIcons.css");
 
 .ui-pnotify-title {
 	font-size: 0.8em;
@@ -52,6 +52,14 @@ a:hover {
 /**
  * Main layout elements
  */
+
+/* Lagt til av Tarje 18.03.14 */
+#container {
+	width: 1000px;
+}
+#inlinePdfResizer #inlinePdf {
+	height: 500px;
+}
 
 #header {
 	background-color: #ABA;
@@ -319,23 +327,11 @@ pre {
  * Table styles
  */
 
-.highlightReviewerNotNotified, .highlightCopyediting {
-	background: #EDEBC4;
-}
-.highlightNoDecision, .highlightLayoutEditing {
-	background: #D8E9BD;
-}
-.highlightRevisedCopyUploaded, .higlightProofreading {
-	background: #C6EBE4;
-}
-.highlightReviewerConfirmationOverdue {
-	background: #9DD1E6;
-}
-.highlightReviewerCompletionOverdue {
-	background: #74C5D8;
+table.listing tr.highlight {
+	background: yellow;
 }
 
-.fastTracked {
+table.listing tr.fastTracked {
 	background-color: #ABA;
 }
 
@@ -382,8 +378,10 @@ td.notificationFunction {
 }
 
 /* Font Sizer */
-#sizer a {
-	outline: none;
+
+.smallFont {
+	outline: none; /*for making it look nice in FF */
+	background: url(../lib/pkp/templates/images/icons/font-down.png);
 	text-indent: -9999px;
 	display: block;
 	float: left;
@@ -393,80 +391,109 @@ td.notificationFunction {
 	margin-left: 8px;
 }
 
-#journalListPageInfo {
-	float: right;
+a.smallFont:hover {
+	background: url(../lib/pkp/templates/images/icons/font-down.png);
+	color: none;
 }
 
-#journalListPageLinks {
+.defaultFont {
+	/*if you want to hide the default font button, use display:none */
+	background: url(../lib/pkp/templates/images/icons/font-default.png);
+	text-indent: -9999px;
+	outline: none;
+	display: block;
 	float: left;
+	width: 20px;
+	height: 23px;
+	margin-right: 4px;
+
 }
+
+a.defaultFont:hover {
+	background: url(../lib/pkp/templates/images/icons/font-default.png);
+	color: none;
+}
+
+.largeFont {
+	background: url(../lib/pkp/templates/images/icons/font-up.png);
+	outline: none;
+	text-indent: -9999px;
+	display: block;
+	float: left;
+	width: 20px;
+	height: 23px;
+}
+
+a.largeFont:hover {
+	background: url(../lib/pkp/templates/images/icons/font-up.png);
+	color: none;
+}
+
 
 
 /* @group Tag-it */
 
 ul.tagit {
-	padding: 1px 5px;
-	overflow: auto;
-    margin-left: inherit; /* usually we don't want the regular ul margins. */
-    margin-right: inherit;
+	padding:1px 5px;
+	border-style:solid;
+	border-width:1px;
+	border-color:#C6C6C6;
+	overflow:auto !important;
+	width:500px;
+	margin-bottom: 0px;
 }
-
-.hidden {
-	display: none;
-}
-
 ul.tagit li {
+	-moz-border-radius:5px 5px 5px 5px;
 	display: block;
-	float: left;
-	margin: 2px 5px 2px 0;
+	float: left !important;
+	margin:2px 5px 2px 0;
+	clear: none;
 }
-
 ul.tagit li.tagit-choice {
-	padding: .2em 18px .2em .5em;
-    position: relative;
-    line-height: inherit;
+	background-color:#DEE7F8;
+	border:1px solid #CAD8F3;
+	padding:2px 4px 3px;
+}
+ul.tagit li.tagit-choice:hover {
+	background-color:#bbcef1;
+	border-color:#6d95e0;
 }
 ul.tagit li.tagit-new {
-	padding: .25em 4px .25em 0;
+	padding:2px 4px 3px;
+	padding:2px 4px 1px;
+	padding:2px 4px 1px 0;
 }
 
-ul.tagit li.tagit-choice a.tagit-label {
-	cursor: pointer;
-	text-decoration: none;
-}
-ul.tagit li.tagit-choice .tagit-close {
-	cursor: pointer;
-    position: absolute;
-    right: .1em;
-    top: 50%;
-    margin-top: -8px;
-}
-
-/* used for some custom themes that don't need image icons */
-ul.tagit li.tagit-choice .tagit-close .text-icon {
-    display: none;
-}
-.ui-autocomplete .ui-menu-item a {
-	font-size: .6em;
-}
 ul.tagit li.tagit-choice input {
-	display: block;
-	float: left;
-	margin: 2px 5px 2px 0;
+	display:block !important;
+	float:left;
+	margin:2px 5px 2px 0;
+}
+ul.tagit li.tagit-choice a.close {
+	color:#777777;
+	cursor:pointer;
+	font-size:12px;
+	font-weight:bold;
+	outline:medium none;
+	padding:2px 0 2px 3px;
+	text-decoration:none;
 }
 ul.tagit input[type="text"] {
-    -moz-box-sizing:    border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing:         border-box;
-
-    border: none;
-	margin: 0;
-	padding: 0;
-	width: inherit;
-	background-color: inherit;
-    outline: none;
+	-moz-box-sizing:border-box;
+	border:none;
+	margin:0;
+	padding:0;
+	width:inherit;
+	border-color:#C6C6C6;
+	background-color:#FFFFFF;
+	color:#333333;
 }
 
+ul.tagit li:after, ul.tagit li div:after {
+	content:" ";
+	display:block;
+	clear:none;
+}
 
 /* @end */
 

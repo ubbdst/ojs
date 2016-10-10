@@ -4,6 +4,7 @@
 <!--
   * plugins/citationFormats/abnt/locale/no_NO/locale.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -18,4 +19,7 @@
 	<message key="plugins.citationFormats.abnt.retrieved"><![CDATA[Tilgjengelig: &lt;<a href="{$url}" target="_new">{$url}</a>&gt;. Nedlastet dato: {$retrievedDate}]]></message>
 	<message key="plugins.citationFormats.abnt.manager.settings">Innstillinger</message>
 	<message key="plugins.citationFormats.abnt.manager.settings.location">Sted</message>
+	<message key="plugins.citationFormats.abnt.manager.AbntCitationSettings">Instillinger for ABNT siteringsformat programutvidelse</message>
+	<message key="plugins.citationFormats.abnt.manager.settings.description">Innstillinger som brukes for å generere ABNT referanser.</message>
 </locale>
+

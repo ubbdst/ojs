@@ -1,11 +1,12 @@
 /**
- * styles/rightSidebar.css
+ * rightSidebar.css
  *
- * Copyright (c) 2003-2013 John Willinsky
+ * Copyright (c) 2003-2011 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * Site-wide shared elements for pages including a right-hand sidebar.
  *
+ * $Id$
  */
 
 /**
@@ -24,11 +25,11 @@
 
 #rightSidebar {
 	float: right;
-	width: 14%;
+	width: 18%;
 	padding: 1em 0em 1em 0em;
 	font-size: 0.65em;
 	height: 100%;
-	margin-right: 10%;
+	margin-right: 2%;
 	margin-left: 2%;
 }
 
@@ -36,8 +37,8 @@
 
 #main {
 	float: left;
-	width: 63%;
-	margin-left: 10%;
+	width: 73%;
+	margin-left: 2%;
 	display: inline;
 	overflow: hidden;
 }

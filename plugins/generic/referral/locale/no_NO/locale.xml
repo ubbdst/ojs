@@ -4,6 +4,7 @@
 <!--
   * plugins/generic/referral/locale/no_NO/locale.xml
   *
+  * Copyright (c) 2013 Simon Fraser University Library
   * Copyright (c) 2003-2013 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
@@ -30,4 +31,13 @@
 	<message key="plugins.generic.referral.confirmDelete">Er du sikker på at du ønsker å slette denne innkommende lenken?</message>
 	<message key="plugins.generic.referral.nameRequired">Du må oppgi et navn på den innkommende lenken.</message>
 	<message key="plugins.generic.referral.urlRequired">Du må oppgi en URL til den innkommende lenken.</message>
+	<message key="plugins.generic.referral.status.accepted">Publisert</message>
+	<message key="plugins.generic.referral.status.accept.confirm">Er du sikker på at du ønsker å publisere de valgte refback(s)?</message>
+	<message key="plugins.generic.referral.status.declined">Ignorert</message>
+	<message key="plugins.generic.referral.status.decline.confirm">Er du sikker på at du ønsker å ignorere de valgte refback(s)?</message>
+	<message key="plugins.generic.referral.settings">Innstillinger for programutvidelse for henvisninger</message>
+	<message key="plugins.generic.referral.settings.description">Programutvidelsen for henvisninger fanger opp URLer som lenker til artikler publisert i dette tidsskriftet. Forfatter kan velge å publisere disse om han eller hun ønsker dette. Dette skjemaet lar Redaksjonsleder kontrollere hvordan disse lenken fanges opp.</message>
+	<message key="plugins.generic.referral.excusions">Utelukkelser</message>
+	<message key="plugins.generic.referral.exclusions.description"><![CDATA[Legg til en liste med mønstre for regulære uttrykk, ett per linje, som skal utelukkes fra henvisningslogging. Disse kan brukes for å hindre at spørringer fra søketjenester lager rot i listen over henvisninger. For mer informasjon om regulære uttrykk se <a href="http://ca.php.net/manual/en/ref.pcre.php" target="_new">http://ca.php.net/manual/en/ref.pcre.php</a>.]]></message>
 </locale>
+
