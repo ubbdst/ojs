@@ -335,7 +335,7 @@
 	<message key="manager.setup.userRegistration">User Registration</message>
 	<message key="manager.setup.useTextTitle">Title text</message>
 	<message key="manager.statistics.defaultMetricDescription">
-		Your journal is configured to record more than one usage metric. Usage statistics will be displayed in severeral contexts.
+		Your journal is configured to record more than one usage metric. Usage statistics will be displayed in several contexts.
 		There are cases where a single usage statistic must be used, e.g. to display an orderd list of most-used articles or to rank
 		search results. Please select one of the configured metrics as a default.
 	</message>
@@ -595,4 +595,7 @@
 	<message key="plugins.importexport.common.register.error.mdsError">Registration was not successful! The DOI registration server returned an error: '{$param}'.</message>
 	<message key="plugins.importexport.common.register.success">Registration successful!</message>
 	<message key="plugins.importexport.common.senderTask.warning.noDOIprefix">DOI prefix is missing for the journal with the path {$path}.</message>
+	<message key="plugins.importexport.common.cliError">ERROR:</message>
+	<message key="plugins.importexport.common.error.unknownJournal">The specified journal path, "{$journalPath}", does not exist.</message>
+	<message key="plugins.importexport.common.error.unknownObjects">The specified objects could not be found.</message>
 </locale>

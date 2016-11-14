@@ -73,13 +73,6 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc PubObjectsExportPlugin::getIssueFilter()
-	 */
-	function getIssueFilter() {
-		return 'issue=>crossref-xml';
-	}
-
-	/**
 	 * @copydoc PubObjectsExportPlugin::getStatusNames()
 	 */
 	function getStatusNames() {
@@ -141,7 +134,7 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc PubObjectsExportPlugin::getPluginSettingsPrefix()
+	 * @copydoc ImportExportPlugin::getPluginSettingsPrefix()
 	 */
 	function getPluginSettingsPrefix() {
 		return 'crossref';
@@ -265,10 +258,13 @@ class CrossRefExportPlugin extends DOIPubIdExportPlugin {
 		$doi = urlencode($object->getStoredPubId('doi'));
 		$params = 'filter=doi:' . $doi ;
 
+		// Use a different endpoint for testing and
+		// production.
+		$endpoint = ($this->isTestMode($context) ? CROSSREF_API_URL_DEV : CROSSREF_API_URL);
 		curl_setopt(
 			$curlCh,
 			CURLOPT_URL,
-			CROSSREF_API_URL . (strpos(CROSSREF_API_URL,'?')===false?'?':'&') . $params
+			$endpoint . (strpos($endpoint,'?')===false?'?':'&') . $params
 		);
 		// try to fetch from the new API
 		$response = curl_exec($curlCh);

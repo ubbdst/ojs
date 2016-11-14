@@ -110,9 +110,11 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 			// Get the XML
 			$exportXml = $this->exportXML($objects, $filter, $context);
 			// Write the XML to a file.
-			// export file name example: crossref/20160723-160036-articles-1.xml
-			$exportFileName = $this->getExportFileName($objectsFileNamePart, $context);
-			file_put_contents($exportFileName, $exportXml);
+			// export file name example: crossref-20160723-160036-articles-1.xml
+			import('lib.pkp.classes.file.FileManager');
+			$fileManager = new FileManager();
+			$exportFileName = $this->getExportFileName($this->getExportPath(), $objectsFileNamePart, $context, '.xml');
+			$fileManager->writeFile($exportFileName, $exportXml);
 			// Deposit the XML file.
 			$result = $this->depositXML($objects, $context, $exportFileName);
 			// send notifications
@@ -136,7 +138,7 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 				}
 			}
 			// Remove all temporary files.
-			$this->cleanTmpfile($exportFileName);
+			$fileManager->deleteFile($exportFileName);
 			// redirect back to the right tab
 			$request->redirect(null, null, null, $path, null, $tab);
 		}
@@ -299,6 +301,54 @@ abstract class DOIPubIdExportPlugin extends PubObjectsExportPlugin {
 			null
 		);
 		return $galleys->toArray();
+	}
+
+	/**
+	 * Get published articles with a DOI asigned from submission IDs.
+	 * @param $submissionIds array
+	 * @param $context Context
+	 * @return array
+	 */
+	function getPublishedArticles($submissionIds, $context) {
+		$publishedArticles = array();
+		$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+		foreach ($submissionIds as $submissionId) {
+			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submissionId, $context->getId());
+			if ($publishedArticle && $publishedArticle->getStoredPubId('doi')) $publishedArticles[] = $publishedArticle;
+		}
+		return $publishedArticles;
+	}
+
+	/**
+	 * Get published issues with a DOI asigned  from issue IDs.
+	 * @param $issueIds array
+	 * @param $context Context
+	 * @return array
+	 */
+	function getPublishedIssues($issueIds, $context) {
+		$publishedIssues = array();
+		$issueDao = DAORegistry::getDAO('IssueDAO');
+		foreach ($issueIds as $issueId) {
+			$publishedIssue = $issueDao->getById($issueId, $context->getId());
+			if ($publishedIssue && $publishedIssue->getStoredPubId('doi')) $publishedIssues[] = $publishedIssue;
+		}
+		return $publishedIssues;
+	}
+
+	/**
+	 * Get article galleys with a DOI assigned from gallley IDs.
+	 * @param $galleyIds array
+	 * @param $context Context
+	 * @return array
+	 */
+	function getArticleGalleys($galleyIds, $context) {
+		$galleys = array();
+		$articleGalleyDao = DAORegistry::getDAO('ArticleGalleyDAO');
+		foreach ($galleyIds as $galleyId) {
+			$articleGalley = $articleGalleyDao->getById($galleyId, null, $context->getId());
+			if ($articleGalley && $articleGalley->getStoredPubId('doi')) $galleys[] = $articleGalley;
+		}
+		return $galleys;
 	}
 
 	/**
