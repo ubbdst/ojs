@@ -23,8 +23,8 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 	 * @param $stageId integer
 	 * @param $formParams array
 	 */
-	function SubmissionMetadataViewForm($submissionId, $stageId = null, $formParams = null, $templateName = 'controllers/modals/submissionMetadata/form/submissionMetadataViewForm.tpl') {
-		parent::PKPSubmissionMetadataViewForm($submissionId, $stageId, $formParams, $templateName);
+	function __construct($submissionId, $stageId = null, $formParams = null, $templateName = 'controllers/modals/submissionMetadata/form/submissionMetadataViewForm.tpl') {
+		parent::__construct($submissionId, $stageId, $formParams, $templateName);
 	}
 
 	/**
@@ -39,8 +39,8 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 
 		// Get section for this journal
 		$sectionDao = DAORegistry::getDAO('SectionDAO');
-		$seriesOptions = $sectionDao->getSectionTitles($submission->getContextId());
-		$templateMgr->assign('sectionOptions', $seriesOptions);
+		$sectionOptions = $sectionDao->getTitles($submission->getContextId());
+		$templateMgr->assign('sectionOptions', $sectionOptions);
 		$templateMgr->assign('sectionId', $submission->getSectionId());
 
 		// Cover image delete link action
@@ -106,7 +106,13 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$submission = $this->getSubmission();
 		$submissionDao = Application::getSubmissionDAO();
 
-		$submission->setSectionId($this->getData('sectionId'));
+		// if section changed consider reordering
+		$reorder = false;
+		$oldSectionId = $submission->getSectionId();
+		if ($oldSectionId != $this->getData('sectionId')) {
+			$reorder = true;
+			$submission->setSectionId($this->getData('sectionId'));
+		}
 
 		$locale = AppLocale::getLocale();
 		// Copy an uploaded cover file for the article, if there is one.
@@ -126,6 +132,20 @@ class SubmissionMetadataViewForm extends PKPSubmissionMetadataViewForm {
 		$submission->setCoverImageAltText($this->getData('coverImageAltText'), $locale);
 
 		$submissionDao->updateObject($submission);
+
+		if ($reorder) {
+			// see if it is a published article
+			$publishedArticleDao = DAORegistry::getDAO('PublishedArticleDAO');
+			$publishedArticle = $publishedArticleDao->getPublishedArticleByArticleId($submission->getId(), null, false); /* @var $publishedArticle PublishedArticle */
+			if ($publishedArticle) {
+				// Resequence the articles.
+				$publishedArticle->setSequence(REALLY_BIG_NUMBER);
+				$publishedArticleDao->updatePublishedArticle($publishedArticle);
+				$publishedArticleDao->resequencePublishedArticles($submission->getSectionId(), $publishedArticle->getIssueId());
+				// The reordering for the old section is not necessary, but for the correctness sake
+				$publishedArticleDao->resequencePublishedArticles($oldSectionId, $publishedArticle->getIssueId());
+			}
+		}
 
 		if ($submission->getDatePublished()) {
 			import('classes.search.ArticleSearchIndex');
