@@ -1576,7 +1576,7 @@ class Upgrade extends Installer {
 				// Update cover image names in the issue_settings table
 				$issueDao->update(
 					'UPDATE issue_settings iss, issues i, journals j
-					SET iss.locale = j.primary_locale, iss.setting_value = CONCAT(LEFT( iss.setting_value, POSITION(\'.\' in iss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING(iss.setting_value, \'\\.\\k+$\'))
+					SET iss.locale = j.primary_locale, iss.setting_value = CONCAT(LEFT( iss.setting_value, LOCATE(\'.\', iss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(iss.setting_value,\'.\',-1))
 					WHERE iss.setting_name = \'coverImage\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
 				);
 				// Update cover image alt texts in the issue_settings table
@@ -1588,7 +1588,7 @@ class Upgrade extends Installer {
 				// Update cover image names in the issue_settings table
 				$issueDao->update(
 					'UPDATE issue_settings
-					SET locale = j.primary_locale, setting_value = CONCAT(LEFT( iss.setting_value, POSITION(\'.\' in iss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING(iss.setting_value, \'\\.\\k+$\'))
+					SET locale = j.primary_locale, setting_value = CONCAT(LEFT( iss.setting_value, LOCATE(\'.\', iss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(iss.setting_value,\'.\',-1))
 					FROM issue_settings iss, issues i, journals j
 					WHERE iss.setting_name = \'coverImage\' AND iss.locale = \'\' AND i.issue_id = iss.issue_id AND j.journal_id = i.journal_id'
 				);
@@ -1641,7 +1641,7 @@ class Upgrade extends Installer {
 				// Update cover image names in the submission_settings table
 				$articleDao->update(
 					'UPDATE submission_settings ss, submissions s, journals j
-					SET ss.locale = j.primary_locale, ss.setting_value = CONCAT(LEFT( ss.setting_value, POSITION(\'.\' in ss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING(ss.setting_value, \'\\.\\k+$\'))
+					SET ss.locale = j.primary_locale, ss.setting_value = CONCAT(LEFT( ss.setting_value, LOCATE(\'.\', ss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(ss.setting_value,\'.\',-1))
 					WHERE ss.setting_name = \'coverImage\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
 				);
 				// Update cover image alt texts in the submission_settings table
@@ -1655,7 +1655,7 @@ class Upgrade extends Installer {
 				// Update cover image names in the submission_settings table
 				$articleDao->update(
 					'UPDATE submission_settings
-					SET locale = j.primary_locale, setting_value = CONCAT(LEFT( ss.setting_value, POSITION(\'.\' in ss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING(ss.setting_value, \'\\.\\k+$\'))
+					SET locale = j.primary_locale, setting_value = CONCAT(LEFT( ss.setting_value, LOCATE(\'.\', ss.setting_value) - 1 ), \'_\', j.primary_locale, \'.\', SUBSTRING_INDEX(ss.setting_value,\'.\',-1))
 					FROM submission_settings ss, submissions s, journals j
 					WHERE ss.setting_name = \'coverImage\' AND ss.locale = \'\' AND s.submission_id = ss.submission_id AND j.journal_id = s.context_id'
 				);
