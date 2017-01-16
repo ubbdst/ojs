@@ -100,7 +100,7 @@
 
 			<div class="container-fluid">
 
-				<div class="navbar-header" style="position: absolute; top: -20px">
+				<div class="navbar-header">
 
 					{* Mobile hamburger menu *}
 					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false" aria-controls="navbar">
@@ -109,7 +109,8 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-
+				</div>
+				<div class="navbar-header" style="position: absolute; top: -20px">
 					{* Logo or site title. Only use <h1> heading on the homepage.
 					   Otherwise that should go to the page title. *}
 					{if $requestedOp == 'index'}
@@ -146,7 +147,7 @@
 				</div>
 
 				{* Primary site navigation *}
-				<nav id="nav-menu" class="navbar-collapse collapse" aria-label="{translate|escape key="common.navigation.site"}" style="padding-left: 260px">
+				<nav id="nav-menu" class="navbar-collapse collapse" aria-label="{translate|escape key="common.navigation.site"}" style="padding-left: 210px">
 					{* Primary navigation menu for current application *}
 					{include file="frontend/components/primaryNavMenu.tpl"}
 
