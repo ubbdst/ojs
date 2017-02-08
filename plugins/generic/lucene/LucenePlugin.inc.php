@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/lucene/LucenePlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class LucenePlugin
@@ -213,23 +213,22 @@ class LucenePlugin extends GenericPlugin {
 	}
 
 	/**
-	 * @see Plugin::getTemplatePath()
+	 * @copydoc PKPPlugin::getTemplatePath
 	 */
-	function getTemplatePath() {
-		return parent::getTemplatePath() . 'templates/';
+	function getTemplatePath($inCore = false) {
+		return parent::getTemplatePath($inCore) . 'templates/';
 	}
 
 	//
 	// Implement template methods from GenericPlugin.
 	//
  	/**
-	 * @see Plugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request = $this->getRequest();
+	function manage($args, $request) {
+		if (!parent::manage($args, $request)) return false;
 
-		switch ($verb) {
+		switch (array_shift($args)) {
 			case 'settings':
 				// Prepare the template manager.
 				$templateMgr = TemplateManager::getManager($request);

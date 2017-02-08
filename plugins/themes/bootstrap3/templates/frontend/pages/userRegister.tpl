@@ -1,8 +1,8 @@
 {**
 * templates/frontend/pages/userRegister.tpl
 *
-* Copyright (c) 2014-2016 Simon Fraser University Library
-* Copyright (c) 2003-2016 John Willinsky
+* Copyright (c) 2014-2017 Simon Fraser University Library
+* Copyright (c) 2003-2017 John Willinsky
 * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
 *
 * User registration form.
@@ -78,7 +78,7 @@
 		{if $reCaptchaHtml}
 			<fieldset class="recaptcha_wrapper">
 				<div class="fields">
-					<div class="recaptcha">
+					<div class="form-group recaptcha">
 						{$reCaptchaHtml}
 					</div>
 				</div>

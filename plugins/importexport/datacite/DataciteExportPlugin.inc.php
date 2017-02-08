@@ -3,8 +3,8 @@
 /**
  * @file plugins/importexport/datacite/DataciteExportPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class DataciteExportPlugin
@@ -200,7 +200,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 	}
 
 	/**
-	 * @copydoc DOIPubIdExportPlugin::depositXML()
+	 * @copydoc PubObjectsExportPlugin::depositXML()
 	 */
 	function depositXML($object, $context, $filename) {
 		$request = $this->getRequest();
@@ -379,7 +379,7 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 	 * @param $sourceFiles array
 	 */
 	function _tarFiles($targetPath, $targetFile, $sourceFiles) {
-		assert($this->_checkForTar());
+		assert((boolean) $this->_checkForTar());
 		// GZip compressed result file.
 		$tarCommand = Config::getVar('cli', 'tar') . ' -czf ' . escapeshellarg($targetFile);
 		// Do not reveal our internal export path by exporting only relative filenames.
@@ -420,13 +420,13 @@ class DataciteExportPlugin extends DOIPubIdExportPlugin {
 		$url = null;
 		switch (true) {
 			case is_a($object, 'Issue'):
-				$url = $router->url($request, $context->getPath(), 'issue', 'view', $object->getBestIssueId());
+				$url = $router->url($request, $context->getPath(), 'issue', 'view', $object->getBestIssueId(), null, null, true);
 				break;
 			case is_a($object, 'PublishedArticle'):
-				$url = $router->url($request, $context->getPath(), 'article', 'view', $object->getBestArticleId());
+				$url = $router->url($request, $context->getPath(), 'article', 'view', $object->getBestArticleId(), null, null, true);
 				break;
 			case is_a($object, 'ArticleGalley'):
-				$url = $router->url($request, $context->getPath(), 'article', 'view', array($article->getBestArticleId(), $object->getBestGalleyId()));
+				$url = $router->url($request, $context->getPath(), 'article', 'view', array($article->getBestArticleId(), $object->getBestGalleyId()), null, null, true);
 				break;
 		}
 		if ($this->isTestMode($context)) {

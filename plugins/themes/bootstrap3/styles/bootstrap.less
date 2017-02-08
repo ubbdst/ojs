@@ -1,8 +1,8 @@
 /**
  * @file plugins/themes/bootstrap3/index.less
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University Library
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @brief Bootstrap 3 theme stylesheet. This is the base styles that must be
@@ -51,6 +51,14 @@
 .pkp_page_index .additional_content {
     margin-top: 2em;
     margin-bottom: 2em;
+}
+
+// Cap the height of an issue thumbnail image
+.issue-toc {
+
+    img {
+        max-height: 25em;
+    }
 }
 
 .article-details {
@@ -162,8 +170,8 @@ footer[role="contentinfo"] {
     margin-top: 4em;
 }
 
-// Style the PDF view
-.header_view_pdf {
+// Style the PDF and HTML view
+.header_view {
 	z-index: 2;
 	background: @navbar-default-bg;
     &:extend(.navbar all);

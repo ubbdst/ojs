@@ -4,8 +4,8 @@
 <!--
   * locale/pt_PT/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the pt_PT (Português (Portugal)) locale.
@@ -118,7 +118,5 @@
 	<message key="author.submissions.queuedEditingProofread">Em Edição: Leitura de provas solicitada</message>
 	<message key="author.submit.reorder">Reordenar nome do autor</message>
 	<message key="author.submit.form.wordCountAlert">O limite de palavras de resumo para esta secção foi excedido.</message>
-	<message key="author.submit.submissionLocale">Idioma de Submissão</message>
-	<message key="author.submit.submissionLocaleDescription">A revista aceita submissões em vários idiomas. Escolha o principal idioma de submissão a partir do botão em baixo.</message>
 	<message key="author.submit.form.localeRequired">Seleccione o idioma de submissão</message>
 </locale>

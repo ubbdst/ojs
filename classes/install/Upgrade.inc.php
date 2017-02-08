@@ -3,8 +3,8 @@
 /**
  * @file classes/install/Upgrade.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class Upgrade
@@ -58,6 +58,17 @@ class Upgrade extends Installer {
 		$cacheManager = CacheManager::getManager();
 		$cacheManager->flush(null, CACHE_TYPE_FILE);
 		$cacheManager->flush(null, CACHE_TYPE_OBJECT);
+		return true;
+	}
+
+	/**
+	 * Clear the CSS cache files (needed when changing LESS files)
+	 * @return boolean
+	 */
+	function clearCssCache() {
+		$request = Application::getRequest();
+		$templateMgr = TemplateManager::getManager($request);
+		$templateMgr->clearCssCache();
 		return true;
 	}
 
@@ -192,10 +203,12 @@ class Upgrade extends Installer {
 		// First, do Admins.
 		// create the admin user group.
 		$userGroupDao->update('INSERT INTO user_groups (context_id, role_id, is_default) VALUES (?, ?, ?)', array(CONTEXT_SITE, ROLE_ID_SITE_ADMIN, 1));
+		$userGroupId = $userGroupDao->getInsertId();
+
 		$userResult = $userGroupDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array(CONTEXT_SITE, ROLE_ID_SITE_ADMIN));
 		while (!$userResult->EOF) {
 			$row = $userResult->GetRowAssoc(false);
-			$userGroupDao->update('INSERT INTO user_user_groups (user_group_id, user_id) VALUES (?, ?)', array($userGroupDao->getInsertId(), (int) $row['user_id']));
+			$userGroupDao->update('INSERT INTO user_user_groups (user_group_id, user_id) VALUES (?, ?)', array($userGroupId, (int) $row['user_id']));
 			$userResult->MoveNext();
 		}
 
@@ -272,17 +285,6 @@ class Upgrade extends Installer {
 
 			// fix stage id assignments for reviews.  OJS hard coded *all* of these to '1' initially. Consider OJS reviews as external reviews.
 			$userGroupDao->update('UPDATE review_assignments SET stage_id = ?', array(WORKFLOW_STAGE_ID_EXTERNAL_REVIEW));
-
-			// Guest editors.
-			$userGroupIds = $userGroupDao->getUserGroupIdsByRoleId(ROLE_ID_GUEST_EDITOR, $journal->getId());
-			$userResult = $journalDao->retrieve('SELECT user_id FROM roles WHERE journal_id = ? AND role_id = ?', array((int) $journal->getId(), ROLE_ID_GUEST_EDITOR));
-
-			while (!$userResult->EOF) {
-				$row = $userResult->GetRowAssoc(false);
-				// there should only be one guest editor group id.
-				$userGroupDao->assignUserToGroup($row['user_id'], $userGroupIds[0]);
-				$userResult->MoveNext();
-			}
 
 			// regular Editors.  NOTE:  this involves a role id change from 0x100 to 0x10 (old OJS _EDITOR to PKP-lib _MANAGER).
 			$userGroups = $userGroupDao->getByRoleId($journal->getId(), ROLE_ID_MANAGER);
@@ -366,15 +368,6 @@ class Upgrade extends Installer {
 
 				// Authors get access to all stages.
 				$stageAssignmentDao->build($submissionId, $authorGroup->getId(), $submissionUserId);
-
-				// Reviewers get access to the external review stage.
-				$reviewersResult = $stageAssignmentDao->retrieve('SELECT reviewer_id FROM review_assignments WHERE submission_id = ?', array($submissionId));
-				while (!$reviewersResult->EOF) {
-					$reviewerRow = $reviewersResult->GetRowAssoc(false);
-					$stageAssignmentDao->build($submissionId, $reviewerUserGroup->getId(), $reviewerRow['reviewer_id']);
-					$reviewersResult->MoveNext();
-				}
-				unset($reviewersResult);
 
 				// Journal Editors
 				// First, full editors.
@@ -708,7 +701,7 @@ class Upgrade extends Installer {
 				$newOptions[$key] = $option['content'];
 			}
 			$row['setting_value'] = serialize($newOptions);
-			$reviewFormDao->Replace('review_form_element_settings', $row, array('review_form_id', 'locale', 'setting_name'));
+			$reviewFormDao->Replace('review_form_element_settings', $row, array('review_form_element_id', 'locale', 'setting_name'));
 			$result->MoveNext();
 		}
 		$result->Close();
@@ -868,6 +861,17 @@ class Upgrade extends Installer {
 		$site = $siteDao->getSite();
 		$adminEmail = $site->getLocalizedContactEmail();
 
+		// get file names form OJS 2.4.x table article_files i.e.
+		// from the temporary table article_files_migration
+		$ojs2FileNames = array();
+		$result = $submissionFileDao->retrieve('SELECT file_id, revision, file_name FROM article_files_migration');
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$ojs2FileNames[$row['file_id']][$row['revision']] = $row['file_name'];
+			$result->MoveNext();
+		}
+		$result->Close();
+
 		import('lib.pkp.classes.file.SubmissionFileManager');
 
 		$contexts = $journalDao->getAll();
@@ -879,16 +883,14 @@ class Upgrade extends Installer {
 				foreach ($submissionFiles as $submissionFile) {
 					$generatedFilename = $submissionFile->getServerFileName();
 					$basePath = $submissionFileManager->getBasePath() . '/';
-					$globPattern = $submissionFile->getSubmissionId() . '-' .
-						$submissionFile->getFileId() . '-' .
-						$submissionFile->getRevision() . '-' .
-						'??' .
-						'.' . strtolower_codesafe($submissionFile->getExtension());
+					$globPattern = $ojs2FileNames[$submissionFile->getFileId()][$submissionFile->getRevision()];
 
-					$matchedResults = array_merge(
-						glob($basePath . '*/*/' . $globPattern),
-						glob($basePath . '*/' . $globPattern)
-					);
+					$pattern1 = glob($basePath . '*/*/' . $globPattern);
+					$pattern2 = glob($basePath . '*/' . $globPattern);
+					if (!is_array($pattern1)) $pattern1 = array();
+					if (!is_array($pattern2)) $pattern2 = array();
+					$matchedResults = array_merge($pattern1, $pattern2);
+
 					if (count($matchedResults)>1) {
 						// Too many filenames matched. Continue with the first; this is just a warning.
 						error_log("WARNING: Duplicate potential files for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\". Taking the first.");
@@ -1255,11 +1257,11 @@ class Upgrade extends Installer {
 					$genre = $genreDao->getByKey('OTHER', $journal->getId());
 					break;
 			}
-			assert($genre);
+			assert(isset($genre));
 
 			// Set genres for files
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
-			foreach ($submissionFiles as $submissionFile) {
+			foreach ((array) $submissionFiles as $submissionFile) {
 				$submissionFile->setGenreId($genre->getId());
 				$submissionFile->setUploaderUserId($creatorUserId);
 				$submissionFile->setUserGroupId($managerUserGroup->getId());
@@ -1269,9 +1271,9 @@ class Upgrade extends Installer {
 
 			// Reload the files now that they're cast; set metadata
 			$submissionFiles = $submissionFileDao->getAllRevisions($row['file_id']);
-			foreach ($submissionFiles as $submissionFile) {
+			foreach ((array) $submissionFiles as $submissionFile) {
 				$suppFileSettingsResult = $submissionFileDao->retrieve('SELECT * FROM article_supp_file_settings WHERE supp_id = ? AND setting_value IS NOT NULL', array($row['supp_id']));
-				$extraSettings = array();
+				$extraSettings = $extraGalleySettings = array();
 				while (!$suppFileSettingsResult->EOF) {
 					$sfRow = $suppFileSettingsResult->getRowAssoc(false);
 					$suppFileSettingsResult->MoveNext();
@@ -1299,9 +1301,13 @@ class Upgrade extends Installer {
 							break;
 						case 'typeOther': break; // Discard (at least for now)
 						case 'excludeDoi': break; // Discard (no longer relevant)
+						case 'excludeURN': break; // Discard (no longer relevant)
 						case 'pub-id::doi':
+						case 'pub-id::other::urn':
 						case 'pub-id::publisher-id':
-							$extraSettings[$sfRow['setting_name']] = $sfRow['setting_value'];
+						case 'urnSuffix':
+						case 'doiSuffix':
+							$extraGalleySettings[$sfRow['setting_name']] = $sfRow['setting_value'];
 							break;
 						default:
 							error_log('Unknown supplementary file setting "' . $sfRow['setting_name'] . '"!');
@@ -1335,6 +1341,19 @@ class Upgrade extends Installer {
 					$articleGalley->setLabel($submissionFile->getName($article->getLocale()));
 					$articleGalley->setLocale($article->getLocale());
 					$articleGalleyDao->insertObject($articleGalley);
+
+					// Preserve extra settings. (Plugins may not be loaded, so other mechanisms might not work.)
+					foreach ($extraGalleySettings as $name => $value) {
+						$submissionFileDao->update(
+							'INSERT INTO submission_galley_settings (galley_id, setting_name, setting_value, setting_type) VALUES (?, ?, ?, ?)',
+							array(
+								$articleGalley->getId(),
+								$name,
+								$value,
+								'string'
+							)
+						);
+					}
 				}
 			}
 		}
@@ -1415,7 +1434,7 @@ class Upgrade extends Installer {
 					}
 					break;
 			}
-			assert($query); // We've created or looked up a query.
+			assert(isset($query)); // We've created or looked up a query.
 
 			$assignedUserIds = array($userId);
 			foreach (array(ROLE_ID_MANAGER, ROLE_ID_SUB_EDITOR, ROLE_ID_ASSISTANT) as $roleId) {
@@ -1540,6 +1559,73 @@ class Upgrade extends Installer {
 		$noteDao->update('DELETE FROM submission_comments WHERE comment_type=2'); // COMMENT_TYPE_EDITOR_DECISION
 		return true;
 	}
+
+	/**
+	 * Convert comments to editors to queries.
+	 * @return boolean True indicates success.
+	 */
+	function convertCommentsToEditor() {
+		$submissionDao = Application::getSubmissionDAO();
+		$stageAssignmetDao = DAORegistry::getDAO('StageAssignmentDAO');
+		$queryDao = DAORegistry::getDAO('QueryDAO');
+		$noteDao = DAORegistry::getDAO('NoteDAO');
+		$userGroupDao = DAORegistry::getDAO('UserGroupDAO');
+
+		import('lib.pkp.classes.security.Role'); // ROLE_ID_...
+
+		$commentsResult = $submissionDao->retrieve(
+			'SELECT s.submission_id, s.context_id, s.comments_to_ed, s.date_submitted
+			FROM submissions_tmp s
+			WHERE s.comments_to_ed IS NOT NULL AND s.comments_to_ed != \'\''
+		);
+		while (!$commentsResult->EOF) {
+			$row = $commentsResult->getRowAssoc(false);
+			$comments_to_ed = PKPString::stripUnsafeHtml($row['comments_to_ed']);
+			if ($comments_to_ed != ""){
+				$userId = null;
+				$authorAssignmentsResult = $stageAssignmetDao->getBySubmissionAndRoleId($row['submission_id'], ROLE_ID_AUTHOR);
+				if ($authorAssignmentsResult->getCount() != 0) {
+					// We assume the results are ordered by stage_assignment_id i.e. first author assignemnt is first
+					$userId = $authorAssignmentsResult->next()->getUserId();
+				} else {
+					$managerUserGroup = $userGroupDao->getDefaultByRoleId($row['context_id'], ROLE_ID_MANAGER);
+					$managerUsers = $userGroupDao->getUsersById($managerUserGroup->getId(), $row['context_id']);
+					$userId = $managerUsers->next()->getId();
+				}
+				assert($userId);
+
+				$query = $queryDao->newDataObject();
+				$query->setAssocType(ASSOC_TYPE_SUBMISSION);
+				$query->setAssocId($row['submission_id']);
+				$query->setStageId(WORKFLOW_STAGE_ID_SUBMISSION);
+				$query->setSequence(REALLY_BIG_NUMBER);
+
+				$queryDao->insertObject($query);
+				$queryDao->resequence(ASSOC_TYPE_SUBMISSION, $row['submission_id']);
+				$queryDao->insertParticipant($query->getId(), $userId);
+
+				$queryId = $query->getId();
+
+				$note = $noteDao->newDataObject();
+				$note->setUserId($userId);
+				$note->setAssocType(ASSOC_TYPE_QUERY);
+				$note->setTitle('Comments for the Editor');
+				$note->setContents($comments_to_ed);
+				$note->setDateCreated(strtotime($row['date_submitted']));
+				$note->setDateModified(strtotime($row['date_submitted']));
+				$note->setAssocId($queryId);
+				$noteDao->insertObject($note);
+			}
+			$commentsResult->MoveNext();
+		}
+		$commentsResult->Close();
+
+		// remove temporary table
+		$submissionDao->update('DROP TABLE submissions_tmp');
+
+		return true;
+	}
+
 
 	/**
 	 * Localize issue cover images.

@@ -4,8 +4,8 @@
 <!--
   * locale/uk_UA/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the uk_UA (Українська) locale.
@@ -53,8 +53,6 @@
        <message key="author.submit.journalSection">Розділ журналу</message>
        <message key="author.submit.journalSectionDescription"><![CDATA[Оберіть відповідний розділ для цього подання (див. Розділи та Політика на сторінці <a href="{$aboutUrl}" target="_new">Про журнал</a>).]]></message>
        <message key="submission.submit.selectSection">Будь ласка, оберіть розділ...</message>
-       <message key="author.submit.submissionLocale">Мова подання</message>
-       <message key="author.submit.submissionLocaleDescription">Цей журнал приймає подання кількома мовами. Оберіть основну мову подання з запропонованих нижче.</message>
        <message key="author.submit.submissionChecklist">Вимоги до подання</message>
              <message key="author.submit.verifyChecklist">Перед тим, як продовжити, Ви повинні підтвердити всі пункти вимог.</message>
        <message key="author.submit.copyrightNoticeAgree">Автори погоджуються з Положенням про авторські права, норми якого будуть застосовані до цього подання, коли і якщо воно буде опубліковане у цьому журналі (нижче можна додати коментарі для редактора).</message>

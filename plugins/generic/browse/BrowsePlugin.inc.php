@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/browse/BrowsePlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class BrowsePlugin
@@ -54,10 +54,10 @@ class BrowsePlugin extends GenericPlugin {
 	}
 
 	/**
-	 * Get the template path for this plugin.
+	 * @copydoc Plugin::getTemplatePath()
 	 */
-	function getTemplatePath() {
-		return parent::getTemplatePath() . 'templates/';
+	function getTemplatePath($inCore = false) {
+		return parent::getTemplatePath($inCore) . 'templates/';
 	}
 
 	/**
@@ -115,11 +115,10 @@ class BrowsePlugin extends GenericPlugin {
  	/**
 	 * @see Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
-		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request =& $this->getRequest();
+	function manage($args, $request) {
+		if (!parent::manage($args, $request)) return false;
 
-		switch ($verb) {
+		switch (array_shift($args)) {
 			case 'settings':
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));

@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/phpMyVisites/PhpMyVisitesPlugin.inc.php
  *
- * Copyright (c) 2014-2016 Simon Fraser University Library
- * Copyright (c) 2003-2016 John Willinsky
+ * Copyright (c) 2014-2017 Simon Fraser University
+ * Copyright (c) 2003-2017 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class PhpMyVisitesPlugin
@@ -103,12 +103,11 @@ class PhpMyVisitesPlugin extends GenericPlugin {
 	}
 
  	/**
-	 * @see Plugin::manage()
+	 * @copydoc Plugin::manage()
 	 */
-	function manage($verb, $args, &$message, &$messageParams, &$pluginModalContent = null) {
+	function manage($args, $request) {
 		if (!parent::manage($verb, $args, $message, $messageParams)) return false;
-		$request = $this->getRequest();
-		switch ($verb) {
+		switch (array_shift($args)) {
 			case 'settings':
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));

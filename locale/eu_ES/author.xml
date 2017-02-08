@@ -4,8 +4,8 @@
 <!--
   * locale/eu_ES/author.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Localization strings for the eu_ES (Euskara) locale.
@@ -114,8 +114,6 @@
 	<message key="author.submissions.queuedReviewRevisions">Ebaluatzen: ebaluazioak behar dira</message>
 	<message key="author.submissions.queuedEditingCopyedit">Editatzen: Zuzenketak egiteko eskatu da.</message>
 	<message key="author.submissions.queuedEditingProofread">Editatzen: proba-zuzenketa eskatu da.</message>
-	<message key="author.submit.submissionLocale">Aurkezpenaren hizkuntza</message>
-	<message key="author.submit.submissionLocaleDescription">Aldizkari honek hainbat hizkuntzatako aurkezpenak onartzen ditu. Aukeratu aurkezpenaren hizkuntza nagusia beheko goitibeherakotik.</message>
 	<message key="author.submit.form.localeRequired">Mesedez, aukeratu aurkezpenaren hizkuntza.</message>
 	<message key="author.submit.reorder">Berriz eskatu egilearen izena</message>
 	<message key="author.submit.form.wordCountAlert">Laburpenetarako gehienezko hitz kopurua gainditu duzu atal honetan.</message>
