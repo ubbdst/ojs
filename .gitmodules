@@ -1,7 +1,6 @@
 [submodule "lib/pkp"]
 	path = lib/pkp
 	url = https://github.com/ubbdst/pkp-lib.git
-	branch = ojs-stable-3_0_1
 [submodule "plugins/generic/customBlockManager"]
 	path = plugins/generic/customBlockManager
 	url = https://github.com/pkp/customBlockManager.git
@@ -36,3 +35,6 @@
 [submodule "plugins/reports/reviewReport"]
 	path = plugins/reports/reviewReport
 	url = https://github.com/pkp/reviewReport
+[submodule "plugins/themes/bootstrap3"]
+	path = plugins/themes/bootstrap3
+	url = https://github.com/ubbdst/bootstrap3.git
