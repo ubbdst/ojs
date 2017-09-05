@@ -16,6 +16,7 @@
 [submodule "plugins/generic/pdfJsViewer"]
 	path = plugins/generic/pdfJsViewer
 	url = https://github.com/pkp/pdfJsViewer.git
+    ignore = dirty
 [submodule "docs/manual"]
 	path = docs/manual
 	url = https://github.com/pkp/ojs-user-guide
