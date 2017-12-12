@@ -52,7 +52,7 @@ class SubscriptionTypeForm extends Form {
 
 		$this->typeId = isset($typeId) ? (int) $typeId : null;
 
-		parent::__construct('subscriptions/subscriptionTypeForm.tpl');
+		parent::__construct('payments/subscriptionTypeForm.tpl');
 
 		// Type name is provided
 		$this->addCheck(new FormValidatorLocale($this, 'name', 'required', 'manager.subscriptionTypes.form.typeNameRequired'));
@@ -72,11 +72,6 @@ class SubscriptionTypeForm extends Form {
 		// Institutional flag is valid value
 		$this->addCheck(new FormValidatorInSet($this, 'institutional', 'optional', 'manager.subscriptionTypes.form.institutionalValid', array('0', '1')));
 
-		// Membership flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'membership', 'optional', 'manager.subscriptionTypes.form.membershipValid', array('1')));
-
-		// Public flag is valid value
-		$this->addCheck(new FormValidatorInSet($this, 'disable_public_display', 'optional', 'manager.subscriptionTypes.form.publicValid', array('1')));
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 	}
@@ -163,8 +158,8 @@ class SubscriptionTypeForm extends Form {
 		$subscriptionType->setCurrencyCodeAlpha($this->getData('currency'));
 		$subscriptionType->setDuration(($duration=$this->getData('duration'))?(int) $duration:null);
 		$subscriptionType->setFormat($this->getData('format'));
-		$subscriptionType->setMembership($this->getData('membership') == null ? 0 : $this->getData('membership'));
-		$subscriptionType->setDisablePublicDisplay($this->getData('disable_public_display') == null ? 0 : $this->getData('disable_public_display'));
+		$subscriptionType->setMembership((int) $this->getData('membership'));
+		$subscriptionType->setDisablePublicDisplay((int) $this->getData('disable_public_display'));
 
 		// Update or insert subscription type
 		if ($subscriptionType->getId() != null) {

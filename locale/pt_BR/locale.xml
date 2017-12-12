@@ -182,7 +182,7 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Gerente da Revista</message>
-	<message key="user.role.sectionEditor">Editor de Seção</message>
+	<message key="user.role.subEditor">Editor de Seção</message>
 	<message key="user.role.subscriptionManager">Gerente de Assinaturas</message>
 	<message key="user.role.managers">Editores-Gerentes</message>
 	<message key="user.role.subscriptionManagers">Gerentes de Assinaturas</message>
@@ -998,7 +998,6 @@ Pode-se opcionalmente informar o motivo pelo qual está sendo desativado o cadas
 	<message key="context.select">Selecionar Revista:</message>
 	<message key="user.role.subEditors">Editores de Seção</message>
 	<message key="submission.event.submissionSubmitted">Artigo submetido</message>
-	<message key="manager.setup.citations.enable">Habilitar o Assistente de marcação de citações</message>
 	<message key="editor.navigation.issues">Edições</message>
 	<message key="article.return">Voltar aos Detalhes do Artigo</message>
 	<message key="user.reviewerPrompt">Você estaria disposto a avaliar envios para esta revista?</message>

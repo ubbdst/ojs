@@ -164,7 +164,7 @@
 	<!-- Roles -->
 	<message key="user.role.manager">Redaksjonsleder</message>
 	<message key="user.role.editor">Ansvarlig redaktør</message>
-	<message key="user.role.sectionEditor">Seksjonsredaktør</message>
+	<message key="user.role.subEditor">Seksjonsredaktør</message>
 	<message key="user.role.layoutEditor">Layoutredaktør</message>
 	<message key="user.role.copyeditor">Manusredaktør</message>
 	<message key="user.role.proofreader">Korrekturleser</message>
@@ -721,7 +721,6 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<message key="log.editor.archived">Manuskriptet {$submissionId} er arkivert.</message>
 	<message key="log.editor.restored">Manuskriptet {$submissionId} er hentet tilbake til arbeidsplanen.</message>
 	<message key="log.editor.editorAssigned">{$editorName} er oppnevnt som redaktør for manuskriptet {$submissionId}.</message>
-	<message key="log.editor.submissionExpedited">{$editorName} har forestått redigeringsprosessen for artikkelen {$submissionId}.</message>
 
 	<message key="log.proofread.assign">{$assignerName} har oppnevnt {$proofreaderName} til å korrigere manuskriptet {$submissionId}.</message>
 	<message key="log.proofread.complete">{$proofreaderName} har sendt inn {$submissionId} for planlegging.</message>
@@ -927,7 +926,6 @@ Authors who publish with this journal agree to the following terms:
 	<message key="subscriptionManager.institutionalSubscriptions">Institusjonelle abonnementer</message>
 	<message key="subscriptionManager.subscriptionTypes">Abonnementstyper</message>
 	<message key="manager.setup.reviewProcessEmailDescription">Redaktørene sender fagfellevurderere forespørsel om å være fagfellevurderer med det innsendte manuskriptet vedlagt e-posten. Fagfellevurdererne sender sin aksept eller avslag til redaktørene på e-post, og sine kommentarer og anbefalinger. Redaktørene legger inn fagfellevurderernes aksept eller avslag på forespørselen, og deres vurderinger og anbefalinger på innleveringens vurderingsside for å dokumentere fagfellevurderingsprosessen.</message>
-	<message key="manager.setup.citations.enable">Gjør det mulig for forfattere å legge inn en separat formattert liste med referanser som en del av innleveringen.</message>
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
 	<li>Merkede elementer indikerer at noe avventer handling fra redaktøren.</li>
 	<li>"Forventet" fylles ut når fagfellevurdereren aksepterer oppdraget; det viser antall uker frem til forfallsdato for vurderingen eller (-) antall uker siden vuderingen skulle vært ferdig.</li>
@@ -1009,4 +1007,7 @@ Authors who publish with this journal agree to the following terms:
 
 	<!-- Included here because it may be used in the navigation bar -->
 	<message key="editor.navigation.issues">Utgaver</message>
+
+	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
+	<message key="log.editor.submissionExpedited">{$editorName} har forestått redigeringsprosessen for artikkelen {$submissionId}.</message>
 </locale>

@@ -114,6 +114,7 @@ class Upgrade extends Installer {
 				} elseif (count($matchedResults)==0) {
 					// No filenames matched. Skip migrating.
 					error_log("WARNING: Unable to find a match for \"$globPattern\" in \"" . $submissionFileManager->getBasePath() . "\". Skipping this file.");
+					$fileResult->MoveNext();
 					continue;
 				}
 				$discoveredFilename = array_shift($matchedResults);
@@ -122,6 +123,7 @@ class Upgrade extends Installer {
 					unlink($discoveredFilename);
 				} else {
 					error_log("WARNING: File \"$discoveredFilename\" does not exist.");
+					$fileResult->MoveNext();
 					continue;
 				}
 				$fileResult->MoveNext();
@@ -1397,7 +1399,7 @@ class Upgrade extends Installer {
 				$submissionFile->setGenreId($genre->getId());
 				$submissionFile->setUploaderUserId($creatorUserId);
 				$submissionFile->setUserGroupId($managerUserGroup->getId());
-				$submissionFile->setFileStage(SUBMISSION_FILE_SUBMISSION);
+				$submissionFile->setFileStage(SUBMISSION_FILE_PROOF);
 				$submissionFileDao->updateObject($submissionFile);
 			}
 
@@ -2184,7 +2186,7 @@ class Upgrade extends Installer {
 		$roles = array(OJS2_ROLE_ID_EDITOR, OJS2_ROLE_ID_SECTION_EDITOR, OJS2_ROLE_ID_LAYOUT_EDITOR, OJS2_ROLE_ID_COPYEDITOR, OJS2_ROLE_ID_PROOFREADER);
 		$localeKeys = array(
 			OJS2_ROLE_ID_EDITOR => array('user.role.editor', 'user.role.editors'),
-			OJS2_ROLE_ID_SECTION_EDITOR => array('user.role.sectionEditor', 'user.role.subEditors'),
+			OJS2_ROLE_ID_SECTION_EDITOR => array('user.role.subEditor', 'user.role.subEditors'),
 			OJS2_ROLE_ID_LAYOUT_EDITOR => array('user.role.layoutEditor', 'user.role.layoutEditors'),
 			OJS2_ROLE_ID_COPYEDITOR => array('user.role.copyeditor', 'user.role.copyeditors'),
 			OJS2_ROLE_ID_PROOFREADER => array('user.role.proofreader', 'user.role.proofreaders'),
@@ -2440,7 +2442,9 @@ class Upgrade extends Installer {
 		foreach ($allPlugins as $plugin) {
 			if ($plugin->isSitePlugin()) {
 				$pluginName = strtolower_codesafe($plugin->getName());
-				$result = $pluginSettings->update('DELETE FROM plugin_settings WHERE plugin_name = ? AND setting_name = \'enabled\' AND context_id <> 0', array($pluginName));
+				if ($pluginName != 'customblockmanagerplugin') {
+					$result = $pluginSettings->update('DELETE FROM plugin_settings WHERE plugin_name = ? AND setting_name = \'enabled\' AND context_id <> 0', array($pluginName));
+				}
 			}
 		}
 
@@ -2548,6 +2552,50 @@ class Upgrade extends Installer {
 		}
 		return true;
 	}
+
+	/**
+	 * For 3.0.x - 3.1.0 upgrade: repair the migration of the supp files.
+	 * @return boolean True indicates success.
+	 */
+	function repairSuppFilesFilestage() {
+		$submissionFileDao = DAORegistry::getDAO('SubmissionFileDAO');
+
+		import('lib.pkp.classes.file.SubmissionFileManager');
+
+		// get supp files
+		$result = $submissionFileDao->retrieve(
+			'SELECT ssf.*, s.context_id
+			FROM submission_supplementary_files ssf, submission_files sf, submissions s
+			WHERE sf.file_id = ssf.file_id AND sf.revision = ssf.revision AND s.submission_id = sf.submission_id'
+		);
+		while (!$result->EOF) {
+			$row = $result->GetRowAssoc(false);
+			$submissionFileRevision = $submissionFileDao->getRevision($row['file_id'], $row['revision']);
+			if ($submissionFileRevision->getFileStage() != SUBMISSION_FILE_PROOF) {
+				$submissionFileManager = new SubmissionFileManager($row['context_id'], $submissionFileRevision->getSubmissionId());
+				$basePath = $submissionFileManager->getBasePath() . '/';
+				$generatedOldFilename = $submissionFileRevision->getServerFileName();
+				$oldFileName = $basePath . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedOldFilename;
+				$submissionFileRevision->setFileStage(SUBMISSION_FILE_PROOF);
+				$generatedNewFilename = $submissionFileRevision->getServerFileName();
+				$newFileName = $basePath . $submissionFileRevision->_fileStageToPath($submissionFileRevision->getFileStage()) . '/' . $generatedNewFilename;
+				if (file_exists($newFileName)) continue; // Skip existing files/links
+				if (!file_exists($path = dirname($newFileName)) && !$submissionFileManager->mkdirtree($path)) {
+					error_log("Unable to make directory \"$path\"");
+				}
+				if (!rename($oldFileName, $newFileName)) {
+					error_log("Unable to move \"$oldFileName\" to \"$newFileName\".");
+				} else {
+					$submissionFileDao->updateObject($submissionFileRevision);
+				}
+			}
+			$result->MoveNext();
+		}
+		$result->Close();
+		return true;
+	}
+
 }
+
 
 ?>
