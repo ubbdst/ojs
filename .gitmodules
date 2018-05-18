@@ -50,3 +50,6 @@
 [submodule "addThis"]
 	path = plugins/generic/addThis
 	url = https://github.com/pkp/addThis.git
+[submodule "plugins/generic/shariff"]
+	path = plugins/generic/shariff
+	url = https://github.com/ojsde/shariff.git
