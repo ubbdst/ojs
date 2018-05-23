@@ -53,3 +53,6 @@
 [submodule "plugins/generic/shariff"]
 	path = plugins/generic/shariff
 	url = https://github.com/ojsde/shariff.git
+[submodule "plugins/themes/healthSciences"]
+	path = plugins/themes/healthSciences
+	url = https://github.com/pkp/healthSciences.git
