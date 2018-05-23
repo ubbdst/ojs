@@ -50,3 +50,6 @@
 [submodule "addThis"]
 	path = plugins/generic/addThis
 	url = https://github.com/pkp/addThis.git
+[submodule "plugins/themes/healthSciences"]
+	path = plugins/themes/healthSciences
+	url = https://github.com/pkp/healthSciences.git
