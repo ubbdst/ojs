@@ -53,3 +53,6 @@
 [submodule "plugins/themes/healthSciences"]
 	path = plugins/themes/healthSciences
 	url = https://github.com/ubbdst/healthSciences.git
+[submodule "plugins/importexport/quickSubmit"]
+	path = plugins/importexport/quickSubmit
+	url = https://github.com/pkp/quickSubmit.git
