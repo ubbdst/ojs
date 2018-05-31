@@ -56,3 +56,6 @@
 [submodule "plugins/importexport/quickSubmit"]
 	path = plugins/importexport/quickSubmit
 	url = https://github.com/pkp/quickSubmit.git
+[submodule "plugins/themes/boap"]
+	path = plugins/themes/boap
+	url = https://github.com/ubbdst/BOAP-OJS-theme.git
