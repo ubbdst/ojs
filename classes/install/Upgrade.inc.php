@@ -2793,7 +2793,6 @@ class Upgrade extends Installer {
 
 		return true;
 	}
-
 }
 
 ?>
