@@ -62,3 +62,6 @@
 [submodule "plugins/themes/boap"]
 	path = plugins/themes/boap
 	url = https://github.com/ubbdst/BOAP-OJS-theme.git
+[submodule "plugins/themes/boap-front"]
+	path = plugins/themes/boap-front
+	url = https://github.com/ubbdst/BOAP-OJS-front-theme.git
