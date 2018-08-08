@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/locale.xml
   *
-  * Copyright (c) 2014-2018 Simon Fraser University
-  * Copyright (c) 2003-2018 John Willinsky
+  * Copyright (c) 2014-2016 Simon Fraser University Library
+  * Copyright (c) 2003-2016 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * (Norwegian translation from english by Karl Henrik Flyum, Dept. of teacher education and school development, University of Oslo, Norway, 2006-2007)
   * Localization strings for the nb_NO (Norsk bokmål) locale.
@@ -48,26 +48,26 @@
 	<message key="navigation.archives">Arkiv</message>
 	<message key="navigation.current">Nyeste</message>
 	<message key="navigation.otherJournals">Andre tidsskrift</message>
-	<message key="navigation.browseByIssue">i utgaver</message>
-	<message key="navigation.browseByAuthor">i forfattere</message>
+	<message key="navigation.browseByIssue">Etter utgaver</message>
+	<message key="navigation.browseByAuthor">Etter forfattere</message>
 	<message key="navigation.infoForAuthors">For forfattere</message>
 	<message key="navigation.infoForLibrarians">For bibliotekarer</message>
 	<message key="navigation.infoForAuthors.long">Informasjon for forfattere</message>
 	<message key="navigation.infoForLibrarians.long">Informasjon for bibliotekarer</message>
 
 	<!-- Article Queues -->
-	<message key="common.queue.long.submissionsUnassigned">Ikke oppnevnt</message>
-	<message key="common.queue.short.submissionsUnassigned">Ikke oppnevnt</message>
-	<message key="common.queue.long.submissionsInEditing">Manus redigeres</message>
-	<message key="common.queue.short.submissionsInEditing">Redigeres</message>
-	<message key="common.queue.long.submissionsInReview">Manus vurderes</message>
-	<message key="common.queue.short.submissionsInReview">Vurderes</message>
+	<message key="common.queue.long.submissionsUnassigned">Ikke oppnevnt til fagfelle</message>
+	<message key="common.queue.short.submissionsUnassigned">Ikke oppnevnt til fagfelle</message>
+	<message key="common.queue.long.submissionsInEditing">Innleveringer til språkvask</message>
+	<message key="common.queue.short.submissionsInEditing">Språkvaskes</message>
+	<message key="common.queue.long.submissionsInReview">Innleveringer til fagfellevurdering</message>
+	<message key="common.queue.short.submissionsInReview">Til fagfellevurdering</message>
 	<message key="common.queue.long.submissionsArchives">Arkiv</message>
 	<message key="common.queue.short.submissionsArchives">Arkiv</message>
-	<message key="common.queue.long.active">Aktive manus</message>
+	<message key="common.queue.long.active">Aktive innleveringer</message>
 	<message key="common.queue.short.active">Aktive</message>
-	<message key="common.queue.long.completed">Arkiver</message>
-	<message key="common.queue.short.completed">Arkiver</message>
+	<message key="common.queue.long.completed">Arkiv</message>
+	<message key="common.queue.short.completed">Arkiv</message>
 
 	<!--
 	 *
@@ -84,69 +84,69 @@
 	<message key="section.abbreviation.example">(Eksempel: Artikler=ART)</message>
 	<!-- Common Article Terms -->
 	<message key="article.articles">Artikler</message>
-	<message key="article.submissionId">Manus-ID</message>
+	<message key="article.submissionId">Innleveringens ID</message>
 	<message key="article.title">Tittel</message>
 	<message key="article.authors">Forfattere</message>
 	<message key="article.indexingInformation">Indekseringsinformasjon</message>
 	<message key="article.metadata">Metadata</message>
 	<message key="article.journalSection">Tidsskriftseksjon</message>
 	<message key="article.file">Fil</message>
-	<message key="article.suppFile">Tilleggsfil</message>
-	<message key="article.suppFiles">Tilleggsfil(er)</message>
-	<message key="article.suppFilesAbbrev">Tilleggsfil(er)</message>
-	<message key="article.discipline">Akademisk fag og felt</message>
+	<message key="article.suppFile">Supplerende fil</message>
+	<message key="article.suppFiles">Supplerende fil(er)</message>
+	<message key="article.suppFilesAbbrev">Supp. filer</message>
+	<message key="article.discipline">Fagfelt og underkategorier</message>
 	<message key="article.subject">Emneord (Nøkkelord)</message>
 	<message key="article.coverage">Dekning</message>
 	<message key="article.type">Type, metode eller innfallsvinkel</message>
 	<message key="article.language">Språk</message>
 	<message key="article.sectionEditor">Seksjonsred.</message>
-	<message key="article.commentsToEditor">Forfatterkommentarer</message>
-	<message key="article.submission">Manuskript</message>
-	<message key="article.submissions">Manuskript</message>
+	<message key="article.commentsToEditor">Forfatters kommentar til redaktør</message>
+	<message key="article.submission">Innlevering</message>
+	<message key="article.submissions">Innleveringer</message>
 	<message key="article.abstract">Sammendrag</message>
 	<message key="article.details">Detaljer</message>
 
 	<!-- Submission Tracking - Common -->
-	<message key="submission.submissionEditing">Manuskriptbehandling</message>
+	<message key="submission.submissionEditing">Behandle innlevering</message>
 	<message key="submission.changeSection">Endre til</message>
 	<message key="submission.editorDecision">Redaktørens beslutning</message>
 	<message key="submission.round"><![CDATA[Runde&nbsp;{$round}]]></message>
-	<message key="submission.editorReview">Redaktørens fagvurdering</message>
+	<message key="submission.editorReview">Redaktørens gjennomgang</message>
 	<message key="submission.notifyAuthor">Send beskjed til forfatter</message>
 	<message key="submission.notifyEditor">Send beskjed til redaktør</message>
-	<message key="submission.editorAuthorRecord">Redaktør/Forfatter e-post</message>
-	<message key="submission.reviewersVersion">Fagkonsulentens annoterte filversjon</message>
-	<message key="submission.postReviewVersion">Filversjon etter fagvurdering</message>
+	<message key="submission.editorAuthorRecord">Logg over e-post til redaktør/forfatter</message>
+	<message key="submission.reviewersVersion">Versjon med fagfellens kommentarer</message>
+	<message key="submission.postReviewVersion">Versjon etter fagfellevurdering</message>
 	<message key="submission.editorVersion">Redaktørens versjon</message>
-	<message key="submission.authorsRevisedVersion">Forfatterens omarbeidete filversjon</message>
+	<message key="submission.authorsRevisedVersion">Forfatterens omarbeidede filversjon</message>
 	<message key="submission.authorVersion">Forfatterens versjon</message>
-	<message key="submission.copyediting">Manusredigering</message>
-	<message key="submission.copyedit">Manusredigering</message>
+	<message key="submission.copyediting">Språkvask</message>
+	<message key="submission.copyedit">Språkvask</message>
 	<message key="submission.proofreading">Korrekturlesing</message>
 	<message key="submission.scheduling">Planlegging</message>
-	<message key="submission.scheduledIn">Planlagt publisert i {$issueName}.</message>
+	<message key="submission.scheduledIn">Planlagt publisert i {$issueName}</message>
 	<message key="submission.scheduledIn.tba">(kommer)</message>
 
 	<message key="submissions.sec">Seksj.</message>
 	<message key="submissions.step1">Trinn 1</message>
 	<message key="submissions.step3">Trinn 3</message>
-	<message key="submissions.queuedReview">Planlagt fagvurdert</message>
+	<message key="submissions.queuedReview">Til fagfellevurdering</message>
 	<message key="submissions.scheduled">Planlagt</message>
 	<message key="submissions.published">Publisert</message>
 	<message key="submissions.initial">Første</message>
-	<message key="submissions.proofread">Korrekturlesing</message>
+	<message key="submissions.proofread">Korrekturlest</message>
 	<message key="submissions.initialProof">Første korrektur</message>
-	<message key="submissions.postAuthor">Post-forfatter</message>
-	<message key="submissions.reviewRound">Fagvurderingsrunde</message>
+	<message key="submissions.postAuthor">Etter forfatter</message>
+	<message key="submissions.reviewRound">Fagfellevurderingsrunde</message>
 	<message key="submissions.proof">Korrektur</message>
 	<message key="submissions.editorDecision">Redaktørens beslutning</message>
 	<message key="submissions.editorRuling">Redaktørens avgjørelse</message>
-	<message key="submission.eventLog">Hendelseslogg</message>
+	<message key="submission.eventLog">Aktivitetslogg</message>
 
 	<!-- Submission list search engine -->
-	<message key="submissions.copyeditComplete">Manuskript redigert</message>
+	<message key="submissions.copyeditComplete">Språkvasket</message>
 	<message key="submissions.layoutComplete">Sider oppsatt</message>
-	<message key="submissions.proofreadingComplete">Korrektur lest</message>
+	<message key="submissions.proofreadingComplete">Korrekturlest</message>
 
 	<!-- Submission Notes -->
 
@@ -163,10 +163,10 @@
 
 	<!-- Roles -->
 	<message key="user.role.manager">Redaksjonsleder</message>
-	<message key="user.role.editor">Ansvarlig redaktør</message>
-	<message key="user.role.subEditor">Seksjonsredaktør</message>
+	<message key="user.role.editor">Redaktør</message>
+	<message key="user.role.sectionEditor">Seksjonsredaktør</message>
 	<message key="user.role.layoutEditor">Layoutredaktør</message>
-	<message key="user.role.copyeditor">Manusredaktør</message>
+	<message key="user.role.copyeditor">Språkvasker</message>
 	<message key="user.role.proofreader">Korrekturleser</message>
 	<message key="user.role.author">Forfatter</message>
 	<message key="user.role.subscriptionManager">Abonnementskontakt</message>
@@ -174,7 +174,7 @@
 	<message key="user.role.editors">Redaktører</message>
 	<message key="user.role.subEditors">Seksjonsredaktører</message>
 	<message key="user.role.layoutEditors">Layoutredaktører</message>
-	<message key="user.role.copyeditors">Manusredaktører</message>
+	<message key="user.role.copyeditors">Språkvaskere</message>
 	<message key="user.role.proofreaders">Korrekturlesere</message>
 	<message key="user.role.authors">Forfattere</message>
 	<message key="user.role.subscriptionManagers">Abonnementskontakter</message>
@@ -183,9 +183,9 @@
 	<message key="issue.issue">Utgave</message>
 	<message key="issue.issues">Utgaver</message>
 	<message key="issue.title">Tittel</message>
-	<message key="issue.volume">Volum</message>
-	<message key="issue.number">Nummer</message>
-	<message key="issue.vol">Vol</message>
+	<message key="issue.volume">Årgang</message>
+	<message key="issue.number">Utgave</message>
+	<message key="issue.vol">Årg</message>
 	<message key="issue.no">Nr</message>
 	<message key="issue.year">År</message>
 	<message key="issue.noIssues">Ingen utgaver</message>
@@ -197,43 +197,43 @@
 	 * LOG - This section contains entries related to log entries.
 	 *
 	-->
-	<message key="submission.event.general.defaultEvent">Manuskripthendelse</message>
-	<message key="submission.event.submissionSubmitted">Artikkel innsendt</message>
-	<message key="submission.event.general.issueScheduled">Manuskript sendt til publiseringsplanen</message>
-	<message key="submission.event.general.issueAssigned">Manuskript utvalgt til utgave</message>
+	<message key="submission.event.general.defaultEvent">Aktivitet</message>
+	<message key="submission.event.submissionSubmitted">Artikkel innlevert</message>
+	<message key="submission.event.general.issueScheduled">Innlevering sendt til publiseringsplanen</message>
+	<message key="submission.event.general.issueAssigned">Innlevering planlagt til utgave</message>
 	<message key="submission.event.general.articlePublished">Artikkel publisert</message>
 
-	<message key="submission.event.author.authorRevision">Forfatterrevisjon innsendt</message>
+	<message key="submission.event.author.authorRevision">Forfatterens revidering innlevert</message>
 
-	<message key="submission.event.general.authorRevision">Forfatter - revisjonsfil oppdatert</message>
+	<message key="submission.event.general.authorRevision">Forfatterens fil med redigeringer oppdatert</message>
 
-	<message key="submission.event.editor.editorAssigned">Redaktør oppnevnt for manuskript</message>
-	<message key="submission.event.editor.editorUnassigned">Redaktør avløst fra manuskript</message>
-	<message key="submission.event.editor.editorDecision">Redaktørens beslutning innsendt</message>
-	<message key="submission.event.editor.editorFile">Redaktør - fil oppdatert</message>
-	<message key="submission.event.editor.submissionArchived">Manuskript sendt til arkivet</message>
-	<message key="submission.event.editor.submissionRestored">Manuskript hentet opp fra arkivet</message>
+	<message key="submission.event.editor.editorAssigned">Redaktør oppnevnt</message>
+	<message key="submission.event.editor.editorUnassigned">Redaktør avløst</message>
+	<message key="submission.event.editor.editorDecision">Redaktørens beslutning innlevert</message>
+	<message key="submission.event.editor.editorFile">Redaktørens fil oppdatert</message>
+	<message key="submission.event.editor.submissionArchived">Innleveringen sendt til arkivet</message>
+	<message key="submission.event.editor.submissionRestored">Innlevering gjenopprettet fra arkivet</message>
 
 
-	<message key="submission.event.copyedit.copyeditorAssigned">Manusredaktør oppnevnt for manuskript</message>
-	<message key="submission.event.copyedit.copyeditorUnassigned">Manusredaktør avløst fra manuskript</message>
-	<message key="submission.event.copyedit.copyeditInitiated">Manusredigeringsoppdrag igangsatt</message>
-	<message key="submission.event.copyedit.copyeditRevision">Manusredaktør - revisjonsfil oppdatert</message>
-	<message key="submission.event.copyedit.copyeditInitialCompleted">Første manusredigering ferdigstilt</message>
-	<message key="submission.event.copyedit.copyeditFinalCompleted">Siste manusredigering ferdigstilt</message>
-	<message key="submission.event.copyedit.copyeditSetFile">Manusredigering - fil oppdatert</message>
+	<message key="submission.event.copyedit.copyeditorAssigned">Språkvasker oppnevnt</message>
+	<message key="submission.event.copyedit.copyeditorUnassigned">Språkvasker avløst</message>
+	<message key="submission.event.copyedit.copyeditInitiated">Språkvask startet</message>
+	<message key="submission.event.copyedit.copyeditRevision">Språkvaskerens fil oppdatert</message>
+	<message key="submission.event.copyedit.copyeditInitialCompleted">Første språkvask ferdigstilt</message>
+	<message key="submission.event.copyedit.copyeditFinalCompleted">Siste språkvask ferdigstilt</message>
+	<message key="submission.event.copyedit.copyeditSetFile">Språkvaskfilen oppdatert</message>
 
-	<message key="submission.event.proofread.proofreaderAssigned">Korrekturleser oppnevnt for manuskript</message>
-	<message key="submission.event.proofread.proofreaderUnassigned">Korrekturleser avløst fra manuskript</message>
-	<message key="submission.event.proofread.proofreadInitiated">Korrekturlesingsoppdrag igangsatt</message>
-	<message key="submission.event.proofread.proofreadRevision">Korrekturleser - revisjonsfil oppdatert</message>
-	<message key="submission.event.proofread.proofreadCompleted">Korrekturlesingsoppdrag ferdigstilt</message>
+	<message key="submission.event.proofread.proofreaderAssigned">Korrekturleser oppnevnt</message>
+	<message key="submission.event.proofread.proofreaderUnassigned">Korrekturleser avløst</message>
+	<message key="submission.event.proofread.proofreadInitiated">Korrekturlesing startet</message>
+	<message key="submission.event.proofread.proofreadRevision">Korrekturleserens fil oppdatert</message>
+	<message key="submission.event.proofread.proofreadCompleted">Korrekturlesing ferdigstilt</message>
 
-	<message key="submission.event.layout.layoutEditorAssigned">Layoutredaktør oppnevnt for manuskript</message>
-	<message key="submission.event.layout.layoutEditorUnassigned">Layoutredaktør avløst fra manuskript</message>
-	<message key="submission.event.layout.layoutInitiated">Layoutoppdrag igangsatt</message>
-	<message key="submission.event.layout.layoutGalleyCreated">Layout - oppsett oppdatert</message>
-	<message key="submission.event.layout.layoutComplete">Layoutoppdrag ferdigstilt</message>
+	<message key="submission.event.layout.layoutEditorAssigned">Layoutredaktør oppnevnt</message>
+	<message key="submission.event.layout.layoutEditorUnassigned">Layoutredaktør avløst</message>
+	<message key="submission.event.layout.layoutInitiated">Layoutoppdrag startet</message>
+	<message key="submission.event.layout.layoutGalleyCreated">Layoutoppsett oppdatert</message>
+	<message key="submission.event.layout.layoutComplete">Layout ferdigstilt</message>
 	<!--
 	 *
 	 * INTERFACE - Contains phrases organized by the section of the
@@ -246,11 +246,20 @@
 	<message key="comments.commentsOnArticle">Kommentarer til denne artikkelen</message>
 	<message key="comments.authenticated"><![CDATA[av <a href="{$publicProfileUrl}" target="_parent">{$userName}</a>]]></message>
 
+	<!-- Site Administration -->
+
+	<message key="admin.settings.oaiRegistrationDescription"><![CDATA[For å få indeksert innholdet i alle tidsskrift på dette nettstedet i et verdensomspennende nettverk av forskningsdatabaser, <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">registrer</a> nettstedets URL hos Public Knowledge Project Metadata <a href="http://pkp.sfu.ca/harvester/" target="_blank">Harvester</a>. Dette verktøyet samler metadata fra hvert indeksert element i dette tidsskriftet, og gjør det dermed mulig å søke presist og samlet i alle forskningsnettsted som følger <a href="http://www.openarchives.org/OAI/openarchivesprotocol.htm#Introduction" target="_blank">Open Archives Initiative-protokollen for metadatainnhøsting</a>.
+<br /><br />
+<a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klikk her</a> og skriv inn <span class="highlight">{$siteUrl}</span> under <b>Site URL</b>, og <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI Archive</b>.
+<br /><br />
+Merk at OAI-grensesnittet kan slås av for dette nettstedet ved å redigere OJS' systemkonfigurasjon. Framtidige versjoner av OJS vil tillate å slå på eller av OAI-grensesnittet for enkelttidskrift på nettstedet.]]></message>
+
+
 	<!-- Languages -->
 
-	<message key="admin.auth.defaultSourceDescription"><![CDATA[Det å spesifisere en annen default valideringskilde enn OJS har følgende virkning:
+	<message key="admin.auth.defaultSourceDescription"><![CDATA[Om du spesifiserer en annen default valideringskilde enn OJS skjer dette:
 <ul>
-	<li>Hvis en bruker forsøker å registrere en ny konto hos dette nettstedet med et brukernavn som finnes på valideringskilden (men ikke i OJS-databasen), vil registreringen bare bli tillatt hvis det angitte passordet er gyldig for den aktuelle brukerkontoen.</li>
+	<li>Hvis en bruker forsøker å registrere en ny konto på dette nettstedet med et brukernavn som finnes hos valideringskilden (men ikke i OJS-databasen), vil registreringen bare bli tillatt hvis det angitte passordet er gyldig for den aktuelle brukerkontoen.</li>
 </ul>]]></message>
 
 	<!-- System Information -->
@@ -268,8 +277,8 @@
 	<!-- Plugin Management -->
 
 	<!-- General plugin information -->
-	<message key="plugins.categories.generic.description">Generiske programutvidelser brukes for å utvide Open Journal Systems på en rekke måter som ikke er støttet av de andre programutvidelseskategoriene.</message>
-	<message key="plugins.categories.auth.description">Validerings-programutvidelser tillater Open Journal Systems å delegere brukervalidering til andre systemer, som for eksempel LDAP-servere.</message>
+	<message key="plugins.categories.generic.description">Generiske programtillegg brukes for å utvide Open Journal Systems på en rekke måter som ikke er støttet av de andre kategoriene av programtillegg</message>
+	<message key="plugins.categories.auth.description">Programtillegg for validering lar Open Journal Systems delegere brukervalidering til andre systemer, f.eks. LDAP-servere</message>
 
 
 
@@ -284,7 +293,7 @@
 
 
 
-	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems støtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe), som er et system for sikker og permanent arkivering av tidsskriftet. LOCKSS er open source programvare utviklet ved Stanford University Library. LOCKSS gjør det mulig for bibliotek å bevare valgte nettidsskrift ved automatisk søking i registrerte tidsskriftnettsted etter nylig publisert innhold, og hente det for arkivering. Hvert arkiv blir kontinuerlig validert mot andre biblioteks cacher, og hvis innholdet viser seg å være ødelagt eller tapt, vil de andre cachene eller tidsskriftet bli brukt til å gjenopprette det.
+	<message key="manager.setup.lockssDescription"><![CDATA[Open Journal Systems støtter <a href="http://www.lockss.org/" target="_blank">LOCKSS</a> (Lots of Copies Keep Stuff Safe). Dette er et system for sikker og permanent arkivering av tidsskriftet. LOCKSS er en «open source»-programvare utviklet ved Stanford University Library. LOCKSS gjør det mulig for bibliotek å bevare valgte nettidsskrift ved automatisk søking i registrerte tidsskriftnettsted etter nylig publisert innhold, og hente det for arkivering. Hvert arkiv blir kontinuerlig validert mot andre biblioteks cacher, og hvis innholdet viser seg å være ødelagt eller tapt, vil de andre cachene eller tidsskriftet bli brukt til å gjenopprette det.
 <br /><br />
 Oppsetting av LOCKSS' støtte for Open Journal Systems trenger ikke skje før etter at publiseringen er godt i gang. Da gjøres det ved å følge disse to trinnene:]]></message>
 
@@ -296,8 +305,8 @@ Merk at om nettstedsadministratoren allerede har registrert nettstedet i disse t
 <a href="http://pkp.sfu.ca/harvester/add.php" target="_blank">Klikk her</a> og skriv inn <span class="highlight">{$siteUrl}</span> under <b>Nettsted URL</b>, og <span class="highlight">{$oaiUrl}</span> under <b>Base URL for OAI-arkiv</b>.]]></message>
 
 	<!-- Setup Step 4 -->
-	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Trinn: Manuskriptarbeidskø &gt; Manuskriptvurdering &gt; Manuskriptbehandling &gt; Innholdsfortegnelse.<br /><br />
-Velg en modell for håndtering av disse sidene av den redaksjonelle prosessen. (For å oppnevne ansvarlig redaktør og seksjonsredaktører; gå til Redaktører i tidsskriftadministrasjon.)]]></message>
+	<message key="manager.setup.basicEditorialStepsDescription"><![CDATA[Trinn: Innleveringskø &gt; Fagfellevurdering &gt; Språkvask &gt; Innholdsfortegnelse.<br /><br />
+Velg en modell for håndtering av disse sidene av den redaksjonelle prosessen. (For å oppnevne ansvarlig redaktør og seksjonsredaktører; gå til «Redaktører» i tidsskriftadministrasjon.)]]></message>
 
 	<!-- Setup Step 5 -->
 
@@ -312,7 +321,7 @@ Velg en modell for håndtering av disse sidene av den redaksjonelle prosessen. (
 
 
 	<!-- People Management -->
-	<message key="manager.people.confirmDisable">Slå av denne brukeren? Dette vil hindre brukeren fra å logge inn på systemet.
+	<message key="manager.people.confirmDisable">Slå av denne brukeren? Dette gjør at brukeren ikke kan logge seg inn i systemet.
 
 Du kan velge å gi brukeren en begrunnelse for at kontoen er slått av.</message>
 	<message key="manager.people.noAdministrativeRights"><![CDATA[Beklager, du har ikke administrative rettigheter over denne brukeren. Dette kan være fordi:
@@ -348,6 +357,12 @@ Du kan velge å gi brukeren en begrunnelse for at kontoen er slått av.</message
 
 	<!-- Navigation sidebar menu -->
 
+	<!-- Used by editor in submission review / editing -->
+	<message key="editor.article.selectReviewerNotes"><![CDATA[Oppgi lenke til fagfellens profil.<br/>
+Rangeres på en skala fra 1 til 5, hvor 5 er best.<br/>
+«Uker» viser til gjennomsnittlig tid det tar å ferdigstille en fagfellevurdering.<br/>
+«Siste» er dato for siste aksepterte fagfellevurdering.<br/>
+«Aktive» er hvor mange fagfellevurderinger som for øyeblikket er bestilt eller under arbeid.]]></message>
 
 
 
@@ -355,80 +370,82 @@ Du kan velge å gi brukeren en begrunnelse for at kontoen er slått av.</message
 	<!-- Section Editor -->
 	<message key="sectionEditor.activeEditorialAssignments">Aktive redaksjonelle oppdrag</message>
 	<message key="sectionEditor.completedEditorialAssignments">Utførte redaksjonelle oppdrag</message>
-	<message key="sectionEditor.noneAssigned">Ingen manuskript utpekt.</message>
-	<message key="sectionEditor.copyedit.confirmRenotify">Ved å varsle denne manusredaktøren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?</message>
+	<message key="sectionEditor.noneAssigned">Ingen oppdrag gitt</message>
+	<message key="sectionEditor.copyedit.confirmRenotify">Ved å varsle denne språkvaskeren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?</message>
 	<message key="sectionEditor.author.confirmRenotify">Ved å varsle denne forfatteren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?</message>
-	<message key="sectionEditor.layout.confirmRenotify">Ved å varsle denne layoutredaktøren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?</message>
+	<message key="sectionEditor.layout.confirmRenotify">Ved å varsle layoutredaktøren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?</message>
 	<message key="sectionEditor.proofreader.confirmRenotify">Ved å varsle denne korrekturleseren igjen, kommer du til å sette oppdraget i gang på nytt. Er du sikker på at du vil gjøre dette?</message>
 
 	<message key="sectionEditor.regrets.breadcrumb">Avslag</message>
- 	<message key="sectionEditor.regrets.title">#{$submissionId} Fagkonsulent avslag, avbrutte og tidligere runder</message>
+ 	<message key="sectionEditor.regrets.title">#{$submissionId} Fagfellens avslag, samt avbrutte og tidligere runder</message>
 	<message key="sectionEditor.regrets">Avslag</message>
 	<message key="sectionEditor.regrets.link">Vis avslag, avbrutt, tidligere runder</message>
 	<message key="sectionEditor.regrets.reviewRound">Fagfellevurdering, runde {$round}</message>
 	<message key="sectionEditor.regrets.decisionRound">Redaktørens beslutning, runde {$round}</message>
-	<message key="sectionEditor.regrets.regretsAndCancels">Fagkonsulent avslag og avbrutte</message>
+	<message key="sectionEditor.regrets.regretsAndCancels">Fagfellens avslag og avbrutte oppdrag</message>
 	<message key="sectionEditor.regrets.regret">Avslag</message>
 	<message key="sectionEditor.regrets.result">Resultat</message>
-	<message key="sectionEditor.review.enrollReviewer">Verve eksisterende bruker som fagkonsulent</message>
-	<message key="sectionEditor.review.createReviewer">Opprett ny fagkonsulent</message>
+	<message key="sectionEditor.review.enrollReviewer">Verve eksisterende bruker som fagfelle</message>
+	<message key="sectionEditor.review.createReviewer">Opprett ny fagfelle</message>
 
 	<!-- Layout Editor -->
 	<message key="layoutEditor.activeEditorialAssignments">Aktive redaksjonelle oppdrag</message>
 	<message key="layoutEditor.completedEditorialAssignments">Utførte redaksjonelle oppdrag</message>
-	<message key="layoutEditor.noActiveAssignments">Ingen aktive redaksjonelle oppdrag.</message>
+	<message key="layoutEditor.noActiveAssignments">Ingen aktive redaksjonelle oppdrag</message>
 	<message key="layoutEditor.layoutEditingAssignments">Layoutoppdrag</message>
 	<message key="layoutEditor.galley.uploadGalleyFormat">Last opp oppsettformat</message>
 	<message key="layoutEditor.galley.replaceGalley">Erstatt fil</message>
-	<message key="layoutEditor.galley.uploadSuppFile">Last opp tilleggsfil</message>
+	<message key="layoutEditor.galley.uploadSuppFile">Last opp supplerende fil</message>
 	<!-- Reviewer -->
-	<message key="reviewer.pendingReviews">Artikler som avventer fagvurdering</message>
-	<message key="reviewer.completedReviews">Ferdig</message>
+	<message key="reviewer.pendingReviews">Artikler som fagfellevurderes</message>
+	<message key="reviewer.completedReviews">Fullført</message>
 	<message key="reviewer.averageQuality">Rangering</message>
 
 	<!-- Used in submission review -->
-	<message key="reviewer.article.fileToBeReviewed">Fil til vurdering</message>
+	<message key="reviewer.article.fileToBeReviewed">Fil som skal fagfelles</message>
 	<message key="reviewer.article.notifyTheEditor">Send beskjed til redaktøren</message>
-	<message key="reviewer.article.canDoReview">Kommer til å utføre vurderingsoppdraget</message>
-	<message key="reviewer.article.cannotDoReview">Kan ikke å utføre vurderingsoppdraget</message>
-	<message key="reviewer.article.restrictedFileAccess">Filer kan bare vises hvis vurderingsoppdraget er akseptert</message>
-	<message key="reviewer.article.submissionEditor">Manuskriptredaktør</message>
- 	<message key="reviewer.article.reviewerCommentsDescription">Skriv eller lim inn kommentarer til vurderingsoppdrag her</message>
-	<message key="reviewer.article.editorToEnter">Redaktøren fører inn</message>
+	<message key="reviewer.article.canDoReview">Vil utføre fagfellevurderingen</message>
+	<message key="reviewer.article.cannotDoReview">Kan ikke utføre fagfellevurderingen</message>
+	<message key="reviewer.article.restrictedFileAccess">Filer vises bare om fagfellen tar oppdraget</message>
+	<message key="reviewer.article.submissionEditor">Redaktør</message>
+ 	<message key="reviewer.article.reviewerCommentsDescription">Skriv eller lim inn kommentarer til fagfellevurderingen her</message>
+	<message key="reviewer.article.editorToEnter">Skal føres inn av redaktøren</message>
 	<message key="reviewer.article.sendReminder">Send purring</message>
 	<message key="reviewer.article.automatic">(Auto)</message>
-	<message key="reviewer.article.selectRecommendation">Velg en anbefaling og send inn vurderingen for å ferdigstille prosessen. Du må legge inn en vurdering eller laste opp en fil før du velger anbefaling.</message>
+	<message key="reviewer.article.selectRecommendation">Velg en anbefaling og send inn fagfellevurderingen for å fullføre prosessen. Du må legge inn en fagfellevurdering eller laste opp en fil før du velger en anbefaling.</message>
 	<message key="reviewer.article.recommendation">Anbefaling</message>
- 	<message key="reviewer.article.submitReview">Send anbefaling til redaktør</message>
+ 	<message key="reviewer.article.submitReview">Send fagfellevurdering til redaktør</message>
 	<message key="reviewer.article.reviewerComments">Kommentarer</message>
-	<message key="reviewer.article.uploadedFile">Opplastete filer</message>
-	<message key="reviewer.article.reviewersAnnotatedVersion">Versjon lastet opp av fagkonsulent</message>
- 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Hvis du vil skrive merknader til redaktøren direkte i manuskriptfilen, må du først lagre den på din egen maskin, og deretter bruke Finn/Last opp.)</message>
-	<message key="reviewer.article.schedule.request">Redaktørens bestilling</message>
-	<message key="reviewer.article.schedule.response">Ditt svar</message>
-	<message key="reviewer.article.schedule.submitted">Fagvurdering: innsendt</message>
-	<message key="reviewer.article.schedule.due">Fagvurdering: ventet-dato</message>
-	<message key="reviewer.article.decision.accept">aksepteres</message>
- 	<message key="reviewer.article.decision.pendingRevisions">aksepteres, med forbehold om omarbeiding</message>
-	<message key="reviewer.article.decision.resubmitHere">send inn på nytt for ny fagvurdering</message>
- 	<message key="reviewer.article.decision.resubmitElsewhere">sendes inn til et annet publiseringssted</message>
-	<message key="reviewer.article.decision.decline">avvises</message>
-	<message key="reviewer.article.decision.seeComments">annet: se kommentarer</message>
-	<message key="reviewer.article.schedule">Arbeidsplan</message>
-	<message key="reviewer.article.submissionToBeReviewed">Manuskriptet som skal vurderes</message>
- 	<message key="reviewer.article.reviewSchedule">Arbeidsplan for fagvurderingen</message>
-	<message key="reviewer.article.reviewSteps">Fagvurdering steg for steg</message>
-	<message key="reviewer.article.reviewerGuidelines">Instruks for fagkonsulenter</message>
-	<message key="reviewer.article.mustSelectDecision">Ingen anbefaling er valgt. Du må velge en anbefaling å sende inn.</message>
+	<message key="reviewer.article.uploadedFile">Opplastede filer</message>
+	<message key="reviewer.article.reviewersAnnotatedVersion">Versjon lastet opp av fagfelle</message>
+ 	<message key="reviewer.article.reviewersAnnotatedVersionDescription">(Hvis du vil skrive kommentarer direkte i filen, må du først lagre den på din egen maskin, og deretter bruke «Finn/Last opp».)</message>
+        <message key="reviewer.article.schedule.request">Redaktørens forespørsel</message>
+        <message key="reviewer.article.schedule.response">Ditt svar</message>
+        <message key="reviewer.article.schedule.submitted">Fagfellevurdering innlevert</message>
+        <message key="reviewer.article.schedule.due">Frist for fagfellevurdering</message>
+	<message key="reviewer.article.decision.accept">Aksepteres</message>
+ 	<message key="reviewer.article.decision.pendingRevisions">Aksepteres med forbehold om omarbeiding</message>
+	<message key="reviewer.article.decision.resubmitHere">Sendes til enda en fagfellevurdering</message>
+ 	<message key="reviewer.article.decision.resubmitElsewhere">Send til et annet tidsskrift</message>
+	<message key="reviewer.article.decision.decline">Avvises</message>
+	<message key="reviewer.article.decision.seeComments">Se kommentarer</message>
+	<message key="reviewer.article.schedule">Planlagte oppgaver</message>
+        <message key="reviewer.article.submissionToBeReviewed">Innlevering som skal fagfellevurderes</message>
+ 	<message key="reviewer.article.reviewSchedule">Plan for fagfellevurdering</message>
+        <message key="reviewer.article.reviewSteps">Fagfellevurdering steg for steg</message>
+        <message key="reviewer.article.reviewerGuidelines">Instruks for fagfeller</message>
+	<message key="reviewer.article.mustSelectDecision">Ingen anbefaling er valgt. Du må velge en anbefaling.</message>
  	<message key="reviewer.article.confirmDecision">Så snart du har registrert beslutningen, kan du ikke lenger endre den. Er du sikker på at du vil fortsette?</message>
+	<message key="reviewer.article.ensuringBlindReview">Forsikre blind fagfellevurdering</message>
 
 	<!-- Used in submission editing -->
-	<message key="copyeditor.article.fileToCopyedit">Fil til MR</message>
-	<message key="copyeditor.article.copyeditorFile">Fil til manusredaktør</message>
-	<message key="copyeditor.article.copyeditorFinalFile">Manusredaktør fil</message>
+	<message key="copyeditor.article.fileToCopyedit">Fil til språkvasker</message>
+	<message key="copyeditor.article.copyeditorFile">Språkvaskerens fil</message>
+	<message key="copyeditor.article.uploadedFile">Opplastet fil</message>
+	<message key="copyeditor.article.copyeditorFinalFile">Språkvaskerens siste fil</message>
 
 	<!-- Proofreader -->
-	<message key="proofreader.noProofreadingAssignments">Ingen korrekturlesingsoppdrag</message>
+	<message key="proofreader.noProofreadingAssignments">Ingen oppdrag for korrekturleser</message>
 
 	<!-- Author -->
 
@@ -439,16 +456,14 @@ Du kan velge å gi brukeren en begrunnelse for at kontoen er slått av.</message
 	<!-- Article Submission Step 2 -->
 
 	<!-- Article Submission Step 3 -->
-	<message key="author.submit.uploadInstructions"><![CDATA[<p>For å laste opp manuskriptet ditt til dette tidsskriftet, må du nå fullføre følgende trinn.</p>
+	<message key="author.submit.uploadInstructions"><![CDATA[<p>For å laste opp manuskriptet ditt til dette tidsskriftet, må du nå fullføre følgende trinn:</p>
 <ol>
-<li>Klikk Finn/Browse (eller Velg Fil) på denne siden, som åpner et Velg Fil-vindu for å finne filen på datamaskinen din.</li>
-<li>Finn filen du ønsker å sende inn, og marker den.</li>
-<li>Klikk Åpne i Velg Fil vinduet, og filnavnet blir hentet til denne siden.</li>
-<li>Klikk Last opp på denne siden, og filen blir lastet opp fra din maskin til tidsskriftet. Filen får automatisk et nytt filnavn i samsvar med tidsskriftets rutiner.</li>
-<li>Så snart manuskriptfilen er lastet opp, kan du klikke Lagre og Fortsett nederst på denne siden.</li>
-</ol>
-
-Du kan senere åpne filen ved å klikke på filnavnet. En ny eller omarbeidet fil kan også lastes opp senere, men da slettes den nåværende filen. Du kan legge til ytterligere filer ved å bruke Tilleggsfiler (neste trinn). Hvis du får problemer med å laste opp manuskriptet ditt, kontakt <a href="mailto:{$supportEmail}">{$supportName}</a> med e-post eller på telefon {$supportPhone} for å få hjelp.]]></message>
+<li>Klikk «Bla gjennom» (eller «Velg Fil») på denne siden. Det åpner et «Velg fil»-vindu for å finne filen på datamaskinen din.</li>
+<li>Finn og marker filen du ønsker å sende inn.</li>
+<li>Klikk «Åpne» i «Velg fil»-vinduet. Filnavnet blir da hentet til denne siden.</li>
+<li>Klikk «Last opp på denne siden». Filen blir da lastet opp fra din maskin til tidsskriftet. Filen får automatisk et nytt filnavn i samsvar med tidsskriftets rutiner.</li>
+<li>Så snart filen er lastet opp, kan du klikke «Lagre og fortsett» nederst på denne siden.</li>
+</ol>]]></message>
 
 	<!-- Article Submission Step 4 -->
 
@@ -457,31 +472,31 @@ Du kan senere åpne filen ved å klikke på filnavnet. En ny eller omarbeidet fi
 	<!-- Article Submission Step 5 -->
 
 	<!-- Used in submission review / editing -->
-	<message key="submission.review.mustUploadFileForReview">E-post med bestilling kan ikke sendes før en fagvurderingsversjon er på plass.</message>
+	<message key="submission.review.mustUploadFileForReview">E-post med forespørsel kan ikke sendes før en fagfellevurdering er på plass.</message>
 
 	<!-- Submission Tracking - Copyedit Specific -->
-	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">E-post med bestilling kan ikke sendes før en fil er valgt for manusredigering i redaktørens beslutning på fagvurderingssiden.</message>
- 	<message key="submission.copyedit.mustUploadFileForCopyedit">E-post med bestilling kan ikke sendes før en fil er lastet opp for manusredigering.</message>
-	<message key="submission.copyedit.initialCopyedit">Første manusredigering</message>
-	<message key="submission.copyedit.editorsCopyedit">Redaktørens manusredigering</message>
-	<message key="submission.copyedit.editorAuthorReview">Forfatterens manusredigering</message>
-	<message key="submission.copyedit.finalCopyedit">Siste manusredigering</message>
-	<message key="submission.copyedit.copyeditVersion">Manusredaktørens versjon</message>
-	<message key="submission.copyedit.selectCopyeditor">Oppnevn manusredaktør</message>
+	<message key="submission.copyedit.mustUploadFileForInitialCopyedit">E-post med forespørsel kan ikke sendes før en fil er valgt for språkvask i «Redaktørens beslutning» på fagfellevurderingssiden</message>
+ 	<message key="submission.copyedit.mustUploadFileForCopyedit">Forespørsel kan ikke sendes før en fil er lastet opp for språkvask</message>
+	<message key="submission.copyedit.initialCopyedit">Første språkvask</message>
+	<message key="submission.copyedit.editorsCopyedit">Redaktørens språkvask</message>
+	<message key="submission.copyedit.editorAuthorReview">Forfatterens språkvask</message>
+	<message key="submission.copyedit.finalCopyedit">Siste språkvask</message>
+	<message key="submission.copyedit.copyeditVersion">Språkvaskerens versjon</message>
+	<message key="submission.copyedit.selectCopyeditor">Oppnevn språkvasker</message>
 	<message key="submission.copyedit.useFile">Bruk fil</message>
-	<message key="submission.copyedit.copyeditComments">Manusredigeringskommentarer</message>
-	<message key="submission.copyedit.instructions">Instruks for manusredigering</message>
+	<message key="submission.copyedit.copyeditComments">Kommentarer til språkvask</message>
+	<message key="submission.copyedit.instructions">Instruks for språkvask</message>
 
 	<!-- Submission Tracking - Layout Specific -->
 	<message key="submission.layout.assignLayoutEditor">Oppnevn layoutredaktør</message>
 	<message key="submission.layout.replaceLayoutEditor">Erstatt layoutredaktør</message>
-	<message key="submission.layout.layoutComments">Layoutkommentarer</message>
-	<message key="submission.layout.instructions">Instruks for layoutredigering</message>
+	<message key="submission.layout.layoutComments">Kommentarer til layout</message>
+	<message key="submission.layout.instructions">Layoutinstruks</message>
 
 
 	<!-- Submission Tracking - Proofread Specific -->
-	<message key="submission.proofreadingComments">Korrekturlesingskommentarer</message>
-	<message key="submission.proofread.corrections">Korrekturlesing: rettelser</message>
+	<message key="submission.proofreadingComments">Kommentar til korrektur</message>
+	<message key="submission.proofread.corrections">Rettelser i korrekturen</message>
 	<message key="submission.proofread.instructions">Instruks for korrekturlesing</message>
 
 	<!-- Submission History -->
@@ -489,8 +504,8 @@ Du kan senere åpne filen ved å klikke på filnavnet. En ny eller omarbeidet fi
 	<message key="submission.logType.article">Artikkel</message>
 	<message key="submission.logType.author">Forfatter</message>
 	<message key="submission.logType.editor">Redaktør</message>
-	<message key="submission.logType.review">Fagvurdering</message>
-	<message key="submission.logType.copyedit">Manusredigering</message>
+	<message key="submission.logType.review">Fagfellevurdering</message>
+	<message key="submission.logType.copyedit">Språkvask</message>
 	<message key="submission.logType.layout">Layout</message>
 	<message key="submission.logType.proofread">Korrekturlesing</message>
 
@@ -499,62 +514,61 @@ Du kan senere åpne filen ved å klikke på filnavnet. En ny eller omarbeidet fi
 	<!-- Submission Email Log -->
 
 	<!-- Submission Comments -->
-	<message key="submission.comments.editorAuthorCorrespondence">Redaktør/forfatter-korrespondanse</message>
-	<message key="submission.comments.copyeditComments">Manusredigering kommentarer</message>
+	<message key="submission.comments.editorAuthorCorrespondence">Korrespondanse mellom redaktør og forfatter</message>
+	<message key="submission.comments.copyeditComments">Språkvaskerens kommentarer</message>
 	<message key="submission.comments.viewableDescription"><![CDATA[Disse kommentarene kan også vises til forfatteren.<br />
 (Etter lagring kan du legge til flere kommentarer.)]]></message>
 	<message key="submission.comments.canShareWithAuthor">For forfatter og redaktør</message>
 	<message key="submission.comments.cannotShareWithAuthor">For redaktør</message>
-	<message key="submission.comments.blindCcReviewers">Etter sending, vis fram en redigerbar blindkopiversjon som kan sendes til fagkonsulenter.</message>
+	<message key="submission.comments.blindCcReviewers">Etter sending, vis fram en redigerbar blindkopiversjon som kan sendes til fagfeller.</message>
 	<message key="submission.comments.forAuthorEditor">For forfatter og redaktør</message>
 	<message key="submission.comments.forEditor">For redaktør</message>
-	<message key="submission.comments.saveAndEmailAuthor">Lagre, og e-post til forfatter</message>
-	<message key="submission.comments.saveAndEmailEditor">Lagre og send e-post til Redaktør</message>
+	<message key="submission.comments.saveAndEmailAuthor">Lagre og send e-post til forfatter</message>
+	<message key="submission.comments.saveAndEmailEditor">Lagre og send e-post til redaktør</message>
 
 	<!-- Login -->
-	<message key="user.login.registerNewAccount">Har du ikke brukernavn? Registrer deg hos dette nettstedet</message>
-	<message key="user.login.resetPasswordInstructions"><![CDATA[Av sikkerhetsgrunner sender systemet et nytt passord til registrerte brukere, heller enn å gjenta det
-nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å tilbakestille passordet ditt. En bekreftelse vil bli sendt til denne e-postadressen.]]></message>
+	<message key="user.login.registerNewAccount"><![CDATA[Har du ikke brukernavn? <br> Registrer deg her.]]></message>
+	<message key="user.login.resetPasswordInstructions"><![CDATA[Av sikkerhetsgrunner sender systemet et nytt passord til registrerte brukere, framfor å gjenta det nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å tilbakestille passordet ditt. En bekreftelse vil bli sendt til denne e-postadressen.]]></message>
 
 	<!-- Profile -->
 
 	<!-- Registration -->
 	<message key="user.register.selectJournal">Velg et tidsskrift du vil registrere deg hos</message>
-	<message key="user.register.noJournals">Det finnes ingen tidsskrift å registrere seg hos på dette nettstedet.</message>
-	<message key="user.register.privacyStatement">Erklæring om personopplysninger</message>
-	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klikk her</a> hvis du er allerede registrert hos dette eller et annet tidsskrift på dette nettstedet.]]></message>
- 	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klikk her</a> hvis du <b>ikke</b> allerede er registrert hos dette eller et annet tidsskrift på dette nettstedet.]]></message>
-	<message key="user.register.loginToRegister">Skriv inn det registrerte brukernavnet og passordet ditt for å registrere deg hos dette tidsskriftet også.</message>
-	<message key="user.register.registrationDisabled">Dette tidsskriftet tar for øyeblikket ikke i mot brukerregistrering.</message>
-	<message key="user.register.form.passwordLengthTooShort">Passordet du skrev inn er ikke langt nok.</message>
- 	<message key="user.register.readerDescription">Be om varsel med e-post når en ny utgave av tidsskriftet publiseres.</message>
- 	<message key="user.register.openAccessNotificationDescription">Be om varsel med e-post når en utgave av tidsskriftet gis Open Access.</message>
-	<message key="user.register.authorDescription">Kan sende inn elementer til tidsskriftet.</message>
-	<message key="user.register.reviewerDescriptionNoInterests">Villig til å utføre fagvurdering av manuskript for tidsskriftet.</message>
-	<message key="user.register.reviewerDescription">Villig til å utføre fagvurdering av manuskript for tidsskriftet. Oppgi fagvurderingsinteresse (hovedområder og forskningsmetoder).</message>
+	<message key="user.register.noJournals">Det finnes ingen tidsskrift du kan registrere deg ved på dette nettstedet</message>
+	<message key="user.register.privacyStatement">Erklæring om personvern</message>
+	<message key="user.register.alreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klikk her</a> hvis du er allerede registrert hos dette eller et annet tidsskrift på dette nettstedet]]></message>
+ 	<message key="user.register.notAlreadyRegisteredOtherContext"><![CDATA[<a href="{$registerUrl}">Klikk her</a> hvis du <b>ikke</b> allerede er registrert hos dette eller et annet tidsskrift på dette nettstedet]]></message>
+	<message key="user.register.loginToRegister">Skriv inn brukernavnet og passordet ditt for å registrere deg hos dette tidsskriftet også</message>
+	<message key="user.register.registrationDisabled">Dette tidsskriftet tar for øyeblikket ikke imot brukerregistrering</message>
+	<message key="user.register.form.passwordLengthTooShort">Passordet du skrev inn er ikke langt nok</message>
+ 	<message key="user.register.readerDescription">Be om varsel med e-post når en ny utgave av tidsskriftet publiseres</message>
+ 	<message key="user.register.openAccessNotificationDescription">Be om varsel med e-post når en utgave av tidsskriftet har åpen tilgang</message>
+	<message key="user.register.authorDescription">Kan sende inn elementer til tidsskriftet</message>
+	<message key="user.register.reviewerDescriptionNoInterests">Villig til å utføre fagfellevurdering for tidsskriftet</message>
+	<message key="user.register.reviewerDescription">Villig til å utføre fagfellevurdering for tidsskriftet. Oppgi faglige interesser (hovedområder og forskningsmetoder).</message>
 
 
 
 	<!-- Search -->
-	<message key="search.browseAuthorIndex">Finn fram i forfatterregister</message>
+	<message key="search.browseAuthorIndex">Finn fram i forfatterregisteret</message>
 	<message key="search.searchFor">Søk i artikler etter</message>
 	<message key="search.withinJournal">Innen</message>
 	<message key="search.allJournals">Alle tidsskrift</message>
- 	<message key="search.authorIndex">Finn fram i forfatterregister</message>
+ 	<message key="search.authorIndex">Finn fram i forfatterregisteret</message>
 	<message key="search.authorDetails">Forfatterdetaljer</message>
 	<message key="search.syntaxInstructions"><![CDATA[Søketips: <ul>
-<li>Søkeord skiller ikke mellom små og store bokstaver</li>
-<li>Vanlige ord blir ignorert</li>
-<li>Ved standard søk blir bare artikler som inneholder <i>alle</i> søkeordene truffet (m.a.o. at søkebegrepet <i>AND</i> er implisitt)</li>
-<li>Du kan kombinere flere søkeord med <i>OR</i> for å finne artikler som inneholder minst ett av søkeordene; for eksempel <i>utdanning OR forskning</i></li>
-<li>Bruk parenteser for å lage komplekse søk; for eksempel <i>archive ((tidsskrift OR konferanse) NOT avhandling)</i></li>
-<li>Søk etter en eksakt frase ved å sette den i anførselstegn; for eksempel <i>"Open Access publisering"</i></li>
+<li>Søkeord skiller ikke mellom små og store bokstaver.</li>
+<li>Vanlige ord blir ignorert.</li>
+<li>Kun artikler som inneholder <i>alle</i> søkeordene returneres (m.a.o. at søkebegrepet <i>AND</i> er implisitt)</li>
+<li>Du kan kombinere flere søkeord med <i>OR</i> for å finne artikler som inneholder minst ett av søkeordene; f.eks. <i>utdanning OR forskning.</i></li>
+<li>Bruk parenteser for å lage komplekse søk; f.eks. <i>archive ((tidsskrift OR konferanse) NOT avhandling)</i></li>
+<li>Søk etter en eksakt frase ved å sette den i anførselstegn; f.eks.<i>«Open Access-publisering»</i></li>
 <li>Ekskluder et søkeord med prefikset <b>-</b> eller <i>NOT</i>; f.eks. <i>online -politics</i> eller <i>online NOT politics</i></li>
-<li>Bruk <b>*</b> i søkeord som jokertegn for å treffe alskens tegn; for eksempel vil <i>soci* morality</i> både treffe dokumenter som inneholder "sociological" og "societal"</li>
+<li>Bruk <b>*</b> i søkeord som jokertegn for et bredere treff; f.eks. vil <i>soci* morality</i> treffe dokumenter som inneholder «sociological», «societal» og andre ord som starter med «soci»</li>
 </ul>]]></message>
 
 	<!-- Site index -->
-	<message key="site.journalsHosted">Tidsskrifter dette nettstedet er vert for</message>
+	<message key="site.journalsHosted">Tidsskrifter som dette nettstedet er vert for</message>
 	<message key="site.journalView">Vis tidsskrift</message>
 	<message key="site.journalRegister">Registrer</message>
 	<message key="site.journalCurrent">Nyeste utgave</message>
@@ -563,12 +577,12 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<!-- Current index -->
 	<message key="current.current">Nyeste</message>
 	<message key="current.noCurrentIssue">Nyeste utgave finnes ikke</message>
-	<message key="current.noCurrentIssueDesc">Dette tidsskriftet har ennå ikke publisert noen utgave.</message>
+	<message key="current.noCurrentIssueDesc">Dette tidsskriftet har ennå ikke publisert noen utgave</message>
 
 	<!-- Archive index -->
 	<message key="archive.archives">Arkiv</message>
 	<message key="archive.browse">Finn fram i eldre utgaver</message>
-	<message key="archive.issueUnavailable">Finner ingen utgave</message>
+	<message key="archive.issueUnavailable">Utgaven er ikke tilgjengelig</message>
 
 	<!-- About The Journal -->
 	<message key="about.statistics">Statistikk</message>
@@ -578,49 +592,49 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<message key="about.editorialTeam.biography">Biografi</message>
 	<message key="about.editorialPolicies">Redaksjonelle retningslinjer</message>
 	<message key="about.focusAndScope">Hovedfokus og spennvidde</message>
-	<message key="about.sectionPolicies">Seksjonsretningslinjer</message>
-	<message key="about.submissions">Manuskript</message>
+	<message key="about.sectionPolicies">Retningslinjer for seksjonen</message>
+	<message key="about.submissions">Innleveringer</message>
 	<message key="about.sponsors">Sponsorer</message>
 	<message key="about.contributors">Andre støttespillere</message>
-	<message key="about.onlineSubmissions">Online innsending av manuskript</message>
+	<message key="about.onlineSubmissions">Innlevere manus</message>
 	<message key="about.onlineSubmissions.haveAccount">Har du allerede brukernavn/passord til {$journalTitle}?</message>
-	<message key="about.onlineSubmissions.login">Gå til innlogging</message>
+	<message key="about.onlineSubmissions.login">Innlogging</message>
 	<message key="about.onlineSubmissions.needAccount">Trenger du brukernavn/passord?</message>
 	<message key="about.onlineSubmissions.registration">Gå til registrering</message>
-	<message key="about.onlineSubmissions.registrationRequired">Registrering og innlogging er påkrevet for sende inn elementer online og for å følge status for innsendte manuskript.</message>
+	<message key="about.onlineSubmissions.registrationRequired">{$login} eller {$register} for innlevering</message>
 	<message key="about.authorGuidelines">Forfatterinstruks</message>
-	<message key="about.submissionPreparationChecklist">Sjekkliste for klargjøring av manuskript</message>
-	<message key="about.submissionPreparationChecklist.description">Som del av innsendingsprosessen må forfatteren krysse av for at manuskriptet oppfyller følgende krav, og manuskript som ikke oppfyller kravene og følger retningslinjene, kan bli returnert til forfatteren.</message>
-	<message key="about.copyrightNotice">Erklæring om copyright</message>
-	<message key="about.privacyStatement">Erklæring om personopplysninger</message>
- 	<message key="about.peerReviewProcess">Om fagvurderingsprosessen</message>
+	<message key="about.submissionPreparationChecklist">Sjekkliste for innleveringen</message>
+	<message key="about.submissionPreparationChecklist.description">Forfatteren må krysse av for at innleveringen oppfyller kravene som listes under. Innleveringer som ikke oppfyller disse, kan bli returnert til forfatteren.</message>
+	<message key="about.copyrightNotice">Erklæring om opphavsrett</message>
+	<message key="about.privacyStatement">Erklæring om personvern</message>
+ 	<message key="about.peerReviewProcess">Prosessen rundt fagfellevurderingen</message>
 	<message key="about.publicationFrequency">Publiseringsfrekvens</message>
-	<message key="about.openAccessPolicy">Open Access-retningslinjer</message>
+	<message key="about.openAccessPolicy">Retningslinjer om Open Access</message>
 	<message key="about.delayedOpenAccess">Utsatt Open Access</message>
-	<message key="about.delayedOpenAccessDescription1">Innholdet i dette tidsskriftet vil bli tilgjengelig i Open Access format</message>
-	<message key="about.delayedOpenAccessDescription2">måned(er) etter at en utgave er publisert.</message>
+	<message key="about.delayedOpenAccessDescription1">Innholdet i dette tidsskriftet vil bli tilgjengelig i Open Access-format</message>
+	<message key="about.delayedOpenAccessDescription2">måned(er) etter at en utgave er publisert</message>
 	<message key="about.authorSelfArchive">Forfatters egenarkivering</message>
 	<message key="about.archiving">Arkivering</message>
-	<message key="about.subscriptions">Abonnement</message>
-	<message key="about.subscriptionsContact">Abonnementskontakt</message>
+	<message key="about.subscriptions">Abonnementer</message>
+	<message key="about.subscriptionsContact">Abonnementsansvarlig</message>
 	<message key="about.availableSubscriptionTypes">Abonnementstyper</message>
 	<message key="about.journalSponsorship">Tidsskriftets sponsorer</message>
  	<message key="about.aboutThisPublishingSystem">Om dette publiseringssystemet</message>
- 	<message key="about.aboutOJSJournal"><![CDATA[Dette tidsskriftet bruker Open Journal Systems {$ojsVersion}, som er open source-programvare for tidskriftsadministrasjon og publisering. OJS er utviklet, støttet, og fritt distribuert av <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under GNU General Public License.]]></message>
- 	<message key="about.aboutOJSSite"><![CDATA[Dette nettstedet bruker Open Journal Systems {$ojsVersion}, som er open source programvare for tidskriftsadministrasjon og publisering. OJS er utviklet, støttet, og fritt distribuert av <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under GNU General Public License.]]></message>
+ 	<message key="about.aboutOJSJournal"><![CDATA[Dette tidsskriftet bruker Open Journal Systems {$ojsVersion}, som er en programvare for administrasjon og publisering av åpent tilgjengelige («open access») tidsskrifter. OJS er utviklet, støttet og fritt distribuert av <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under GNU General Public License.]]></message>
+ 	<message key="about.aboutOJSSite"><![CDATA[Dette nettstedet bruker Open Journal Systems {$ojsVersion}, som er en programvare for administrasjon og publisering av åpent tilgjengelige («open access») tidsskrifter. OJS er utviklet, støttet og fritt distribuert av <a href="http://pkp.sfu.ca/">Public Knowledge Project</a> under GNU General Public License.]]></message>
 
 	<!-- Announcement -->
 
 	<!-- Help -->
-	<message key="help.ojsHelp">Open Journal Systems hjelp</message>
-	<message key="help.ojsHelpAbbrev">OJS hjelp</message>
+	<message key="help.ojsHelp">Open Journal Systems-hjelp</message>
+	<message key="help.ojsHelpAbbrev">OJS-hjelp</message>
 
 	<!-- Installer -->
-	<message key="installer.appInstallation">OJS installasjon</message>
-	<message key="installer.ojsUpgrade">OJS oppgradering</message>
+	<message key="installer.appInstallation">Installere OJS</message>
+	<message key="installer.ojsUpgrade">Oppgradere OJS</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS versjon {$version}</h4>
 
-<p>Takk for at du laster ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Før du går videre, vennligst les <a href="{$baseUrl}/docs/README">README</a> filen som følger med denne programvare. For mer informasjon om Public Knowledge Project og deres programvareprosjekter, vennligst oppsøk <a href="http://pkp.sfu.ca/" target="_blank">PKP nettstedet</a>. Hvis du har feilmeldinger eller trenger svar om teknisk støtte for Open Journal Systems, oppsøk <a href="http://forum.pkp.sfu.ca">støtteforum</a> eller PKPs online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">feilmeldingssystem</a>. Selv om støtteforumet er den kontaktkanalen vi foretrekker, kan du også e-poste teamet: <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>Takk for at du laster ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Før du går videre, vennligst les <a href="{$baseUrl}/docs/README">README</a> filen som følger med denne programvaren. For mer informasjon om Public Knowledge Project og deres programvareprosjekter, vennligst oppsøk <a href="http://pkp.sfu.ca/" target="_blank">PKP nettstedet</a>. Hvis du har feilmeldinger eller trenger svar om teknisk støtte for Open Journal Systems, oppsøk <a href="http://forum.pkp.sfu.ca">støtteforum</a> eller PKPs online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">feilmeldingssystem</a>. Selv om støtteforumet er den kontaktkanalen vi foretrekker, kan du også sende e-post til teamet: <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 
 <h4>Oppgradering</h4>
 
@@ -641,100 +655,88 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 
 <h4>Støttede databasesystemer</h4>
 
-<p>OJS er for øyeblikket bare testet for MySQL og PostgreSQL, selv om andre databaseadministrasjonssystemer støttet av <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> også kan fungere (helt eller delvis). Kompatibilitetsrapporter og/eller code patcher for alternative DBMSs kan sendes til OJS teamet.</p>
-
-<h4>Før installasjon</h4>
-
-<p>1. Følgende filer og mapper (og deres innhold) må gjøres overskrivbare:</p>
-<ul>
-	<li><tt>config.inc.php</tt> er overskrivbar (optional): {$writable_config}</li>
-	<li><tt>public/</tt> er overskrivbar: {$writable_public}</li>
-	<li><tt>cache/</tt> er overskrivbar: {$writable_cache}</li>
-	<li><tt>cache/t_cache/</tt> er overskrivbar: {$writable_templates_cache}</li>
-	<li><tt>cache/t_compile/</tt> er overskrivbar: {$writable_templates_compile}</li>
-	<li><tt>cache/_db</tt> er overskrivbar: {$writable_db_cache}</li>
-</ul>
-
-<p>2. En mappe for lagring av opplastete filer må opprettes og gjøres overskrivbar (Se "Filinnstillinger" nedenfor).</p>
-
-<h4>Manuell installasjon</h4>
-
-<p>Velg <strong>Manuell installering</strong> for å vise SQL-setninger  som trengs for å opprette OJS databaseskjema og første data, slik at databaseinstallasjonen kan utføres manuelt. Denne valgmuligheten er nyttig for debugging av installasjonsproblemer, særlig på platformer systemet ikke har støtte for. Merk at denne installasjonsmåten verken vil lage databasen eller tabeller, selv om konfigurasjonsfilen likevel kommer til å bli skrevet med de medfølgende databaseinnstillingene.</p>]]></message>
+<p>OJS er for øyeblikket bare testet for MySQL og PostgreSQL, selv om andre databaseadministrasjonssystemer støttet av <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> også kan fungere (helt eller delvis). Kompatibilitetsrapporter og/eller code patcher for alternative DBMSs kan sendes til OJS teamet.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS versjon {$version}</h4>
 
-<p>Takk for at du laster ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Før du går videre, vennligst les <a href="{$baseUrl}/docs/README">README</a>- og <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a>-filene som følger med denne programvaren. For mer informasjon om Public Knowledge Project og deres programvareprosjekter, vennligst oppsøk <a href="http://pkp.sfu.ca/" target="_blank">PKPs nettsted</a>. Hvis du har feilmeldinger eller spørsmål om teknisk støtte for Open Journal Systems, se OJS' <a href="http://forum.pkp.sfu.ca">støtteforum</a> eller besøk PKPs online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">feilmeldingssystem</a>. Selv om støtteforumet er den foretrukne kontaktkanalen, kan du også e-poste teamet: <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
-<p>Det er <strong>på det sterkeste anbefalt</strong> at du tar backup av database din, filmappen, og OJS installasjonsmappe før du går videre.</p>
-<p>Hvis du kjører installasjonen i <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, vennligst forsikre deg om at max_execution_time directive i din php.ini konfigurasjonsfil er satt til en høy grense. Hvis denne eller en annen tidsbegrensning (for eks. Apache's "Timeout" direktiv) blir overskredet og oppgraderingsprosessen dermed blir avbrutt, vil det bli nødvendig å gripe inn manuelt.</p>]]></message>
-	<message key="installer.localeInstructions">Primærspråket som skal brukes i dette systemet. Vennligst slå opp i OJS-dokumentasjonen hvis du er interessert i støtte for språk som ikke er oppført her.</message>
-	<message key="installer.additionalLocalesInstructions">Velg øvrige språk som skal støttes i dette systemet. Disse språkene vil bli tilgjengelig til bruk for de tidsskrift nettstedet er vert for. Flere språk kan også installeres når som helst, gjennom grensesnittet for nettstedsadministrasjon.</message>
-	<message key="installer.filesDirInstructions"><![CDATA[Skriv inn fullstendig sti til en eksisterende mappe hvor opplastede filer skal oppbevares. Denne mappen bør ikke kunne aksesseres direkte fra internett. <strong>Vennligst sikre at denne mappen finnes og er overskrivbar før du installerer.</strong> Windows filstinavn bør bruke vanlig skråstrek (/), for eks. "C:/myjournal/files".]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Advarsel:</b> Hvis installasjonen feilet under databaseinstallasjonen kan du trenge å droppe din OJS-database eller databasetabellene før du forsøker å reinstallere databasen.]]></message>
-	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
-<p>Installasjonen kunne ikke automatisk overskrive konfigurasjonsfilen. Før du forsøker å bruke systemet, vennligst åpne <tt>config.inc.php</tt> i et egnet tekstbehandlingsprogram og erstatt innholdet i den med innholdet i tekstfeltet nedenfor.</p>]]></message>
-	<message key="installer.installationComplete"><![CDATA[<p>Installasjonen av OJS er vellykket gjennomført .</p>
-<p>For å begynne å bruke systemet, <a href="{$loginUrl}">logg inn</a> med brukernavnet og passord skrevet inn på foregående side.</p>
-<p>Hvis du ønsker å motta nyheter og oppdateringer, <strong>vennligst registrer deg på <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Hvis du har spørsmål eller kommentarer, besøk <a href="http://forum.pkp.sfu.ca" target="_new">støtteforumet</a>.</p>]]></message>
-	<message key="installer.upgradeComplete"><![CDATA[<p>Oppgradering av OJS til versjon {$version} ble vellykket gjennomført.</p>
-<p>Ikke glem å sette "installed"-innstillingen i din config.inc.php konfigurasjonsfil tilbake til  <i>På</i>.</p>
-<p>Om du ikke allerede har registrert deg og ønsker å motta nyheter og oppdateringer, <strong>vennligst registrer deg på<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Hvis du have spørsmål eller kommentarer, vennligst besøk <a href="http://forum.pkp.sfu.ca" target="_new">støtteforumet</a>.</p>]]></message>
+<p>Takk for at du laster ned Public Knowledge Projects <strong>Open Journal Systems</strong>. Før du går videre, les filene <a href="{$baseUrl}/docs/README">README</a>- og <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> som følger med denne programvaren. For mer informasjon om Public Knowledge Project og deres programvareprosjekter,  se <a href="http://pkp.sfu.ca/" target="_blank">PKPs nettsted</a>. Hvis du har feilmeldinger eller spørsmål om teknisk støtte for Open Journal Systems, se OJS' <a href="http://forum.pkp.sfu.ca">støtteforum</a> eller besøk PKPs nettbaserte <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">feilmeldingssystem</a>. Selv om støtteforumet er den foretrukne kontaktkanalen, kan du også sende en e-post til teamet: <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>Det er <strong>på det sterkeste anbefalt</strong> at du tar backup av databasen din, filmappen og OJS installasjonsmappe før du går videre.</p>
+<p>Hvis du kjører installasjonen i <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a> må du forsikre deg om at max_execution_time directive i din php.ini konfigurasjonsfil er satt til en høy grense. Hvis denne eller en annen tidsbegrensning (for eks. Apaches «Timeout» direktiv) blir overskredet og oppgraderingsprosessen dermed blir avbrutt, vil det bli nødvendig å gripe inn manuelt.</p>]]></message>
+	<message key="installer.localeInstructions">Hovedspråket som skal brukes i dette systemet. Slå opp i OJS-dokumentasjonen hvis du er interessert i støtte for språk som ikke er oppført her.</message>
+	<message key="installer.additionalLocalesInstructions">Velg andre språk som skal støttes i dette systemet. Disse språkene vil bli tilgjengelige til bruk for tidsskriftene som nettstedet er vert for. Flere språk kan også installeres når som helst gjennom grensesnittet for nettstedsadministrasjon.</message>
+	<message key="installer.filesDirInstructions"><![CDATA[Skriv inn en fullstendig sti til en eksisterende mappe hvor opplastede filer skal oppbevares. Denne mappen bør ikke kunne nås direkte fra internett. <strong> Pass på at denne mappen finnes og er overskrivbar før du installerer.</strong> Windows filstinavn bør bruke vanlig skråstrek (/), f.eks. «C:/myjournal/files».]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Advarsel:</b> Hvis installasjonen feilet under databaseinstallasjonen, kan du måtte droppe OJS-databasen din eller databasetabellene dine før du forsøker å reinstallere databasen.]]></message>
+	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>Viktig!</h4>
+<p>Installasjonen kunne ikke automatisk overskrive konfigurasjonsfilen. Før du forsøker å bruke systemet, åpne <tt>config.inc.php</tt> i et egnet tekstbehandlingsprogram og erstatt innholdet i den med innholdet i tekstfeltet nedenfor.</p>]]></message>
+	<message key="installer.installationComplete"><![CDATA[<p>OJS ble installert.</p>
+<p>For å begynne å bruke systemet, <a href="{$loginUrl}">logg inn</a> med brukernavnet og passord skrevet inn på forrige side.</p>
+<p>Om du ønsker å bli del av PKP-fellesskapet, kan du:</p>
+<ol>
+	<li>Lese<a href="http://pkp.sfu.ca/blog" target="_new">PKP-bloggen</a> og følge<a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS-tjenesten</a> for nyheter og oppdateringer.</li>
+	<li>Besøk <a href="http://forum.pkp.sfu.ca" target="_new">støtteforumet</a> om du har spørsmål og kommentarer.</li>
+</ol>]]></message>
+	<message key="installer.upgradeComplete"><![CDATA[<p>Oppgradering av OJS til versjon {$version} ble gjennomført.</p>
+<p>Ikke glem å sette «installert»-innstillingen i konfigurasjonsfilen din (config.inc.php) tilbake til <i>«På»</i>.</p>
+<p>Om du ikke allerede har registrert deg og ønsker å motta nyheter og oppdateringer, <strong> registrer deg på<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Hvis du har spørsmål eller kommentarer,  besøk <a href="http://forum.pkp.sfu.ca" target="_new">støtteforumet</a>.</p>]]></message>
 
 
 	<!-- Article Logs -->
-	<message key="log.author.documentRevised">{$authorName} har omarbeidet artikkel {$submissionId}. Den nye filens ID er {$fileId}.</message>
-	<message key="log.review.reviewerUnassigned">{$reviewerName} er avløst fra vurdering av manuskriptet {$submissionId} for vurderingsrunde {$round}.</message>
-	<message key="log.review.reviewInitiated">Vurderingsrunde {$round} av manuskriptet {$submissionId} ved {$reviewerName} er igangsatt.</message>
- 	<message key="log.review.reviewReinitiated">Vurderingsrunde {$round} av manuskript {$submissionId} ved {$reviewerName}  er igangsatt på nytt.</message>
- 	<message key="log.review.reviewCleared">Vurderingsrunde {$round} av manuskript {$submissionId} ved {$reviewerName}  er fjernet.</message>
-	<message key="log.review.reviewerRated">{$reviewerName} er rangert for vurderingsrunde {$round} av manuskriptet {$submissionId}.</message>
-	<message key="log.review.reviewDueDateSet">Ventet-datoen for vurderingsrunde {$round}  av manuskriptet {$submissionId} ved {$reviewerName} er satt til {$dueDate}.</message>
-	<message key="log.review.reviewRecommendationSet">Anbefalingen for runde {$round} vurdering av manuskriptet {$submissionId} ved {$reviewerName} er satt.</message>
- 	<message key="log.review.reviewRecommendationSetByProxy">Anbefalingen for runde {$round} vurdering av manuskriptet {$submissionId} er satt av redaktøren, {$editorName}, på vegne av fagkonsulenten, {$reviewerName}.</message>
-	<message key="log.review.resubmit">Manuskriptet {$submissionId} er gjeninnsendt for vurdering.</message>
- 	<message key="log.review.reviewDeclined">{$reviewerName} har avslått runde {$round} vurdering av manuskript {$submissionId}.</message>
- 	<message key="log.review.reviewAccepted">{$reviewerName} har akseptert runde {$round} vurdering av manuskript {$submissionId}.</message>
- 	<message key="log.review.reviewAcceptedByProxy">{$userName} har akseptert runde {$round} vurdering av manuskript {$submissionId} på vegne av {$reviewerName}.</message>
-	<message key="log.review.reviewFileByProxy">Redaktøren, {$userName}, har lastet opp en vurderingsfil for runde {$round} for manuskriptet {$submissionId} på vegne av fagkonsulenten, {$reviewerName}.</message>
-	<message key="log.review.reviewerFile">En fagkonsulentfil er lastet opp.</message>
+	<message key="log.author.documentRevised">{$authorName} har omarbeidet artikkelen {$submissionId}. Den nye filens ID er {$fileId}.</message>
+	<message key="log.review.reviewerUnassigned">{$reviewerName} er avløst fra fagfellevurdering av innleveringen {$submissionId} for vurderingsrunde {$round}</message>
+	<message key="log.review.reviewInitiated">Fagfellevurderingsrunde {$round} av innleveringen {$submissionId} ble igangsatt av {$reviewerName}</message>
+ 	<message key="log.review.reviewReinitiated">Vurderingsrunde {$round} av innleveringen {$submissionId} ved {$reviewerName}  er igangsatt på nytt</message>
+ 	<message key="log.review.reviewCancelled">Vurderingsrunde {$round} av innleveringen {$submissionId} ved {$reviewerName} er avbrutt</message>
+ 	<message key="log.review.reviewCleared">Vurderingsrunde {$round} av innleveringen {$submissionId} ved {$reviewerName}  er fjernet</message>
+	<message key="log.review.reviewerRated">{$reviewerName} er rangert for vurderingsrunden {$round} av {$submissionId}</message>
+	<message key="log.review.reviewDueDateSet">Frist for vurderingsrunde {$round}  av {$submissionId} ved {$reviewerName} er satt til {$dueDate}</message>
+	<message key="log.review.reviewRecommendationSet">Anbefalingen for runde {$round} i vurderingen av innleveringen {$submissionId} ved {$reviewerName} er lagt inn</message>
+ 	<message key="log.review.reviewRecommendationSetByProxy">Anbefalingen for runde {$round} i vurderingen av innleveringen {$submissionId} er lagt inn av redaktøren, {$editorName}, på vegne av fagfellen, {$reviewerName}</message>
+	<message key="log.review.resubmit">Innleveringen {$submissionId} er levert inn for fagfellevurdering</message>
+ 	<message key="log.review.reviewDeclined">{$reviewerName} har avslått forespørsel om deltakelse i runde {$round} i fagfellevurderingen av innleveringen {$submissionId}</message>
+ 	<message key="log.review.reviewAccepted">{$reviewerName} har akseptert forespørsel om deltakelse i runde {$round} i fagfellevurderingen av innleveringen {$submissionId}</message>
+ 	<message key="log.review.reviewAcceptedByProxy">{$userName} har akseptert fagfellevurderingen i runde {$round}  av innleveringen {$submissionId} på vegne av {$reviewerName}</message>
+	<message key="log.review.reviewFileByProxy">Redaktøren {$userName} har lastet opp en fagfellevurdering av innleveringen {$submissionId} i runde {$round} på vegne av fagfellen {$reviewerName}</message>
+	<message key="log.review.reviewerFile">En fil med fagfellevurdering er lastet opp</message>
 
 
- 	<message key="log.copyedit.initiate">Manusredigering av manuskript {$submissionId} er utført av {$copyeditorName}.</message>
-	<message key="log.copyedit.copyeditFileSet">Default manusredigeringsfil er valgt.</message>
-	<message key="log.copyedit.initialEditComplete">{$copyeditorName} har ferdigstilt første manusredigering av manuskriptet {$submissionId}.</message>
-	<message key="log.copyedit.finalEditComplete">{$copyeditorName} har ferdigstilt siste manusredigering av manuskriptet {$submissionId}.</message>
- 	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} er oppnevnt for manusredigering av manuskriptet {$submissionId}.</message>
- 	<message key="log.copyedit.copyeditorFile">En manusredaktørversjon av manuskriptfilen er lastet opp.</message>
- 	<message key="log.copyedit.authorFile">En versjon av manuskriptfilen bearbeidet av forfatteren er lastet opp.</message>
+ 	<message key="log.copyedit.initiate">Språkvasken av {$submissionId} har blitt kommentert av {$copyeditorName}</message>
+	<message key="log.copyedit.copyeditFileSet">Standard språkvaskfil er valgt</message>
+	<message key="log.copyedit.initialEditComplete">{$copyeditorName} har ferdigstilt første språkvask av innleveringen {$submissionId}</message>
+	<message key="log.copyedit.finalEditComplete">{$copyeditorName} har ferdigstilt siste språkvask av innleveringen {$submissionId}</message>
+ 	<message key="log.copyedit.copyeditorAssigned">{$copyeditorName} er oppnevnt som språkvasker av innleveringen {$submissionId}</message>
+ 	<message key="log.copyedit.copyeditorFile">En språkvasket versjon av innleveringen er lastet opp</message>
+ 	<message key="log.copyedit.authorFile">Forfatteren har lastet opp en språkvasket versjon av innleveringen</message>
 
-	<message key="log.layout.layoutEditorAssigned">{$editorName} er oppnevnt som layoutredaktør for manuskriptet {$submissionId}.</message>
-	<message key="log.layout.layoutEditorUnassigned">{$editorName} er avløst som layoutredaktør for manuskriptet {$submissionId}.</message>
- 	<message key="log.layout.layoutEditComplete">{$editorName} har ferdigstilt layoutredigering av manuskriptet {$submissionId}.</message>
+	<message key="log.layout.layoutEditorAssigned">{$editorName} er oppnevnt som layoutredaktør for innleveringen {$submissionId}</message>
+	<message key="log.layout.layoutEditorUnassigned">{$editorName} er avløst som layoutredaktør for innleveringen {$submissionId}</message>
+ 	<message key="log.layout.layoutEditComplete">{$editorName} har ferdigstilt layoutredigering av innleveringen {$submissionId}</message>
 
-	<message key="log.editor.metadataModified">Metadata for denne artikkelen ble endret av {$editorName}.</message>
- 	<message key="log.editor.editorFile">En redaktørversjon av manuskriptfilen er lastet opp.</message>
-	<message key="log.editor.archived">Manuskriptet {$submissionId} er arkivert.</message>
-	<message key="log.editor.restored">Manuskriptet {$submissionId} er hentet tilbake til arbeidsplanen.</message>
-	<message key="log.editor.editorAssigned">{$editorName} er oppnevnt som redaktør for manuskriptet {$submissionId}.</message>
+	<message key="log.editor.metadataModified">Metadata for denne artikkelen ble endret av {$editorName}</message>
+ 	<message key="log.editor.editorFile">Redaktøren har lastet opp en versjon av innleveringen.</message>
+	<message key="log.editor.archived">Innleveringen {$submissionId} er arkivert</message>
+	<message key="log.editor.restored">Innleveringen {$submissionId} er hentet tilbake til arbeidsplanen</message>
+	<message key="log.editor.editorAssigned">{$editorName} er oppnevnt som redaktør for innleveringen {$submissionId}</message>
+	<message key="log.editor.submissionExpedited">{$editorName} har ferdigstilt artikkelen {$submissionId}.</message>
 
-	<message key="log.proofread.assign">{$assignerName} har oppnevnt {$proofreaderName} til å korrigere manuskriptet {$submissionId}.</message>
-	<message key="log.proofread.complete">{$proofreaderName} har sendt inn {$submissionId} for planlegging.</message>
+	<message key="log.proofread.assign">{$assignerName} har oppnevnt {$proofreaderName} til å korrekturlese innleveringen {$submissionId}</message>
+	<message key="log.proofread.complete">{$proofreaderName} har sendt inn {$submissionId} for planlegging</message>
 
-	<message key="log.imported">{$userName} har importert artikkel {$submissionId}.</message>
+	<message key="log.imported">{$userName} har importert artikkelen {$submissionId}</message>
 
 	<!-- Reading Tools entries -->
 
 
 	<!-- RT Settings -->
- 	<message key="rt.admin.settings">Valg for leseverktøy</message>
+ 	<message key="rt.admin.settings">Alternativer for leseverktøy</message>
 
  	<message key="rt.admin.settings.description">Leseverktøyene vil bli vist i en ramme ved siden av publiserte elementer i de seksjonene av tidsskriftet som er utpekt for indeksering. Leseverktøyene består av et sett valgfrie verktøy tilknyttet det publiserte elementet (oppført nedenfor), og et sett verktøy som gir tilgang til relaterte elementer, organisert etter fag og felt.</message>
-	<message key="rt.admin.settings.enableReadingTools">Slå på leseverktøy for de utpekte seksjonene av tidsskriftet.</message>
+	<message key="rt.admin.settings.enableReadingTools">Slå på leseverktøy for utvalgte seksjoner av tidsskriftet</message>
 	<message key="rt.admin.settings.relatedItems">Felt</message>
-	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Se <a href="{$relatedItemsLink}" class="action">Relaterte element sett</a> for å se, legge til, korrigere, eller slette relaterte elementer for hvert felt.]]></message>
+	<message key="rt.admin.settings.relatedItemsLink"><![CDATA[Se <a href="{$relatedItemsLink}" class="action">«Relaterte elementsett»</a> for å se, legge til, korrigere eller slette relaterte elementer for hvert felt]]></message>
 
 	<message key="rt.admin.options">Verktøy for tidsskriftelement</message>
  	<message key="rt.admin.relatedItems">Verktøy for relaterte elementer</message>
 
-	<message key="rt.admin.settings.addComment">Legg til kommentar (tillater leseren å sende inn kommentarer, som redaksjonslederen kan slette. Leserkommentarer må være slått på i oppsett trinn 2).</message>
+	<message key="rt.admin.settings.addComment">Legg til kommentar. (Dette tillater leseren å sende inn kommentarer, som redaksjonslederen kan slette.)</message>
 
 	<!-- RT Versions -->
 
@@ -743,7 +745,7 @@ nåværende passordet.<br /><br />Skriv inn e-postadressen din nedenfor for å t
 	<!-- RT Searches -->
 
 	<message key="rt.admin.validateUrls.description"><![CDATA[Mulig ugyldige URL-adresser for søkestedene er vist nedenfor.<br/>
-Du bør validere de URLene som er angitt som ugyldige manuelt, fordi denne testen ikke er 100% nøyaktig.<br/>
+Du bør validere de URLene som er angitt som ugyldige manuelt, fordi denne testen ikke er 100 % nøyaktig.<br/>
 Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skjema.]]></message>
 
 	<!-- RT Entities -->
@@ -753,7 +755,7 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 
 	<message key="rt.metadata.dublinCore.primaryAuthor">Eier</message>
 
-	<message key="rt.metadata.pkp.primaryAuthor">Forfatterens navn, tilknytning, land</message>
+	<message key="rt.metadata.pkp.primaryAuthor">Forfatterens navn, institusjonstilhørighet og land</message>
 	<message key="rt.metadata.pkp.peerReviewed">Fagfellevurdert artikkel</message>
 
 
@@ -762,7 +764,7 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 	<message key="rt.thisJournal">Søk i tidsskrift</message>
 
 
- 	<message key="rt.context.authorTermsDescription">For elementer med flere enn en forfatter, kan du krysse av for hvert forfatternavn du vil søke på. For å få vite mer om søkeressursene, klikk på OM. Disse ressursene er valgt for sin relevans og frie tilgang til noe eller alt innhold.</message>
+ 	<message key="rt.context.authorTermsDescription">For elementer med flere enn en forfatter, kan du krysse av for hvert forfatternavn du vil søke på. For å få vite mer om søkeressursene, klikk på «Om». Disse ressursene er valgt for sin relevans og frie tilgang til noe eller alt innhold.</message>
 
 
 	<!--
@@ -779,14 +781,14 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 	 * DEFAULT - Default settings for setup items.
 	 *
 	-->
-	<message key="reviewer.article.enterReviewForm">Klikk på ikonet for å fylle ut vurderingsskjemaet.</message>
-	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Vær vennlig å fylle inn de påkrevde feltene.</message>
+	<message key="reviewer.article.enterReviewForm">Klikk på ikonet for å fylle ut skjema for fagfellevurdering</message>
+	<message key="reviewer.article.reviewFormResponse.form.responseRequired">Fyll ut feltene</message>
 	<message key="common.payment">Betaling</message>
 	<message key="common.payments">Betalinger</message>
-	<message key="common.confirmComplete">Er du sikker på at du vil registrere at du er ferdig med denne oppgaven? Hvis du gjør dette, kan du muligens ikke foreta endringer senere.</message>
-	<message key="common.homePageHeader.altText">Tidsskriftets hjemmeside: topptekst</message>
-	<message key="common.journalHomepageImage.altText">Tidsskriftets hjemmeside: bilde</message>
-	<message key="navigation.competingInterestGuidelines">Interessekonflikter: retningslinjer</message>
+	<message key="common.confirmComplete">Er du sikker på at du vil markere at du er ferdig med denne oppgaven? Hvis du gjør dette, kan du muligens ikke foreta endringer senere.</message>
+	<message key="common.homePageHeader.altText">Topptekst for tidsskriftets hjemmeside</message>
+	<message key="common.journalHomepageImage.altText">Bilde for tidsskriftets hjemmeside</message>
+	<message key="navigation.competingInterestGuidelines">Retningslinjer angående interessekonflikter</message>
 	<message key="article.coverPage.altText">Omslagsbilde</message>
 	<message key="article.accessLogoOpen.altText">Åpen tilgang (Open Access)</message>
 	<message key="article.accessLogoRestricted.altText">Begrenset tilgang</message>
@@ -795,103 +797,104 @@ Valideringen kan for eksempel svikte på søkesteder som krever utfylling av skj
 	<message key="article.comments.enable">Slå på</message>
 	<message key="article.fontSize">Skriftstørrelse</message>
 	<message key="article.fontSize.small.altText">Liten</message>
-	<message key="article.fontSize.medium.altText">Middelstor</message>
+	<message key="article.fontSize.medium.altText">Mellomstor</message>
 	<message key="article.fontSize.large.altText">Stor</message>
 	<message key="submission.sent">Sendt</message>
 	<message key="journal.issn">ISSN</message>
-	<message key="user.noRoles.chooseJournal">Brukerkontoen din er ikke knyttet til noe tidsskrift. Vennligst velg tidsskrift:</message>
-	<message key="user.noRoles.noRolesForJournal">Brukerkontoen din er ikke knyttet til noen rolle for dette tidsskriftet. Vennligst velg blant disse alternativene:</message>
-	<message key="user.noRoles.submitArticle">Send inn et artikkelforslag</message>
-	<message key="user.noRoles.submitArticleRegClosed">Send inn en artikkel: Forfatterregistreringen er for øyeblikket slått av.</message>
-	<message key="user.noRoles.regReviewer">Registrer som fagkonsulent</message>
-	<message key="user.noRoles.regReviewerClosed">Registrer som fagkonsulent: Registrering av fagkonsulenter er for øyeblikket slått av.</message>
+	<message key="user.noRoles.chooseJournal">Du må velge et tidsskrift. Brukerkontoen din er ikke knyttet til noe tidsskrift.</message>
+	<message key="user.noRoles.noRolesForJournal">Velg blant alternativene under. Brukerkontoen din er ikke knyttet til noen rolle for dette tidsskriftet.</message>
+	<message key="user.noRoles.submitArticle">Send inn en artikkel</message>
+	<message key="user.noRoles.submitArticleRegClosed">Send inn en artikkel. Forfatterregistreringen er for øyeblikket slått av.</message>
+	<message key="user.noRoles.regReviewer">Registrer som fagfelle</message>
+	<message key="user.noRoles.regReviewerClosed">Registrer som fagfelle. Registrering av fagfeller er for øyeblikket slått av.</message>
 	<message key="issue.coverPage.altText">Omslagsside</message>
-	<message key="reader.subscribersOnly">Bare for abonnenter</message>
+	<message key="reader.subscribersOnly">Kun for abonnenter</message>
 	<message key="reader.subscriptionRequiredLoginText">Bare abonnenter får tilgang til dette elementet. Logg inn for å bekrefte abonnement.</message>
 	<message key="reader.openAccess">Åpen tilgang (Open Access)</message>
-	<message key="reader.subscriptionAccess">Abonnementstilgang</message>
-	<message key="reader.subscriptionOrFeeAccess">Abonnements- eller betalingstilgang</message>
-	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>For øyeblikket er det dessverre ikke mulig å laste ned pakkene med oversatte lokalfiler fra webserveren hos Public Knowledge Project, fordi:</p>
+	<message key="reader.subscriptionAccess">Krever abonnement</message>
+	<message key="reader.subscriptionOrFeeAccess">Krever abonnement eller avgift</message>
+	<message key="admin.languages.downloadUnavailable"><![CDATA[<p>For øyeblikket er det dessverre ikke mulig å laste ned språkpakkene fra webserveren hos Public Knowledge Project, fordi:</p>
 	<ul>
-		<li>Din server har ikke eller tillater ikke bruk av GNU "tar"-funksjonen</li>
-		<li>OJS greier ikke å modifisere registerfilen for lokalfiler, som vanligvis heter "registry/locales.xml".</li>
+		<li>Din server har ikke eller tillater ikke bruk av GNU tar-funksjonen</li>
+		<li>OJS klarer ikke å modifisere registerfilen for språkpakken, som vanligvis heter «registry/locales.xml».</li>
 	</ul>
-<p>Pakkene med oversatte lokalfiler kan lastes ned manuelt fra <a href="http://pkp.sfu.ca">PKP-nettstedet</a>.</p>]]></message>
-	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Forslag til <i>Creative Commons Copyright Notices</i> på engelsk</h3>
-<h4>1. Forslag til retningslinjer for tidsskrift som tilbyr <i>Open Access</i></h4>
-Authors who publish with this journal agree to the following terms:
-<ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication with the work simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	<li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	<li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
+<p>Språkpakkene kan lastes ned manuelt fra <a href="http://pkp.sfu.ca">PKP-nettstedet</a>.</p>]]></message>
+	<message key="plugins.categories.citationFormats.description">Programtillegg for referansestiler lar brukerne se referansene i forskjellige stiler</message>
+	<message key="manager.setup.authorCopyrightNotice.sample"><![CDATA[<h3>Forslag til Creative Commons Copyright Notices</h3>
+<h4>1. Forslag til retningslinjer for tidsskrift som tilbyr Open Access</h4>
+Forfattere som publiserer med dette tidsskriftet går med på følgende vilkår: <ol type="a">
+    <li>Forfattere beholder opphavsretten og gir tidsskriftet rett til første publisering, med verket samtidig lisensiert under en <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a>. Dette lar andre dele verket på en måte som anerkjenner forfatterskap og første publisering i dette tidsskriftet.</li>
+    <li>Forfattere kan legge inn andre ledd i kontrakten for ikke-eksklusiv distribuering av tidsskriftets publiserte versjon av verket (f.eks. egenarkivere i institusjonelle arkiv eller publisere det i en bok), med en anerkjennelse av første publisering i dette tidsskriftet.</li>
+    <li>Forfattere har også anledning til å legge ut arbeidene sine på nettet (f.eks. i institusjonelle arkiv eller på nettsiden sin) før og under innleveringsprosessen, siden det kan føre til produktive utvekslinger, så vel som tidligere og flere refereringer av det publiserte verket. (Se <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>).</li>
 </ol>
 
-<h4>Forslag til retningslinjer for tidsskrift som tilbyr utsatt <i>Open Access</i> (OA etter en karantenetid)</h4>
-Authors who publish with this journal agree to the following terms:
+<h4>Forslag til retningslinjer for tidsskrift som tilbyr utsatt Open Access (OA etter en karantenetid)</h4>
+Forfattere som publiserer med dette tidsskriftet går med på følgende vilkår: 
 <ol type="a">
-	<li>Authors retain copyright and grant the journal right of first publication, with the work [SPECIFY PERIOD OF TIME] after publication simultaneously licensed under a <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a> that allows others to share the work with an acknowledgement of the work's authorship and initial publication in this journal.</li>
-	 <li>Authors are able to enter into separate, additional contractual arrangements for the non-exclusive distribution of the journal's published version of the work (e.g., post it to an institutional repository or publish it in a book), with an acknowledgement of its initial publication in this journal.</li>
-	 <li>Authors are permitted and encouraged to post their work online (e.g., in institutional repositories or on their website) prior to and during the submission process, as it can lead to productive exchanges, as well as earlier and greater citation of published work (See <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html"> The Effect of Open Access</a>).</li>
-</ol>]]></message>
+    <li>Forfattere beholder opphavsretten og gir tidsskriftet rett til første publisering, med verket [SPESIFISER TID] etter publisering samtidig lisensiert under en <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a>. Dette lar andre dele verket på en måte som anerkjenner forfatterskap og første publisering i dette tidsskriftet.</li>
+     <li>Forfattere kan legge inn andre ledd i kontrakten for ikke-eksklusiv distribuering av tidsskriftets publiserte versjon av verket (f.eks. egenarkivere i institusjonelle arkiv eller publisere det i en bok), med en anerkjennelse av første publisering i dette tidsskriftet.</li>
+  <li>Forfattere har også anledning til å legge ut arbeidene sine på nettet (f.eks. i institusjonelle arkiver eller på nettsiden sin) før og under innleveringsprosessen, siden det kan føre til produktive utvekslinger, så vel som tidligere og flere refereringer av det publiserte verket. (Se <a target="_new" href="http://opcit.eprints.org/oacitation-biblio.html">The Effect of Open Access</a>)]]></message>
 	<message key="manager.setup.referenceLinkingDescription"><![CDATA[<p>For at lesere lett skal kunne finne nettpubliserte versjoner av verk forfattere henviser til i artiklene sine, finnes følgende muligheter.</p>
 
 <ol>
-	<li><strong>Legg til et Leseverktøy</strong><p>Redaksjonslederen kan legge til verktøyet "Finn henvisning" i Leseverktøy som vises i sidespalten ved publiserte artikler. Med dette verktøyet kan leseren lime inn tittelen fra en henvisning for å søke etter verket i egnete søkeverktøy som er valgt på forhånd av tidsskriftet.</p></li>
-	<li><strong>Legg inn lenker i henvisningene</strong><p>Layoutredaktøren kan legge inn aktive lenker direkte i artikkelfilens henvisninger ved å følge instruksen nedenfor (som kan redigeres).</p></li>
+	<li><strong>Legg til et leseverktøy</strong><p>Redaksjonslederen kan legge til verktøyet «Finn referanse» i «Leseverktøy» som vises i sidemenyen ved publiserte artikler. Med dette verktøyet kan leseren lime inn tittelen fra en referanse for å søke etter verket i databaser som tidsskriftet har valgt ut.</p></li>
+	<li><strong>Legg inn lenker i referansene</strong><p>Layoutredaktøren kan legge inn aktive lenker direkte i referansene ved å følge instruksen nedenfor (som kan redigeres).</p></li>
 </ol>]]></message>
-	<message key="submission.layout.imageInvalid">Ugyldig filformat. Tillatte filformat er .gif, .jpg, eller .png.</message>
-	<message key="reviewer.article.notifyEditorA">Send e-post til manuskriptredaktøren</message>
-	<message key="reviewer.article.notifyEditorB">om hvorvidt du vil påta deg vurderingsoppdraget.</message>
-	<message key="reviewer.article.consultGuidelines">Hvis du påtar deg vurderingsoppdraget: se 'Instruks for fagkonsulenter' nedenfor.</message>
-	<message key="reviewer.article.downloadSubmission">Klikk på filnavn for å laste ned og vurdere dette innsendte manuskriptet og de eventuelle tilleggsfilene som hører til (på skjerm eller i utskrift).</message>
-	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Avgi en erklæring om hvorvidt du står i en interessekonflikt med hensyn til denne forskningen (se <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}">Retningslinjer for Erklæring om interessekonflikter</a>).]]></message>
+	<message key="submission.layout.imageInvalid">Ugyldig filformat. Tillatte filformat: .gif, .jpg eller .png.</message>
+	<message key="reviewer.article.notifyEditorA">Send e-post til redaktøren</message>
+	<message key="reviewer.article.notifyEditorB">om hvorvidt du vil påta deg fagfellevurderingen</message>
+	<message key="reviewer.article.consultGuidelines">Hvis du påtar deg fagfellevurderingen: se «Instruks for fagfellevurdering» nedenfor</message>
+	<message key="reviewer.article.downloadSubmission">Klikk på filnavn for å laste ned og fagfellevurdere (på skjerm eller i utskrift) filen(e) i innleveringen</message>
+	<message key="reviewer.article.enterCompetingInterests"><![CDATA[Oppgi eventuelle interessekonflikter du står i knyttet til denne forskningen (se <a target="_new" class="action" href="{$competingInterestGuidelinesUrl}"> «Erklæring om interessekonflikter»</a>).]]></message>
 	<message key="reviewer.competingInterests">Interessekonflikter</message>
-	<message key="reviewer.article.enterReviewA">Klikk på ikonet for å skrive eller lime inn fagvurderingen din av dette manuskriptet.</message>
-	<message key="reviewer.article.uploadFile">Du kan i tillegg laste opp filer som kan gjøres tilgjengelige for redaktør og/eller forfatter.</message>
-	<message key="submission.layout.noLayoutFile">Ingen (last opp en ferdigstilt filversjon til manusredigering før bestillingen sendes)</message>
-	<message key="submission.layout.publicGalleyId">Offentlig Sideoppsett-identifikator</message>
-	<message key="debug.notes.currencyListLoad">Lastet valutalisten "{$filename}" fra XML</message>
-	<message key="submission.layout.galleyPublicIdentificationExists">Offentlig identifikator for sideoppsettet finnes allerede.</message>
-	<message key="submission.layout.referenceLinking">Henvisningslenking</message>
-	<message key="about.authorFees">Forfatterbetaling</message>
-	<message key="about.authorFeesMessage">Dette tidsskriftet krever inn følgende forfatterbetaling.</message>
-	<message key="about.memberships">medlemskap</message>
+	<message key="reviewer.article.enterReviewA">Klikk på ikonet for å skrive eller lime inn fagfellevurderingen</message>
+	<message key="reviewer.article.uploadFile">Du kan i tillegg laste opp filer som kan gjøres tilgjengelige for redaktør og/eller forfatter for konsultasjon.</message>
+	<message key="submission.layout.noLayoutFile">Ingen (last opp en endelig, språkvasket versjon som layoutversjon før forespørselen sendes)</message>
+	<message key="submission.layout.publicGalleyId">Offentlig identifikator for oppsettet</message>
+	<message key="debug.notes.currencyListLoad">Lastet valutalisten «{$filename}» fra XML</message>
+	<message key="submission.layout.galleyPublicIdentificationExists">Offentlig identifikator for oppsettet finnes allerede</message>
+	<message key="submission.layout.referenceLinking">Lenke til referanser</message>
+	<message key="about.authorFees">Forfatteravgift</message>
+	<message key="about.authorFeesMessage">Dette tidsskriftet krever denne forfatteravgiften</message>
+	<message key="about.memberships">Medlemskap</message>
 	<message key="about.aboutThisPublishingSystem.altText">OJS' redaksjonelle prosess og publiseringsprosess</message>
-	<message key="help.searchReturnResults">Tilbake til søkeresultat</message>
+	<message key="help.searchReturnResults">Gå tilbake til søkeresultat</message>
 	<message key="donations.thankYou">Takk</message>
-	<message key="donations.thankYouMessage">Takk for bidraget ditt: vi setter stor pris på din støtte.</message>
-	<message key="payment.loginRequired">Du må være logget inn for å betale.</message>
-	<message key="payment.loginRequired.forArticle">Abonnement eller artikkelkjøp er påkrevet for å få tilgang til dette elementet. Du må være innlogget for å bekrefte tidligere betaling eller betale artikkelkjøp.</message>
-	<message key="payment.loginRequired.forDonation">Du må være innlogget for å gi en donasjon.</message>
+	<message key="donations.thankYouMessage">Takk for bidraget ditt. Vi setter stor pris på støtten din.</message>
+	<message key="payment.loginRequired">Du må være logget inn for å betale</message>
+	<message key="payment.loginRequired.forArticle">Du må være abonnent eller kjøpe artikkelen for å få tilgang til den. Logg inn for å verifisere abonnementet, å hente fram tidligere betaling eller å kjøpe artikkelen.</message>
+	<message key="payment.loginRequired.forDonation">Du må være innlogget for å gi en pengegave</message>
 	<message key="payment.paid">Betalt</message>
 	<message key="payment.payNow">Betal nå</message>
-	<message key="payment.waive">Gi fritak</message>
+	<message key="payment.waive">Frita</message>
 	<message key="payment.alreadyPaid">Allerede betalt</message>
-	<message key="payment.alreadyPaidMessage">For å ferdigstille innsendingen kan du krysse av i denne boksen hvis du allerede har sendt betalingen til tidsskriftet. Den redaksjonelle behandlingen av det innsendte manuskriptet settes i gang så snart betalingen er mottatt. Klikk BETAL NÅ ovenfor, for å se betalingsinstruksen.</message>
+	<message key="payment.alreadyPaidMessage">Kryss av i denne boksen hvis du allerede har sendt betalingen til tidsskriftet. Det fullfører innleveringsprosessen. Den redaksjonelle behandlingen settes i gang så snart betalingen er mottatt. Klikk «Betal nå» for å se instruks.</message>
 	<message key="payment.paymentReceived">Betalingen er mottatt</message>
 	<message key="payment.paymentSent">Betalingen er allerede sendt</message>
-	<message key="payment.type.submission">Innsendingsgebyr</message>
-	<message key="payment.type.publication">Publiseringsgebyr</message>
-	<message key="payment.type.fastTrack">Gebyr for ekspress-fagvurdering</message>
-	<message key="payment.type.membership">Individuell medlemsavgift</message>
-	<message key="payment.type.purchaseArticle">Betal artikkelpris</message>
+	<message key="payment.type.submission">Innsendingsavgift</message>
+	<message key="payment.type.publication">Publiseringsavgift</message>
+	<message key="payment.type.fastTrack">Avgift for hurtig fagfellevurdering</message>
+	<message key="payment.type.membership">Kontingent for individuelt medlemskap</message>
+	<message key="payment.type.purchaseArticle">Avgift for kjøp av artikkel</message>
 	<message key="payment.type.subscription">Abonnementsavgift</message>
-	<message key="payment.type.donation">Donasjoner</message>
-	<message key="payment.donation.makeDonation">Gi en donasjon</message>
-	<message key="payment.submission.paySubmission">Betal innsendingsgebyr</message>
-	<message key="payment.publication.payPublication">Betal publiseringsgebyr</message>
-	<message key="payment.publication.publicationPaid">Publiseringsgebyr er betalt</message>
+	<message key="payment.type.donation">Pengegaver</message>
+	<message key="payment.donation.makeDonation">Gi en pengegave</message>
+	<message key="payment.submission.paySubmission">Betal innsendingsavgift</message>
+	<message key="payment.fastTrack.payFastTrack">Betal for hurtig fagfellevurdering</message>
+	<message key="payment.fastTrack.inFastTrack">til hurtig fagfellevurdering</message>
+	<message key="payment.publication.payPublication">Betal publiseringsavgift</message>
+	<message key="payment.publication.publicationPaid">Publiseringsavgift er betalt</message>
 	<message key="payment.membership.buyMembership">Kjøp individuelt medlemskap</message>
 	<message key="payment.membership.renewMembership">Forny individuelt medlemskap</message>
-	<message key="payment.membership.ends">Avsluttes</message>
+	<message key="payment.membership.ends">Utløper</message>
 	<message key="payment.subscription.renew">Forny abonnement</message>
 	<message key="payment.subscription.expires">Utløper</message>
-	<message key="installer.databaseSettingsInstructions">OJS krever tilgang til en SQL-database for lagring av data. Se listen over databaser som støttes i systemkravene ovenfor. Skriv inn innstillingene som skal brukes for å opprette forbindelsen med databasen i feltene nedenfor.</message>
-	<message key="log.review.reviewDeclinedByProxy">{$userName} har avslått å utføre fagvurdering i {$round}. runde for manuskriptet{$submissionId} på vegne av {$reviewerName}.</message>
-	<message key="log.editor.decision">Redaktørbeslutningen ({$decision}) for artikkelen {$submissionId} ble journalført av {$editorName}.</message>
-	<message key="rt.admin.settings.addComment.authenticated">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates ikke.</message>
-	<message key="rt.admin.settings.addComment.anonymous">Brukeren må være registrert og innlogget før innsending; anonym innsending tillates.</message>
-	<message key="rt.admin.settings.addComment.unauthenticated">Brukeren trenger ikke være registrert før innsending; anonym innsending tillates.</message>
+	<message key="installer.databaseSettingsInstructions">OJS krever tilgang til en SQL-database for å lagre av data. Se listen over støttede databaser i systemkravene ovenfor. Skriv inn innstillingene som skal brukes for å opprette forbindelsen med databasen i feltene nedenfor.</message>
+	<message key="log.review.reviewDeclinedByProxy">{$userName} har avslått forespørsel om å fagfellevurdere innleveringen {$submissionId} i runden {$round} på vegne av {$reviewerName}</message>
+	<message key="log.editor.decision">Den redaksjonelle avgjørelsen ({$decision}) for innleveringen {$submissionId} ble journalført av {$editorName}</message>
+	<message key="rt.admin.settings.addComment.authenticated">Brukeren må være registrert og innlogget for å kommentere. Anonyme kommentarer er ikke tillatt.</message>
+	<message key="rt.admin.settings.addComment.anonymous">Brukeren må være registrert og innlogget for å kommentere. Anonyme kommentarer er tillatt.</message>
+	<message key="rt.admin.settings.addComment.unauthenticated">Brukeren trenger ikke være registrert for å kommentere. Anonyme kommentarer er tillatt.</message>
 	<message key="article.article">Artikkel</message>
 	<message key="user.manageMySubscriptions">Administrer mine abonnementer</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
@@ -901,29 +904,38 @@ Authors who publish with this journal agree to the following terms:
 	<message key="subscriptionTypes.months">måneder</message>
 	<message key="subscriptionTypes.nonExpiring">Uten utløpsdato</message>
 	<message key="subscriptionTypes.format">Format</message>
-	<message key="subscriptionTypes.format.online">Online</message>
+	<message key="subscriptionTypes.format.online">På nett</message>
 	<message key="subscriptionTypes.format.print">Trykt</message>
-	<message key="subscriptionTypes.format.printOnline">Trykt og online</message>
+	<message key="subscriptionTypes.format.printOnline">Trykt og på nett</message>
 	<message key="subscriptions.inactive">Ikke aktiv</message>
 	<message key="subscriptions.status">Status</message>
 	<message key="subscriptions.status.active">Aktiv</message>
-	<message key="subscriptions.status.needsInformation">Informasjon må oppdateres</message>
-	<message key="subscriptions.status.needsApproval">Behøver godkjenning</message>
+	<message key="subscriptions.status.needsInformation">Informasjon må legges inn</message>
+	<message key="subscriptions.status.needsApproval">Må godkjennes</message>
 	<message key="subscriptions.status.awaitingManualPayment">Avventer manuell betaling</message>
-	<message key="subscriptions.status.awaitingOnlinePayment">Avventer online-betaling</message>
-	<message key="subscriptions.status.other">Annet, se notater</message>
-	<message key="subscriptions.individualDescription">Personlige abonnement krever at man logger inn for å få tilgang til innhold.</message>
+	<message key="subscriptions.status.awaitingOnlinePayment">Avventer betaling på nett</message>
+	<message key="subscriptions.status.other">Annet, se «Notater»</message>
+	<message key="subscriptions.individualDescription">Personlige abonnement krever at man logger inn for å få tilgang til innhold</message>
 	<message key="subscriptions.institutionalDescription">Institusjonsabonnement krever ikke innlogging. Brukerens domene og/eller IP-adresse benyttes for å gi tilgang til innhold.</message>
-	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Merk:</strong> Institusjonsabonnementer som er kjøpt online trenger godkjenning av domene og IP-adresseområde før abonnementet aktiveres.]]></message>
+	<message key="subscriptions.institutionalOnlinePaymentDescription"><![CDATA[<strong>Merk:</strong> Institusjonsabonnementer som er kjøpt på nett trenger godkjenning av domene og IP-adresseområde før abonnementet aktiveres.]]></message>
 	<message key="subscriptionManager.individualSubscriptions">Personlige abonnementer</message>
 	<message key="subscriptionManager.institutionalSubscriptions">Institusjonelle abonnementer</message>
 	<message key="subscriptionManager.subscriptionTypes">Abonnementstyper</message>
-	<message key="manager.setup.reviewProcessEmailDescription">Redaktørene sender fagfellevurderere forespørsel om å være fagfellevurderer med det innsendte manuskriptet vedlagt e-posten. Fagfellevurdererne sender sin aksept eller avslag til redaktørene på e-post, og sine kommentarer og anbefalinger. Redaktørene legger inn fagfellevurderernes aksept eller avslag på forespørselen, og deres vurderinger og anbefalinger på innleveringens vurderingsside for å dokumentere fagfellevurderingsprosessen.</message>
+	<message key="manager.setup.reviewProcessEmailDescription">Redaktørene sender fagfeller forespørsel om å være fagfelle for den vedlagte artikkelen. Fagfellen sender sin aksept eller avslag til redaktørene på e-post, og senere sine kommentarer og anbefalinger. Redaktørene legger inn fagfellenes aksept eller avslag på forespørselen, og deres vurderinger og anbefalinger på innleveringens vurderingsside for å dokumentere fagfellevurderingsprosessen.</message>
+	<message key="manager.setup.citations.enable">Slå på referansemarkeringshjelpen</message>
 	<message key="editor.submissionReview.notes"><![CDATA[<ol>
-	<li>Merkede elementer indikerer at noe avventer handling fra redaktøren.</li>
-	<li>"Forventet" fylles ut når fagfellevurdereren aksepterer oppdraget; det viser antall uker frem til forfallsdato for vurderingen eller (-) antall uker siden vuderingen skulle vært ferdig.</li>
+	<li>De merkede elementene indikerer at redaktøren har oppgaver som venter. De er merket som følger:
+		<ul>
+			<li class="highlightReviewerNotNotified">En fagfelle har blitt oppnevnt men ikke mottatt e-post</li>
+			<li class="highlightNoDecision">Alle fagfeller har sendt inn kommentarene sine, men ingen avgjørelse er registrert </li>
+			<li class="highlightRevisedCopyUploaded">Forfatter har lastet opp en revidert fil/li>
+			<li class="highlightReviewerConfirmationOverdue">Fagfellen har ikke svart på forespørsel om fagfellevurdering innen fristen</li>
+			<li class="highlightReviewerCompletionOverdue">Fagfellen har ikke levert inn fagfellevurderingen innen fristen</li>
+		</ul>
+	</li>
+	<li>«Frist» fylles ut når fagfellen aksepterer forespørselen. Det viser antall uker fagfellen har på å fullføre vurderingen eller (-) uker siden fristen gikk ut.</li>
 </ol>]]></message>
-	<message key="reviewer.article.reviewGuidelinesDescription">Retningslinjene for fagfellevurdering gir fagfellevurdererne kriterier for vurdering av hvorvidt en innlevering er egnet for publisering i tidsskriftet, og kan også inneholde veiledning i å skrive en effektiv og hjelpsom vurdering. Ved gjennomføring av vurderingen får fagfellevurdererne to tekstbokser tilgjengelig, en merket  "for forfatter og redaktør," og den andre merket "for redaktøren." Som et alternativ kan tidsskriftadministratoren lage vurderingsskjema under Vurderingsskjema. Uansett vil redaktøren kunne inkludere fagfellevurderingene i korrespondanse med forfattere.</message>
+	<message key="reviewer.article.reviewGuidelinesDescription">Retningslinjene for fagfellevurdering gir fagfellene kriterier for vurdering av hvorvidt en innlevering er egnet for publisering i tidsskriftet. De kan også inneholde veiledning i å skrive en effektiv og hjelpsom vurdering. Ved gjennomføring av vurderingen får fagfellene to tekstbokser tilgjengelig. Den ene merket «For forfatter og redaktør» og den andre merket «For redaktøren.» Tidsskriftadministratoren kan eventuelt lage et vurderingsskjema under «Vurderingsskjema». Redaktøren vil i alle tilfeller kunne inkludere fagfellevurderingene i korrespondanse med forfattere.</message>
 	<message key="user.subscriptions.mySubscriptions">Mine abonnementer</message>
 	<message key="user.subscriptions.individualSubscriptions">Personlige abonnementer</message>
 	<message key="user.subscriptions.institutionalSubscriptions">Institusjonelle abonnementer</message>
@@ -932,26 +944,26 @@ Authors who publish with this journal agree to the following terms:
 	<message key="user.subscriptions.purchaseNewSubscription">Kjøp nytt abonnement</message>
 	<message key="user.subscriptions.purchaseIndividualSubscription">Kjøp personlig abonnement</message>
 	<message key="user.subscriptions.purchaseInstitutionalSubscription">Kjøp institusjonelt abonnement</message>
-	<message key="user.subscriptions.expires">Utløper</message>
-	<message key="user.subscriptions.expired">Utløp</message>
+	<message key="user.subscriptions.expires">Utløper: {$date}</message>
+	<message key="user.subscriptions.expired">Utløpt: {$date}</message>
 	<message key="user.subscriptions.viewSubscriptionTypes">Se tilgjengelige abonnementstyper</message>
 	<message key="user.subscriptions.form.typeId">Abonnementstype</message>
 	<message key="user.subscriptions.form.membership">Medlemskap</message>
-	<message key="user.subscriptions.form.membershipRequired">Valgt abonnementstype krever medlemskapsinformasjon.</message>
-	<message key="user.subscriptions.form.typeIdValid">Velg en gyldig abonnementstype.</message>
-	<message key="user.subscriptions.form.subscriptionExists">Denne brukerkontoen har allerede et personlig abonnement.</message>
-	<message key="user.subscriptions.form.membershipInstructions">Medlemskapsinformasjon dersom det kreves for den valgte abonnementstypen.</message>
+	<message key="user.subscriptions.form.membershipRequired">Den valgte abonnementstypen krever informasjon om medlemsskap</message>
+	<message key="user.subscriptions.form.typeIdValid">Velg en gyldig abonnementstype</message>
+	<message key="user.subscriptions.form.subscriptionExists">Denne brukerkontoen har allerede et personlig abonnement</message>
+	<message key="user.subscriptions.form.membershipInstructions">Informasjon om medlemsskap, dersom det kreves for den valgte abonnementstypen</message>
 	<message key="user.subscriptions.form.institutionName">Institusjonsnavn</message>
-	<message key="user.subscriptions.form.institutionNameRequired">Et institusjonsnavn må oppgis.</message>
+	<message key="user.subscriptions.form.institutionNameRequired">Du må oppgi et institusjonsnavn</message>
 	<message key="user.subscriptions.form.institutionMailingAddress">Postadresse</message>
 	<message key="user.subscriptions.form.domain">Domene</message>
 	<message key="user.subscriptions.form.domainInstructions"><![CDATA[Om et domenenavn oppgis her, er IP-adresseområde valgfritt. <br />Gyldige verdier er domenenavn (f.eks. lib.sfu.ca).]]></message>
-	<message key="user.subscriptions.form.domainIPRangeRequired">Den valgte abonnementstypen krever et domene og/eller et IP-adresseområde for abonnementsautentisering.</message>
-	<message key="user.subscriptions.form.domainValid">Vennligst oppgi et gyldig domene.</message>
+	<message key="user.subscriptions.form.domainIPRangeRequired">Den valgte abonnementstypen krever et domene og/eller et IP-adresseområde for abonnementsautentisering</message>
+	<message key="user.subscriptions.form.domainValid">Oppgi et gyldig domene</message>
 	<message key="user.subscriptions.form.ipRange">IP-adresseområde</message>
 	<message key="user.subscriptions.form.ipRangeItem"><![CDATA[&#8226;]]></message>
 	<message key="user.subscriptions.form.ipRangeInstructions"><![CDATA[OM IP-adresseområde oppgis her, er domene valgfritt.<br />Gyldige verdier inkluderer en IP-adresse (f.eks. 142.58.103.1), IP-adresseområde (f.eks. 142.58.103.1 - 142.58.103.4), IP-adresseområde med jokertegn '*' (f.eks. 142.58.*.*), og et IP-adresseområde med CIDR (f.eks. 142.58.100.0/24).]]></message>
-	<message key="user.subscriptions.form.ipRangeValid">Vennligst oppgi et gyldig IP-adresseområde.</message>
+	<message key="user.subscriptions.form.ipRangeValid">Oppgi et gyldig IP-adresseområde</message>
 	<message key="user.subscriptions.form.deleteIpRange">Slett</message>
 	<message key="user.subscriptions.form.addIpRange">Legg til</message>
 	<message key="about.history">Tidsskriftets historie</message>
@@ -960,45 +972,198 @@ Authors who publish with this journal agree to the following terms:
 	<message key="about.subscriptionTypes.name">Navn</message>
 	<message key="about.subscriptionTypes.format">Format</message>
 	<message key="about.subscriptionTypes.duration">Varighet</message>
-	<message key="about.subscriptionTypes.cost">Kostnad</message>
+	<message key="about.subscriptionTypes.cost">Pris</message>
 	<message key="payment.subscription.purchase">Kjøp abonnement</message>
 	<message key="installer.installApplication">Installer Open Journal Systems</message>
 	<message key="installer.upgradeApplication">Oppgrader Open Journal Systems</message>
-	<message key="notification.type.articleSubmitted">En ny artikkel, "{$title}", har blitt innlevert.</message>
-	<message key="notification.type.editing">Redigeringshendelser</message>
-	<message key="notification.type.editorDecisionComment">Redaktørens beslutning vedrørende "{$title}" har blitt kommentert.</message>
-	<message key="notification.type.galleyModified">Et sideoppsett til "{$title}" har blitt endret.</message>
-	<message key="notification.type.issuePublished">Et nummer har blitt publisert.</message>
-	<message key="notification.type.metadataModified">"{$title}'s" metadata har blitt endret.</message>
-	<message key="notification.type.newAnnouncement">En ny kunngjøring har blitt lagt inn.</message>
-	<message key="notification.type.reviewerComment">En fagfellevurderer har kommentert "{$title}".</message>
-	<message key="notification.type.reviewerFormComment">Et vurderingsskjema har blitt sendt inn for "{$title}".</message>
-	<message key="notification.type.reviewing">Vurderingshendelser</message>
-	<message key="notification.type.site">Nettstedshendelser</message>
-	<message key="notification.type.submissionComment">En redaktør har kommentert "{$title}".</message>
-	<message key="notification.type.submissions">Innleveringshendelser</message>
-	<message key="notification.type.userComment">En leser har kommentert "{$title}".</message>
-	<message key="user.register.reviewerInterests">Angi interessante vurderingsområder (hovedområder og forskningsmetoder):</message>
+	<message key="notification.mailListDescription">Oppgi e-postadressen din for å få umiddelbar varsling når viktig nytt innhold legges til i tidsskriftet</message>
+	<message key="notification.notificationsPublicDescription"><![CDATA[Denne siden viser viktige oppdateringer som har med dette tidsskriftet å gjøre, som nye utgaver eller oppslag. Du kan abonnere på disse varslingene via RSS-tjenesten (ved å klikke på symbolene til høyre) eller <a href="{$emailUrl}">via e-post.</a>]]></message>
+	<message key="notification.type.articleSubmitted">En ny artikkel, "{$param}", har blitt innlevert</message>
+	<message key="notification.type.editing">Redigeringsaktivitet</message>
+	<message key="notification.type.editorDecisionComment">Redaktørens beslutning vedrørende «{$param}» har blitt kommentert</message>
+	<message key="notification.type.galleyModified">Et oppsett til «{$param}» har blitt endret</message>
+	<message key="notification.type.issuePublished">En utgave har blitt publisert</message>
+	<message key="notification.type.metadataModified">«{$param}s» metadata har blitt endret</message>
+	<message key="notification.type.newAnnouncement">Et nytt oppslag har blitt lagt inn</message>
+	<message key="notification.type.reviewerComment">En fagfelle har kommentert «{$param}»</message>
+	<message key="notification.type.reviewerFormComment">Et skjema for fagfellevurdering har blitt sendt inn for «{$title}»</message>
+	<message key="notification.type.reviewing">Fagfelleaktivitet</message>
+	<message key="notification.type.site">Nettstedsaktivitet</message>
+	<message key="notification.type.submissionComment">En redaktør har kommentert «{$param}.»</message>
+	<message key="notification.type.submissions">Innleveringsaktivitet</message>
+	<message key="notification.type.userComment">En leser har kommentert «{$param}»</message>
+	<message key="user.register.reviewerInterests">Oppgi faglige interesser (hovedområder og forskningsmetoder):</message>
 	<message key="user.subscriptions.subscriptionStatus">Abonnementsstatus</message>
 	<message key="user.subscriptions.status">Status</message>
 	<message key="user.subscriptions.statusDescription">Beskrivelse</message>
 	<message key="navigation.categories">Kategorier</message>
-	<message key="issue.fullIssue">Hele nummeret</message>
-	<message key="issue.nonpdf.title">Last ned nummeret</message>
-	<message key="issue.viewIssue">Vis nummeret</message>
-	<message key="issue.viewIssueDescription">Vis eller last ned hele nummeret</message>
-	<message key="site.noJournals">Det er ingen tidsskrift tilgjengelig.</message>
-	<message key="payment.authorFees">Forfatteravgifter</message>
-	<message key="user.authorization.sectionAssignment">Du forsøker å få tilgang til en artikkel som ikke er en del av din seksjon.</message>
-	<message key="user.subscriptions.statusInformation">Aktive og utløpte abonnementer vises nedenfor sammen med sine utløpsdatoer. I tillegg kan følgende statusinformasjoner også vises med hvert abonnement.</message>
-	<message key="user.subscriptions.status.needsInformationDescription">Det trengs mer informasjon før abonnementet kan aktiviseres.</message>
-	<message key="user.subscriptions.status.needsApprovalDescription">Abonnementet må vurderes før det kan aktiviseres.</message>
-	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Manuell betaling er initiert men ennå ikke mottatt</message>
-	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">En nettbetaling har blitt initiert men har blitt kansellert eller ikke fullført</message>
+	<message key="issue.fullIssue">Hele utgaven</message>
+	<message key="issue.nonpdf.title">Last ned utgaven</message>
+	<message key="issue.viewIssue">Vis utgaven</message>
+	<message key="issue.viewIssueDescription">Vis eller last ned hele utgaven</message>
+	<message key="site.noJournals">Ingen tidsskrift er tilgjengelig</message>
+	<message key="gifts.buyer">Fra</message>
+	<message key="gifts.buyerDescription">Hvem er denne gaven fra?</message>
+	<message key="gifts.recipient">Til</message>
+	<message key="gifts.recipientDescription">Hvem er denne gaven til?</message>
+	<message key="gifts.thankYou">Takk</message>
+	<message key="gifts.details">Gavedetaljer</message>
+	<message key="gifts.gift">Gave</message>
+	<message key="gifts.noteTitle">Tittel</message>
+	<message key="gifts.myGifts">Mine gaver</message>
+	<message key="gifts.status.notRedeemed">Tilgjengelig</message>
+	<message key="payment.type.gift">Gave</message>
+	<message key="payment.authorFees">Forfatteravgift</message>
+	<message key="user.authorization.sectionAssignment">Du forsøker å få tilgang til en artikkel som ikke er en del av din seksjon</message>
+	<message key="user.subscriptions.statusInformation">Aktive og utløpte abonnementer vises nedenfor sammen med sine utløpsdatoer. I tillegg kan følgende statusinformasjon også vises med hvert abonnement:</message>
+	<message key="user.subscriptions.status.needsInformationDescription">Det trengs mer informasjon før abonnementet kan aktiviseres</message>
+	<message key="user.subscriptions.status.needsApprovalDescription">Abonnementet må gjennomgås før det kan aktiviseres</message>
+	<message key="user.subscriptions.status.awaitingManualPaymentDescription">Manuell betaling er startet, men ennå ikke mottatt</message>
+	<message key="user.subscriptions.status.awaitingOnlinePaymentDescription">En nettbetaling har blitt startet, men har blitt kansellert eller er ikke fullført</message>
 
 	<!-- Included here because it may be used in the navigation bar -->
 	<message key="editor.navigation.issues">Utgaver</message>
+	<message key="plugins.categories.viewableFiles">Programtillegg for artikkeloppsett</message>
+	<message key="plugins.categories.viewableFiles.description">Programtillegg for artikkeloppsett gjør det mulig å vise ulike dokumenttyper i artikkeloppsettet</message>
+	<message key="context.current">Gjeldende tidsskrift:</message>
+	<message key="context.select">Bytt til et annet tidsskrift:</message>
+	<message key="navigation.categories.browse">Bla gjennom</message>
+	<message key="article.return">Gå tilbake til artikkeldetaljene</message>
+	<message key="journal.viewAllIssues">Vis alle utgavene</message>
+	<message key="user.noRoles.selectUsersWithoutRoles">Inkluder brukere som ikke har noen rolle i dette tidsskriftet</message>
+	<message key="user.profile.profileImage">Profilbilde</message>
+	<message key="user.reviewerPrompt">Er du villig til å være fagfelle for dette tidsskriftet?</message>
+	<message key="user.reviewerPrompt.userGroup">Ja, be om en rolle i {$userGroup}</message>
+	<message key="user.register.contextsPrompt">Hvilke tidsskrift på dette nettstedet vil du registere deg hos?</message>
+	<message key="user.register.otherContextRoles">Be om følgende roller</message>
+	<message key="user.register.noContextReviewerInterests">Dersom du er bedt om å være fagfelle for et tidsskrift, oppgi de faglige interessene dine her</message>
+	<message key="user.role.journalAssistant">Redaksjonell stab</message>
+	<message key="user.role.journalAssistants">Redaksjonell stab</message>
+	<message key="user.role.guestEditor">Gjesteredaktør</message>
+	<message key="user.role.guestEditors">GR</message>
+	<message key="issue.return">Returner til detaljene om utgaven</message>
+	<message key="search.results.orderBy">Sorter resultat etter</message>
+	<message key="search.results.orderBy.article">Artikkeltittel</message>
+	<message key="search.results.orderBy.author">Forfatter</message>
+	<message key="search.results.orderBy.date">Publiseringsdato</message>
+	<message key="search.results.orderBy.issue">Utgave</message>
+	<message key="search.results.orderBy.journal">Tidsskriftstittel</message>
+	<message key="search.results.orderBy.popularityAll">Popularitet (uavhengig av tid)</message>
+	<message key="search.results.orderBy.popularityMonth">Popularitet (sist måned)</message>
+	<message key="search.results.orderBy.relevance">Relevans</message>
+	<message key="search.results.orderDir.asc">Stigende</message>
+	<message key="search.results.orderDir.desc">Synkende</message>
+	<message key="search.results.similarDocuments">Liknende dokumenter</message>
+	<message key="manager.setup.clockssDescription"><![CDATA[Open Journal Systems støtter også systemet <a href="http://clockss.org/" target="_blank">CLOCKSS</a> (Controlled Lots of Copies Keep Stuff Safe). Dette er et system for sikker og permanent arkivering av tidsskriftet. CLOCKSS er basert på «open source»-programvaren LOCKSS utviklet ved Stanford University Library. Det gjør det mulig for bibliotek å bevare valgte nettidsskrift ved automatisk søking i registrerte tidsskriftnettsted etter nylig publisert innhold, og hente det for arkivering. Hvert arkiv blir kontinuerlig validert mot andre biblioteks cacher, og hvis innholdet viser seg å være ødelagt eller tapt, vil de andre cachene eller tidsskriftet bli brukt til å gjenopprette det.
+<br /><br />
+Oppretting av CLOCKSS' støtte for Open Journal Systems trenger ikke skje før etter at publiseringen er godt i gang.]]></message>
+	<message key=""><![CDATA[]]></message>
+	<message key="editor.submissionEditing.notes"><![CDATA[<ol>
+	<li>De merkede elementene indikerer at redaktøren har oppgaver som venter:
+		<ul>
+			<li class="highlightCopyediting">Språkvasken krever behandling</li>
+			<li class="highlightLayoutEditing">Layoutredigeringen krever behandling</li>
+			<li class="higlightProofreading">Korrekturlesingen krever behandling</li>
+		</ul>
+	</li>
+</ol>]]></message>
+	<message key="submission.layout.galley.remotelyHostedContent">Dette oppsettet vil bil tilgjengelig på et separat nettsted</message>
+	<message key="submission.layout.galley.remoteURL">URL av innhold med ekstern vert</message>
+	<message key="reviewer.article.selectRecommendation.byEditor">Instill eller juster fagfellens anbefaling</message>
+	<message key="user.register.selectContext">Velg et tidsskrift å registrere ved:</message>
+	<message key="article.pageTitle">Visning av {$title}</message>
+	<message key="article.pdf.title">Pdf-format</message>
+	<message key="article.download">Last ned denne pdf-filen</message>
+	<message key="article.pluginMissing"><![CDATA[<p>Pdf-filen du valgte burde lastes her om du har en nettleser som har installert et programtillegg for pdf, f.eks. en nyere versjon av <a href="https://get.adobe.com/reader/">Adobe Acrobat Reader</a>).</p>]]></message>
+	<message key="article.nonpdf.title">Last ned artikkel</message>
+	<message key="article.nonpdf.note"><![CDATA[Filen du har valgt burde bli lastet ned automatisk. Dersom det ikke skjer, kan du klikke på lenken under. Merk at denne filen krever en spesiell viser eller et programtillegg for at den kan vises. br /><br />Dersom filen ikke lastes ned automatisk, <a href="{$url}">klikk her</a>.]]></message>
+	<message key="archive.archivesPageNumber">Arkiver, side {$pageNumber}</message>
+	<message key="about.contact">Kontakt</message>
+	<message key="about.aboutContext">Tidsskriftet</message>
+	<message key="about.onlineSubmissions.register">Registrer</message>
+	<message key="about.onlineSubmissions.submissionActions">{$newSubmission} eller {$viewSubmissions}</message>
+	<message key="about.onlineSubmissions.newSubmission">Ny innlevering</message>
+	<message key="about.onlineSubmissions.viewSubmissions">Se innleveringer til vurdering</message>
+	<message key="help.goToEditPage">Endre {$sectionTitle}</message>
+	<message key="gifts.thankYouMessage">Du har kjøpt gaven. Du vil få en kopi av e-posten som sendes til mottakeren så snart betalingen er behandlet.</message>
+	<message key="editor.issues.backIssues">Tidligere utgaver</message>
+	<message key="editor.issues.futureIssues">Kommende utgaver</message>
+	<message key="gifts.purchaseGiftIndividualSubscription">Gaveabonnement</message>
+	<message key="gifts.subscriptionFormIntroduction">Fyll ut skjemaet under. Kontaktinformasjonen og hilsenen fra deg vil bli brukt i e-posten til mottakeren for å informere dem om det nye gaveabonnementet deres. Du vil også få en kopi av denne e-posten.</message>
+	<message key="gifts.detailsDescription">Velg gaven under og inkluder en hilsen som vil bil sendt til mottakeren. Du vil få en kopi av denne e-posten.</message>
+	<message key="gifts.note">Hilsen</message>
+	<message key="gifts.noteTitleRequired">Legg inn en tittel på hilsenen</message>
+	<message key="gifts.noteRequired">Legg inn en hilsen</message>
+	<message key="gifts.localeRequired">Velg et språk for hilsenen</message>
+	<message key="gifts.manageMyGifts">Administrer mine gaver</message>
+	<message key="gifts.redeemGift">Løs inn gaven</message>
+	<message key="gifts.status.redeemed">Løst inn</message>
+	<message key="gifts.status.redeemGift">Løs inn gaven</message>
+	<message key="gifts.subscriptions">Abonnementer</message>
+	<message key="gifts.subscriptionsDescription">Om du løser inn et gaveabonnement her, vil det erstatte det abonnementet du skulle ha. Abonnementer vil starte fra datoen det løses inn på og vil gjelde så lenge abonnementstypen varer.</message>
+	<message key="gifts.purchaseGiftSubscription">Gi et gaveabonnement</message>
+	<message key="gifts.giftSubscriptionsAvailable">Gaveabonnement er også tilgjengelig. Mottakeren kan løse inn gaveabonnement når som helst. Gaveabonnement er en fin måte å støtte dette tidsskriftet på.</message>
+	<message key="gifts.noSubscriptions">Ingen gaveabonnement</message>
+	<message key="gifts.giftRedeemed">Gaven ble løst inn</message>
+	<message key="gifts.noGiftToRedeem">Denne gaven er ikke tilgjengelig for å løses inn</message>
+	<message key="gifts.giftAlreadyRedeemed">Denne gaven har allerede blitt løst inn</message>
+	<message key="gifts.giftNotValid">Gaven er ikke gyldig og kunne ikke løses inn</message>
+	<message key="gifts.subscriptionTypeNotValid">Abonnementstypen for denne gaven er ikke gyldig. Kontakt abonnementsansvarlig for hjelp.</message>
+	<message key="gifts.subscriptionNonExpiring">Gaven ble ikke løst inn siden abonnement som du allerede har ikke går ut</message>
+	<message key="payment.loginRequired.forIssue">Du må være abonnement eller kjøpe utgaven for å få tilgang til den. Logg inn for å verifisere abonnement, å hente fram tidligere betaling eller å kjøpe utgaven.</message>
+	<message key="payment.type.purchaseIssue">Avgift for kjøp av utgave</message>
+	<message key="payment.type.gift.subscription">Abonnement</message>
+	<message key="installer.preInstallationInstructions"><![CDATA[<h4>Før installasjon</h4> <p>1. Følgende filer og mapper (og deres innhold) må gjøres overskrivbare:</p> <ul> 
+<li><tt>config.inc.php</tt> er overskrivbar (valgfritt): {$writable_config}</li> <li><tt>public/</tt> er overskrivbar: {$writable_public}</li> <li><tt>cache/</tt> er overskrivbar: {$writable_cache}</li> <li><tt>cache/t_cache/</tt> er overskrivbar: {$writable_templates_cache}</li> <li><tt>cache/t_compile/</tt> er overskrivbar: {$writable_templates_compile}</li> <li><tt>cache/_db</tt> er overskrivbar: {$writable_db_cache}</li> </ul> 
 
-	<!-- legacy strings from OJS 2, for upgraded installations from OJS 2 -->
-	<message key="log.editor.submissionExpedited">{$editorName} har forestått redigeringsprosessen for artikkelen {$submissionId}.</message>
+<p>2. En mappe for lagring av opplastede filer må opprettes og gjøres overskrivbar (Se «Filinnstillinger» nedenfor).</p>]]></message>
+	<message key="installer.localeSettingsInstructions"><![CDATA[For fullstendig støtte for Unicode (UTF-8), velg UTF-8 for alle innstillingene for tegnsett. Pass på at fullstendig støtte for Unicode krever at PHP er kompilert med støtte for <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> biblioteket. Det kan hende du får problemer med å bruke utvidede tegnsett om serveren din ikke fyller disse kravene. Serveren din støtter mbstring: <strong>{$supportsMBString}</strong>]]></message>
+	<message key="installer.allowFileUploads"><![CDATA[Serveren din lar for øyeblikket disse filene bli opplastet <strong>{$allowFileUploads}</strong>]]></message>
+	<message key="installer.maxFileUploadSize"><![CDATA[Serveren din lar for øyeblikket filene ha den maksimale størrelsen {$maxFileUploadSize}</strong>]]></message>
+	<message key="site.upgradeAvailable.admin"><![CDATA[En ny versjon av OJS er tilgengelig. Du bruker for tiden OJS {$currentVersion}. Den nyeste versjonen av OJS er {$latestVersion}. Besøk <a href="http://pkp.sfu.ca/ojs_download" target="_new">denne siden</a> for å laste ned den nyeste versjonen og for å finne instruksjon for oppgradering.]]></message>
+	<message key="site.upgradeAvailable.manager"><![CDATA[En ny versjon av OJS er tilgjengelig.  Du bruker for tiden OJS {$currentVersion}. Den nyeste versjonen er OJS {$latestVersion}. Kontakt nettstedsadministratoren ({$siteAdminName}, <a href="mailto:{$siteAdminEmail}">{$siteAdminEmail}</a>) for å informere om lanseringen av ny versjon. Du finner mer informasjon <a href="http://pkp.sfu.ca/ojs_download" target="_new">her</a>.]]></message>
+	<message key="notification.type.submissionSubmitted">En ny artikkel, «{$title}», har blitt innlevert</message>
+	<message key="notification.savedIssueMetadata">Metadata lagret</message>
+	<message key="notification.type.editorAssignmentTask">En ny artikkel har blitt levert inn. Opprett en redaktør for artikkelen.</message>
+	<message key="notification.type.assignProductionUser">Oppnevn en bruker til å lage oppsett. Bruk «Legg til»-lenken under «Deltakere».</message>
+	<message key="notification.type.awaitingRepresentations">Avventer oppsett</message>
+	<message key="user.authorization.copyeditorAssignmentMissing">Ingen tilgang. Du har ikke blitt bedt om å språkvaske denne artikkelen.</message>
+	<message key="user.authorization.noContext">Ingen tidsskrift i denne konteksten</message>
+	<message key="user.authorization.invalidIssue">Ugyldig utgaveforespørsel</message>
+	<message key="user.authorization.invalidCopyditorSubmission">Ugyldig innlevering av språkvask eller ingen forespørsel om språkvask</message>
+	<message key="grid.action.createContext">Lag nytt tidsskrift</message>
+	<message key="notification.type.approveSubmission">Denne innleveringen avventer godkjennelse før det kan vises i utgaven</message>
+	<message key="notification.type.approveSubmissionTitle">Avventer godkjenning</message>
+	<message key="user.profile.form.showOtherContexts">Registrer hos andre tidsskrift</message>
+	<message key="user.profile.form.hideOtherContexts">Gjem andre tidsskrift</message>
+	<message key="article.view.interstitial">Velg en artikkel for nedlasting</message>
+	<message key="grid.catalogEntry.availableRepresentation.approved">Godkjent</message>
+	<message key="grid.catalogEntry.availableRepresentation.notApproved">Avventer godkjenning</message>
+	<message key="grid.catalogEntry.approvedRepresentation.title">Godkjenn oppsettet</message>
+	<message key="grid.catalogEntry.approvedRepresentation.message"><![CDATA[<p>Godkjenn oppsettet for publisering.</p>]]></message>
+	<message key="grid.catalogEntry.approvedRepresentation.removeMessage"><![CDATA[<p>Gjør om godkjenningen av oppsettet.</p>]]></message>
+	<message key="search.cli.rebuildIndex.indexing">Indekserer {$journalName}</message>
+	<message key="search.cli.rebuildIndex.indexingByJournalNotSupported">Denne typen søk tillater ikke ny indeksering for hvert tidsskrift</message>
+	<message key="search.cli.rebuildIndex.unknownJournal">Tidsskriftstien «{$journalPath}» kunne ikke knyttes til et tidsskrift</message>
+	<message key=""><![CDATA[]]></message>
+	<message key=""><![CDATA[]]></message>
+	<message key=""><![CDATA[]]></message>
+	<message key=""><![CDATA[]]></message>
+	<message key=""><![CDATA[]]></message>
+	<message key=""><![CDATA[]]></message>
+	<message key=""><![CDATA[]]></message>
+	<message key=""><![CDATA[]]></message>
+	<message key=""><![CDATA[]]></message>
+	<message key=""><![CDATA[]]></message>
+	<message key="reviewer.submission.reviewFormResponse.form.responseRequired">Legg inn de nødvendige feltene</message>
+	<message key="user.role.subEditor">Seksjonsredaktør</message>
+	<message key="subscriptions.status.noSubscription">Du har ingen aktive abonnementer</message>
+	<message key="reader.purchasePrice">({$currency} {$price})</message>
+	<message key="manager.setup.porticoDescription">Portico er en ikke-kommersiell tjeneste dedikert til å bevare digitale publikasjoner, som tidsskrifter, bøker og historiske samlinger. Dersom tidsskriftet ditt har signert en kontrakt med Portico, skrur du den på her:</message>
+	<message key="payment.type.publication.required">Publiseringsgebyret er til forfall</message>
+	<message key="payment.requestPublicationFee">Be om publiseringsgebyr ({$feeAmount})</message>
+	<message key="payment.notFound">En betaling har blitt forespurt, men forespørselen har gått ut. Kontakt tidsskriftsadministratoren for detaljer.</message>
+	<message key="log.editor.recommendation">En redaksjonell anbefaling ({$decision}) for artikkelen {$submissionId} ble registrert av {$editorName}</message>
+	<message key="notification.type.publicationScheduled">Denne innleveringen har blitt planlagt for publisering</message>
+	<message key="navigation.subscriptions">Abonnementer</message>
 </locale>
