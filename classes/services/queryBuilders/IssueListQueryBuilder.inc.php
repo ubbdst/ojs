@@ -68,8 +68,8 @@ class IssueListQueryBuilder extends BaseQueryBuilder {
 	public function orderBy($column, $direction = 'DESC') {
 		if ($column === 'lastModified') {
 			$this->orderColumn = 'i.last_modified';
-		} elseif ($column === 'seq') {
-			$this->orderColumn = 'o.seq';
+		//} elseif ($column === 'seq') {
+			//$this->orderColumn = 'o.seq';
 		} else {
 			$this->orderColumn = 'i.date_published';
 		}
