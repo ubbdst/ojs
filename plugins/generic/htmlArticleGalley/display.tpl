@@ -11,25 +11,15 @@
 <html lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}">
 {translate|assign:"pageTitleTranslated" key="article.pageTitle" title=$article->getLocalizedTitle()}
 {include file="frontend/components/headerHead.tpl"}
+{include file="frontend/components/header.tpl"}
 <body class="pkp_page_{$requestedPage|escape} pkp_op_{$requestedOp|escape}">
 
 	{* Header wrapper *}
-	<header class="header_view">
-
-		<a href="{url page="article" op="view" path=$article->getBestArticleId()}" class="return">
-			<span class="pkp_screen_reader">
-				{translate key="article.return"}
-			</span>
-		</a>
-
-		<a href="{url page="article" op="view" path=$article->getBestArticleId()}" class="title">
-			{$article->getLocalizedTitle()|escape}
-		</a>
-	</header>
-
-	<div id="htmlContainer" class="galley_view">
-		<iframe name="htmlFrame" src="{url page="article" op="download" path=$article->getBestArticleId()|to_array:$galley->getBestGalleyId() inline=true}" allowfullscreen webkitallowfullscreen></iframe>
+	<div id="htmlContainer" style="margin-left: auto; margin-right: auto; max-width: 700px; padding-top: 20px">
+		{$htmlGalleyContents}
 	</div>
+
 	{call_hook name="Templates::Common::Footer::PageFooter"}
+	{include file="frontend/components/footer.tpl"}
 </body>
 </html>
