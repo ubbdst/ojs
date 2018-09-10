@@ -129,7 +129,7 @@ class IssueHandler extends Handler {
 		$issueService = ServicesContainer::instance()->get('issue');
 		$params = array(
 			'orderBy' => 'seq',
-			'orderDirection' => 'ASC',
+			'orderDirection' => 'DESC',
 			'count' => $count,
 			'offset' => $offset,
 			'isPublished' => true,
