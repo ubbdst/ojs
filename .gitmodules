@@ -65,3 +65,15 @@
 [submodule "plugins/themes/boap-front"]
 	path = plugins/themes/boap-front
 	url = https://github.com/ubbdst/BOAP-OJS-front-theme.git
+[submodule "plugins/generic/texture"]
+	path = plugins/generic/texture
+	url = https://github.com/asmecher/texture.git
+[submodule "plugins/generic/jatsTemplate"]
+	path = plugins/generic/jatsTemplate
+	url = https://github.com/asmecher/jatsTemplate.git
+[submodule "plugins/generic/oaiJats"]
+	path = plugins/generic/oaiJats
+	url = https://github.com/pkp/oaiJats
+[submodule "plugins/generic/ojs3-markup"]
+	path = plugins/generic/markup
+	url = https://github.com/kaschioudi/ojs3-markup.git
