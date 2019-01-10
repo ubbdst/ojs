@@ -77,3 +77,6 @@
 [submodule "plugins/generic/ojs3-markup"]
 	path = plugins/generic/markup
 	url = https://github.com/kaschioudi/ojs3-markup.git
+[submodule "plugins/generic/browseBySection"]
+	path = plugins/generic/browseBySection
+	url = https://github.com/pkp/browseBySection.git
