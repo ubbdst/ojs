@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/RbaiyewuSubmissionTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RbaiyewuSubmissionTest
@@ -22,8 +22,8 @@ class RbaiyewuSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'rbaiyewu',
-			'firstName' => 'Rana',
-			'lastName' => 'Baiyewu',
+			'givenName' => 'Rana',
+			'familyName' => 'Baiyewu',
 			'affiliation' => 'University of Nairobi',
 			'country' => 'Kenya',
 		));

@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/recommendBySimilarity/RecommendBySimilarityPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class RecommendBySimilarityPlugin
@@ -50,13 +50,6 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 		return __('plugins.generic.recommendBySimilarity.description');
 	}
 
-	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	function getTemplatePath($inCore = false) {
-		return parent::getTemplatePath($inCore) . 'templates/';
-	}
-
 
 	//
 	// View level hook implementations.
@@ -69,7 +62,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 		$output =& $params[2];
 
 		// Identify similarity terms for the given article.
-		$displayedArticle = $smarty->get_template_vars('article');
+		$displayedArticle = $smarty->getTemplateVars('article');
 		$articleId = $displayedArticle->getId();
 		import('classes.search.ArticleSearch');
 		$articleSearch = new ArticleSearch();
@@ -78,7 +71,7 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 
 		// If we got similarity terms then execute a search with...
 		// ... request, journal and error messages, ...
-		$request = PKPApplication::getRequest();
+		$request = Application::getRequest();
 		$router = $request->getRouter();
 		$journal = $router->getContext($request);
 		$error = null;
@@ -93,8 +86,8 @@ class RecommendBySimilarityPlugin extends GenericPlugin {
 		$smarty->assign('articlesBySimilarity', $results);
 		$smarty->assign('articlesBySimilarityQuery', $query);
 
-		$output .= $smarty->fetch($this->getTemplatePath() . 'articleFooter.tpl');
+		$output .= $smarty->fetch($this->getTemplateResource('articleFooter.tpl'));
 		return false;
 	}
 }
-?>
+

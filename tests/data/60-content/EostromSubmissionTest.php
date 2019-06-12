@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/EostromSubmissionTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class EostromSubmissionTest
@@ -22,8 +22,8 @@ class EostromSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'eostrom',
-			'firstName' => 'Elinor',
-			'lastName' => 'Ostrom',
+			'givenName' => 'Elinor',
+			'familyName' => 'Ostrom',
 			'affiliation' => 'Indiana University',
 			'country' => 'United States',
 		));
@@ -39,8 +39,8 @@ class EostromSubmissionTest extends ContentBaseTestCase {
 			),
 			'additionalAuthors' => array(
 				array(
-					'firstName' => 'Frank',
-					'lastName' => 'van Laerhoven',
+					'givenName' => 'Frank',
+					'familyName' => 'van Laerhoven',
 					'country' => 'United States',
 					'affiliation' => 'Indiana University',
 					'email' => 'fvanlaerhoven@mailinator.com',

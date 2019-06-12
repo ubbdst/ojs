@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/externalFeed/ExternalFeedPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class ExternalFeedPlugin
@@ -28,7 +28,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			$externalFeedDao = new ExternalFeedDAO($this->getName());
 			DAORegistry::registerDAO('ExternalFeedDAO', $externalFeedDao);
 
-			$request = $this->getRequest();
+			$request = Application::getRequest();
 			$templateMgr = TemplateManager::getManager($request);
 			$templateMgr->addStyleSheet('externalFeed', $request->getBaseUrl() . '/' . $this->getStyleSheetFile());
 
@@ -40,8 +40,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 
 			// Journal Manager link to externalFeed management pages
 			HookRegistry::register('Templates::Manager::Index::ManagementPages', array($this, 'displayManagerLink'));
-
-			$this->_registerTemplateResource();
 		}
 		return $success;
 	}
@@ -52,13 +50,6 @@ class ExternalFeedPlugin extends GenericPlugin {
 
 	function getDescription() {
 		return __('plugins.generic.externalFeed.description');
-	}
-
-	/**
-	 * @copydoc Plugin::getTemplatePath()
-	 */
-	function getTemplatePath($inCore = false) {
-		return $this->getTemplateResourceName() . ':';
 	}
 
 	/**
@@ -79,7 +70,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * Get the filename of the CSS stylesheet for this plugin.
 	 */
 	function getStyleSheetFile() {
-		$request = $this->getRequest();
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 		$journalId = $journal?$journal->getId():0;
 		$styleSheet = $this->getSetting($journalId, 'externalFeedStyleSheet');
@@ -96,7 +87,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	/**
 	 * Extend the {url ...} smarty to support externalFeed plugin.
 	 */
-	function smartyPluginUrl($params, &$smarty) {
+	function smartyPluginUrl($params, $smarty) {
 		$path = array($this->getCategory(), $this->getName());
 		if (is_array($params['path'])) {
 			$params['path'] = array_merge($path, $params['path']);
@@ -139,7 +130,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 	 * @param $args array
 	 */
 	function displayHomepage($hookName, $args) {
-		$request = $this->getRequest();
+		$request = Application::getRequest();
 		$journal = $request->getJournal();
 		$journalId = $journal?$journal->getId():0;
 
@@ -208,7 +199,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$output .= '</div>';
 
 				$templateManager =& $args[0];
-				$additionalHomeContent = $templateManager->get_template_vars('additionalHomeContent');
+				$additionalHomeContent = $templateManager->getTemplateVars('additionalHomeContent');
 				$templateManager->assign('additionalHomeContent', $additionalHomeContent . "\n\n" . $output);
 			}
 		}
@@ -240,7 +231,7 @@ class ExternalFeedPlugin extends GenericPlugin {
 			LOCALE_COMPONENT_PKP_USER
 		);
 		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
+		$templateMgr->registerPlugin('function', 'plugin_url', array($this, 'smartyPluginUrl'));
 		$journal = $request->getJournal();
 		$journalId = $journal->getId();
 
@@ -363,10 +354,10 @@ class ExternalFeedPlugin extends GenericPlugin {
 				$feeds =& $externalFeedDao->getExternalFeedsByJournalId($journalId, $rangeInfo);
 				$templateMgr->assign('feeds', $feeds);
 
-				$templateMgr->display($this->getTemplatePath() . 'externalFeeds.tpl');
+				$templateMgr->display($this->getTemplateResource('externalFeeds.tpl'));
 				return true;
 		}
 	}
 }
 
-?>
+

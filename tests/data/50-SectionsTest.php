@@ -3,8 +3,8 @@
 /**
  * @file tests/data/50-SectionsTest.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class SectionsTest
@@ -45,7 +45,7 @@ class SectionsTest extends WebTestCase {
 		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 
 		// Verify resulting grid row
-		$this->assertEquals('Berardo, Buskins', $this->getText('css=#cell-1-editors > span'));
+		$this->assertEquals('Stephanie Berardo, David Buskins', $this->getText('css=#cell-1-editors > span'));
 		$this->waitForElementNotPresent('css=div.pkp_modal_panel');
 
 		// Create a new "Reviews" section

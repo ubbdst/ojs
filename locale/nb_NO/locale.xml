@@ -4,8 +4,8 @@
 <!--
   * locale/nb_NO/locale.xml
   *
-  * Copyright (c) 2014-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2014-2019 Simon Fraser University
+  * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   * (Norwegian translation from english by Karl Henrik Flyum, Dept. of teacher education and school development, University of Oslo, Norway, 2006-2007)
   * Localization strings for the nb_NO (Norsk bokmål) locale.
@@ -85,6 +85,7 @@
 	<!-- Common Article Terms -->
 	<message key="article.articles">Artikler</message>
 	<message key="article.submissionId">Innleveringens ID</message>
+	<message key="common.publishedSubmissions">Artikler</message>
 	<message key="article.title">Tittel</message>
 	<message key="article.authors">Forfattere</message>
 	<message key="article.indexingInformation">Indekseringsinformasjon</message>
@@ -630,11 +631,11 @@ Rangeres på en skala fra 1 til 5, hvor 5 er best.<br/>
 	<message key="help.ojsHelpAbbrev">OJS-hjelp</message>
 
 	<!-- Installer -->
-	<message key="installer.appInstallation">Installere OJS</message>
-	<message key="installer.ojsUpgrade">Oppgradere OJS</message>
+	<message key="installer.appInstallation">OJS installasjon</message>
+	<message key="installer.ojsUpgrade">OJS oppgradering</message>
 	<message key="installer.installationInstructions"><![CDATA[<h4>OJS versjon {$version}</h4>
 
-<p>Takk for at du laster ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Før du går videre, vennligst les <a href="{$baseUrl}/docs/README">README</a> filen som følger med denne programvaren. For mer informasjon om Public Knowledge Project og deres programvareprosjekter, vennligst oppsøk <a href="http://pkp.sfu.ca/" target="_blank">PKP nettstedet</a>. Hvis du har feilmeldinger eller trenger svar om teknisk støtte for Open Journal Systems, oppsøk <a href="http://forum.pkp.sfu.ca">støtteforum</a> eller PKPs online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">feilmeldingssystem</a>. Selv om støtteforumet er den kontaktkanalen vi foretrekker, kan du også sende e-post til teamet: <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>Takk for at du laster ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Før du går videre, vennligst les <a href="{$baseUrl}/docs/README.md">README</a> filen som følger med denne programvare. For mer informasjon om Public Knowledge Project og deres programvareprosjekter, vennligst oppsøk <a href="http://pkp.sfu.ca/" target="_blank">PKP nettstedet</a>. Hvis du har feilmeldinger eller trenger svar om teknisk støtte for Open Journal Systems, oppsøk <a href="http://forum.pkp.sfu.ca">støtteforum</a> eller PKPs online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">feilmeldingssystem</a>. Selv om støtteforumet er den kontaktkanalen vi foretrekker, kan du også e-poste teamet: <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
 
 <h4>Oppgradering</h4>
 
@@ -655,28 +656,42 @@ Rangeres på en skala fra 1 til 5, hvor 5 er best.<br/>
 
 <h4>Støttede databasesystemer</h4>
 
-<p>OJS er for øyeblikket bare testet for MySQL og PostgreSQL, selv om andre databaseadministrasjonssystemer støttet av <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> også kan fungere (helt eller delvis). Kompatibilitetsrapporter og/eller code patcher for alternative DBMSs kan sendes til OJS teamet.</p>]]></message>
+<p>OJS er for øyeblikket bare testet for MySQL og PostgreSQL, selv om andre databaseadministrasjonssystemer støttet av <a href="http://php.weblogs.com/adodb/" target="_blank">ADOdb</a> også kan fungere (helt eller delvis). Kompatibilitetsrapporter og/eller code patcher for alternative DBMSs kan sendes til OJS teamet.</p>
+
+<h4>Før installasjon</h4>
+
+<p>1. Følgende filer og mapper (og deres innhold) må gjøres overskrivbare:</p>
+<ul>
+	<li><tt>config.inc.php</tt> er overskrivbar (optional): {$writable_config}</li>
+	<li><tt>public/</tt> er overskrivbar: {$writable_public}</li>
+	<li><tt>cache/</tt> er overskrivbar: {$writable_cache}</li>
+	<li><tt>cache/t_cache/</tt> er overskrivbar: {$writable_templates_cache}</li>
+	<li><tt>cache/t_compile/</tt> er overskrivbar: {$writable_templates_compile}</li>
+	<li><tt>cache/_db</tt> er overskrivbar: {$writable_db_cache}</li>
+</ul>
+
+<p>2. En mappe for lagring av opplastete filer må opprettes og gjøres overskrivbar (Se "Filinnstillinger" nedenfor).</p>
+
+<h4>Manuell installasjon</h4>
+
+<p>Velg <strong>Manuell installering</strong> for å vise SQL-setninger  som trengs for å opprette OJS databaseskjema og første data, slik at databaseinstallasjonen kan utføres manuelt. Denne valgmuligheten er nyttig for debugging av installasjonsproblemer, særlig på platformer systemet ikke har støtte for. Merk at denne installasjonsmåten verken vil lage databasen eller tabeller, selv om konfigurasjonsfilen likevel kommer til å bli skrevet med de medfølgende databaseinnstillingene.</p>]]></message>
 	<message key="installer.upgradeInstructions"><![CDATA[<h4>OJS versjon {$version}</h4>
 
-<p>Takk for at du laster ned Public Knowledge Projects <strong>Open Journal Systems</strong>. Før du går videre, les filene <a href="{$baseUrl}/docs/README">README</a>- og <a href="{$baseUrl}/docs/UPGRADE">UPGRADE</a> som følger med denne programvaren. For mer informasjon om Public Knowledge Project og deres programvareprosjekter,  se <a href="http://pkp.sfu.ca/" target="_blank">PKPs nettsted</a>. Hvis du har feilmeldinger eller spørsmål om teknisk støtte for Open Journal Systems, se OJS' <a href="http://forum.pkp.sfu.ca">støtteforum</a> eller besøk PKPs nettbaserte <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">feilmeldingssystem</a>. Selv om støtteforumet er den foretrukne kontaktkanalen, kan du også sende en e-post til teamet: <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
-<p>Det er <strong>på det sterkeste anbefalt</strong> at du tar backup av databasen din, filmappen og OJS installasjonsmappe før du går videre.</p>
-<p>Hvis du kjører installasjonen i <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a> må du forsikre deg om at max_execution_time directive i din php.ini konfigurasjonsfil er satt til en høy grense. Hvis denne eller en annen tidsbegrensning (for eks. Apaches «Timeout» direktiv) blir overskredet og oppgraderingsprosessen dermed blir avbrutt, vil det bli nødvendig å gripe inn manuelt.</p>]]></message>
-	<message key="installer.localeInstructions">Hovedspråket som skal brukes i dette systemet. Slå opp i OJS-dokumentasjonen hvis du er interessert i støtte for språk som ikke er oppført her.</message>
-	<message key="installer.additionalLocalesInstructions">Velg andre språk som skal støttes i dette systemet. Disse språkene vil bli tilgjengelige til bruk for tidsskriftene som nettstedet er vert for. Flere språk kan også installeres når som helst gjennom grensesnittet for nettstedsadministrasjon.</message>
-	<message key="installer.filesDirInstructions"><![CDATA[Skriv inn en fullstendig sti til en eksisterende mappe hvor opplastede filer skal oppbevares. Denne mappen bør ikke kunne nås direkte fra internett. <strong> Pass på at denne mappen finnes og er overskrivbar før du installerer.</strong> Windows filstinavn bør bruke vanlig skråstrek (/), f.eks. «C:/myjournal/files».]]></message>
-	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Advarsel:</b> Hvis installasjonen feilet under databaseinstallasjonen, kan du måtte droppe OJS-databasen din eller databasetabellene dine før du forsøker å reinstallere databasen.]]></message>
-	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>Viktig!</h4>
-<p>Installasjonen kunne ikke automatisk overskrive konfigurasjonsfilen. Før du forsøker å bruke systemet, åpne <tt>config.inc.php</tt> i et egnet tekstbehandlingsprogram og erstatt innholdet i den med innholdet i tekstfeltet nedenfor.</p>]]></message>
-	<message key="installer.installationComplete"><![CDATA[<p>OJS ble installert.</p>
-<p>For å begynne å bruke systemet, <a href="{$loginUrl}">logg inn</a> med brukernavnet og passord skrevet inn på forrige side.</p>
-<p>Om du ønsker å bli del av PKP-fellesskapet, kan du:</p>
-<ol>
-	<li>Lese<a href="http://pkp.sfu.ca/blog" target="_new">PKP-bloggen</a> og følge<a href="http://pkp.sfu.ca/blog/feed" target="_new">RSS-tjenesten</a> for nyheter og oppdateringer.</li>
-	<li>Besøk <a href="http://forum.pkp.sfu.ca" target="_new">støtteforumet</a> om du har spørsmål og kommentarer.</li>
-</ol>]]></message>
-	<message key="installer.upgradeComplete"><![CDATA[<p>Oppgradering av OJS til versjon {$version} ble gjennomført.</p>
-<p>Ikke glem å sette «installert»-innstillingen i konfigurasjonsfilen din (config.inc.php) tilbake til <i>«På»</i>.</p>
-<p>Om du ikke allerede har registrert deg og ønsker å motta nyheter og oppdateringer, <strong> registrer deg på<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Hvis du har spørsmål eller kommentarer,  besøk <a href="http://forum.pkp.sfu.ca" target="_new">støtteforumet</a>.</p>]]></message>
+<p>Takk for at du laster ned Public Knowledge Project's <strong>Open Journal Systems</strong>. Før du går videre, vennligst les <a href="{$baseUrl}/docs/README.md">README</a>- og <a href="{$baseUrl}/docs/UPGRADE.md">UPGRADE</a>-filene som følger med denne programvaren. For mer informasjon om Public Knowledge Project og deres programvareprosjekter, vennligst oppsøk <a href="http://pkp.sfu.ca/" target="_blank">PKPs nettsted</a>. Hvis du har feilmeldinger eller spørsmål om teknisk støtte for Open Journal Systems, se OJS' <a href="http://forum.pkp.sfu.ca">støtteforum</a> eller besøk PKPs online <a href="https://github.com/pkp/pkp-lib#issues" target="_blank">feilmeldingssystem</a>. Selv om støtteforumet er den foretrukne kontaktkanalen, kan du også e-poste teamet: <a href="mailto:pkp-support@sfu.ca">pkp-support@sfu.ca</a>.</p>
+<p>Det er <strong>på det sterkeste anbefalt</strong> at du tar backup av database din, filmappen, og OJS installasjonsmappe før du går videre.</p>
+<p>Hvis du kjører installasjonen i <a href="http://www.php.net/features.safe-mode" target="_blank">PHP Safe Mode</a>, vennligst forsikre deg om at max_execution_time directive i din php.ini konfigurasjonsfil er satt til en høy grense. Hvis denne eller en annen tidsbegrensning (for eks. Apache's "Timeout" direktiv) blir overskredet og oppgraderingsprosessen dermed blir avbrutt, vil det bli nødvendig å gripe inn manuelt.</p>]]></message>
+	<message key="installer.localeInstructions">Primærspråket som skal brukes i dette systemet. Vennligst slå opp i OJS-dokumentasjonen hvis du er interessert i støtte for språk som ikke er oppført her.</message>
+	<message key="installer.additionalLocalesInstructions">Velg øvrige språk som skal støttes i dette systemet. Disse språkene vil bli tilgjengelig til bruk for de tidsskrift nettstedet er vert for. Flere språk kan også installeres når som helst, gjennom grensesnittet for nettstedsadministrasjon.</message>
+	<message key="installer.filesDirInstructions"><![CDATA[Skriv inn fullstendig sti til en eksisterende mappe hvor opplastede filer skal oppbevares. Denne mappen bør ikke kunne aksesseres direkte fra internett. <strong>Vennligst sikre at denne mappen finnes og er overskrivbar før du installerer.</strong> Windows filstinavn bør bruke vanlig skråstrek (/), for eks. "C:/myjournal/files".]]></message>
+	<message key="installer.reinstallAfterDatabaseError"><![CDATA[<b>Advarsel:</b> Hvis installasjonen feilet under databaseinstallasjonen kan du trenge å droppe din OJS-database eller databasetabellene før du forsøker å reinstallere databasen.]]></message>
+	<message key="installer.overwriteConfigFileInstructions"><![CDATA[<h4>IMPORTANT!</h4>
+<p>Installasjonen kunne ikke automatisk overskrive konfigurasjonsfilen. Før du forsøker å bruke systemet, vennligst åpne <tt>config.inc.php</tt> i et egnet tekstbehandlingsprogram og erstatt innholdet i den med innholdet i tekstfeltet nedenfor.</p>]]></message>
+	<message key="installer.installationComplete"><![CDATA[<p>Installasjonen av OJS er vellykket gjennomført .</p>
+<p>For å begynne å bruke systemet, <a href="{$loginUrl}">logg inn</a> med brukernavnet og passord skrevet inn på foregående side.</p>
+<p>Hvis du ønsker å motta nyheter og oppdateringer, <strong>vennligst registrer deg på <a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Hvis du har spørsmål eller kommentarer, besøk <a href="http://forum.pkp.sfu.ca" target="_new">støtteforumet</a>.</p>]]></message>
+	<message key="installer.upgradeComplete"><![CDATA[<p>Oppgradering av OJS til versjon {$version} ble vellykket gjennomført.</p>
+<p>Ikke glem å sette "installed"-innstillingen i din config.inc.php konfigurasjonsfil tilbake til  <i>På</i>.</p>
+<p>Om du ikke allerede har registrert deg og ønsker å motta nyheter og oppdateringer, <strong>vennligst registrer deg på<a href="http://pkp.sfu.ca/ojs/register" target="_new">http://pkp.sfu.ca/ojs/register</a>.</strong> Hvis du have spørsmål eller kommentarer, vennligst besøk <a href="http://forum.pkp.sfu.ca" target="_new">støtteforumet</a>.</p>]]></message>
 
 
 	<!-- Article Logs -->
@@ -829,7 +844,7 @@ Forfattere som publiserer med dette tidsskriftet går med på følgende vilkår:
 </ol>
 
 <h4>Forslag til retningslinjer for tidsskrift som tilbyr utsatt Open Access (OA etter en karantenetid)</h4>
-Forfattere som publiserer med dette tidsskriftet går med på følgende vilkår: 
+Forfattere som publiserer med dette tidsskriftet går med på følgende vilkår:
 <ol type="a">
     <li>Forfattere beholder opphavsretten og gir tidsskriftet rett til første publisering, med verket [SPESIFISER TID] etter publisering samtidig lisensiert under en <a target="_new" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution License</a>. Dette lar andre dele verket på en måte som anerkjenner forfatterskap og første publisering i dette tidsskriftet.</li>
      <li>Forfattere kan legge inn andre ledd i kontrakten for ikke-eksklusiv distribuering av tidsskriftets publiserte versjon av verket (f.eks. egenarkivere i institusjonelle arkiv eller publisere det i en bok), med en anerkjennelse av første publisering i dette tidsskriftet.</li>
@@ -896,6 +911,7 @@ Forfattere som publiserer med dette tidsskriftet går med på følgende vilkår:
 	<message key="rt.admin.settings.addComment.anonymous">Brukeren må være registrert og innlogget for å kommentere. Anonyme kommentarer er tillatt.</message>
 	<message key="rt.admin.settings.addComment.unauthenticated">Brukeren trenger ikke være registrert for å kommentere. Anonyme kommentarer er tillatt.</message>
 	<message key="article.article">Artikkel</message>
+	<message key="common.publishedSubmission">Artikkel</message>
 	<message key="user.manageMySubscriptions">Administrer mine abonnementer</message>
 	<message key="subscriptionTypes.currency">Valuta</message>
 	<message key="subscriptionTypes.year">år</message>
@@ -1113,8 +1129,8 @@ Oppretting av CLOCKSS' støtte for Open Journal Systems trenger ikke skje før e
 	<message key="payment.loginRequired.forIssue">Du må være abonnement eller kjøpe utgaven for å få tilgang til den. Logg inn for å verifisere abonnement, å hente fram tidligere betaling eller å kjøpe utgaven.</message>
 	<message key="payment.type.purchaseIssue">Avgift for kjøp av utgave</message>
 	<message key="payment.type.gift.subscription">Abonnement</message>
-	<message key="installer.preInstallationInstructions"><![CDATA[<h4>Før installasjon</h4> <p>1. Følgende filer og mapper (og deres innhold) må gjøres overskrivbare:</p> <ul> 
-<li><tt>config.inc.php</tt> er overskrivbar (valgfritt): {$writable_config}</li> <li><tt>public/</tt> er overskrivbar: {$writable_public}</li> <li><tt>cache/</tt> er overskrivbar: {$writable_cache}</li> <li><tt>cache/t_cache/</tt> er overskrivbar: {$writable_templates_cache}</li> <li><tt>cache/t_compile/</tt> er overskrivbar: {$writable_templates_compile}</li> <li><tt>cache/_db</tt> er overskrivbar: {$writable_db_cache}</li> </ul> 
+	<message key="installer.preInstallationInstructions"><![CDATA[<h4>Før installasjon</h4> <p>1. Følgende filer og mapper (og deres innhold) må gjøres overskrivbare:</p> <ul>
+<li><tt>config.inc.php</tt> er overskrivbar (valgfritt): {$writable_config}</li> <li><tt>public/</tt> er overskrivbar: {$writable_public}</li> <li><tt>cache/</tt> er overskrivbar: {$writable_cache}</li> <li><tt>cache/t_cache/</tt> er overskrivbar: {$writable_templates_cache}</li> <li><tt>cache/t_compile/</tt> er overskrivbar: {$writable_templates_compile}</li> <li><tt>cache/_db</tt> er overskrivbar: {$writable_db_cache}</li> </ul>
 
 <p>2. En mappe for lagring av opplastede filer må opprettes og gjøres overskrivbar (Se «Filinnstillinger» nedenfor).</p>]]></message>
 	<message key="installer.localeSettingsInstructions"><![CDATA[For fullstendig støtte for Unicode (UTF-8), velg UTF-8 for alle innstillingene for tegnsett. Pass på at fullstendig støtte for Unicode krever at PHP er kompilert med støtte for <a href="http://www.php.net/mbstring" target="_blank">mbstring</a> biblioteket. Det kan hende du får problemer med å bruke utvidede tegnsett om serveren din ikke fyller disse kravene. Serveren din støtter mbstring: <strong>{$supportsMBString}</strong>]]></message>

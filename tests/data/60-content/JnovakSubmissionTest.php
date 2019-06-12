@@ -3,8 +3,8 @@
 /**
  * @file tests/data/60-content/JnovakSubmissionTest.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2000-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2000-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class JnovakSubmissionTest
@@ -22,8 +22,8 @@ class JnovakSubmissionTest extends ContentBaseTestCase {
 	function testSubmission() {
 		$this->register(array(
 			'username' => 'jnovak',
-			'firstName' => 'John',
-			'lastName' => 'Novak',
+			'givenName' => 'John',
+			'familyName' => 'Novak',
 			'affiliation' => 'Aalborg University',
 			'country' => 'Denmark',
 		));

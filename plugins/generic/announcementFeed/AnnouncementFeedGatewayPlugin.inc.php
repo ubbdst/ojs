@@ -3,8 +3,8 @@
 /**
  * @file plugins/generic/announcementFeed/AnnouncementFeedGatewayPlugin.inc.php
  *
- * Copyright (c) 2014-2018 Simon Fraser University
- * Copyright (c) 2003-2018 John Willinsky
+ * Copyright (c) 2014-2019 Simon Fraser University
+ * Copyright (c) 2003-2019 John Willinsky
  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
  *
  * @class AnnouncementFeedGatewayPlugin
@@ -63,13 +63,6 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 	 */
 	public function getPluginPath() {
 		return $this->_parentPlugin->getPluginPath();
-	}
-
-	/**
-	 * @copydoc PKPPlugin::getTemplatePath
-	 */
-	public function getTemplatePath($inCore = false) {
-		return $this->_parentPlugin->getTemplatePath($inCore);
 	}
 
 	/**
@@ -151,7 +144,7 @@ class AnnouncementFeedGatewayPlugin extends GatewayPlugin {
 			'journal' => $journal,
 		));
 
-		$templateMgr->display($this->getTemplatePath() . $typeMap[$type], $mimeTypeMap[$type]);
+		$templateMgr->display($this->_parentPlugin->getTemplateResource($typeMap[$type]), $mimeTypeMap[$type]);
 
 		return true;
 	}
