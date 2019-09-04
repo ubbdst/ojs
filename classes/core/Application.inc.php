@@ -357,6 +357,12 @@ class Application extends PKPApplication {
 	 */
 	function getCCLicenseOptions() {
 		return array(
+			'http://creativecommons.org/licenses/by-nc-nd/3.0' => 'submission.license.cc.by-nc-nd3',
+			'http://creativecommons.org/licenses/by-nc/3.0' => 'submission.license.cc.by-nc3',
+			'http://creativecommons.org/licenses/by-nc-sa/3.0' => 'submission.license.cc.by-nc-sa3',
+			'http://creativecommons.org/licenses/by-nd/3.0' => 'submission.license.cc.by-nd3',
+			'http://creativecommons.org/licenses/by/3.0' => 'submission.license.cc.by3',
+			'http://creativecommons.org/licenses/by-sa/3.0' => 'submission.license.cc.by-sa3',
 			'http://creativecommons.org/licenses/by-nc-nd/4.0' => 'submission.license.cc.by-nc-nd4',
 			'http://creativecommons.org/licenses/by-nc/4.0' => 'submission.license.cc.by-nc4',
 			'http://creativecommons.org/licenses/by-nc-sa/4.0' => 'submission.license.cc.by-nc-sa4',
@@ -374,6 +380,12 @@ class Application extends PKPApplication {
 	 */
 	function getCCLicenseBadge($ccLicenseURL) {
 		$licenseKeyMap = array(
+			'http://creativecommons.org/licenses/by-nc-nd/3.0' => 'submission.license.cc.by-nc-nd3.footer',
+			'http://creativecommons.org/licenses/by-nc/3.0' => 'submission.license.cc.by-nc3.footer',
+			'http://creativecommons.org/licenses/by-nc-sa/3.0' => 'submission.license.cc.by-nc-sa3.footer',
+			'http://creativecommons.org/licenses/by-nd/3.0' => 'submission.license.cc.by-nd3.footer',
+			'http://creativecommons.org/licenses/by/3.0' => 'submission.license.cc.by3.footer',
+			'http://creativecommons.org/licenses/by-sa/3.0' => 'submission.license.cc.by-sa3.footer',
 			'http://creativecommons.org/licenses/by-nc-nd/4.0' => 'submission.license.cc.by-nc-nd4.footer',
 			'http://creativecommons.org/licenses/by-nc/4.0' => 'submission.license.cc.by-nc4.footer',
 			'http://creativecommons.org/licenses/by-nc-sa/4.0' => 'submission.license.cc.by-nc-sa4.footer',
